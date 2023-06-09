@@ -5,8 +5,8 @@
 # Script créé le 09-06-2023
 # Script modifié le 09-06-2023
 #
-# sudo touch Automated_Docker_installation_on_DEBIAN_11_x.sh
-# sudo chmod +x Automated_Docker_installation_on_DEBIAN_11_x.sh
+# touch Automated_Docker_installation_on_DEBIAN_11_x.sh
+# chmod +x Automated_Docker_installation_on_DEBIAN_11_x.sh
 # sudo ./Automated_Docker_installation_on_DEBIAN_11_x.sh
 # --------------------------------------------------------
 
