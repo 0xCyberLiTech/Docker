@@ -1,6 +1,19 @@
 #!/bin/sh
 
-# Mettre à jour Portainer
+# --------------------------------------------------------
+# Marc MALET
+# Script créé le 09-06-2023 
+# Script modifié le 09-06-2023
+#
+# touch Automated_upgrade_Portainer_on_DEBIAN_11_x.sh
+# chmod +x Automated_upgrade_Portainer_on_DEBIAN_11_x.sh
+# sudo ./Automated_upgrade_Portainer_on_DEBIAN_11_x.sh
+# --------------------------------------------------------
+
+# Mise à jour automatisée de Portainer sur DEBIAN 11.x
+# --------------------------------------------------------
+# 
+
 # Portainer permettant de mettre à jour facilement nos conteneurs, il peut être tentant de l’utiliser également pour le mettre à jour lui-même. 
 # Spoiler : c’est une mauvaise idée qui va tout simplement casser votre Portainer. 
 
