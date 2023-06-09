@@ -1,3 +1,19 @@
+#!/bin/sh
+
+# --------------------------------------------------------
+# Marc MALET
+# Script créé le 09-06-2023 
+# Script modifié le 09-06-2023
+#
+# Automated_installation_of_Portainer_on_DEBIAN_11_x.sh
+# chmod +x Automated_installation_of_Portainer_on_DEBIAN_11_x.sh
+#
+# --------------------------------------------------------
+
+# Installation automatisée de Portainer sur DEBIAN 11.x
+# --------------------------------------------------------
+# 
+
 Installation de Portainer
 
 Portainer est un conteneur Docker qui a pour but de faciliter l’installation et la gestion de vos autres conteneurs Docker. Pour faire simple, il va nous permettre de nous affranchir totalement de la ligne de commande pour déployer des conteneurs, les mettre à jour et gérer leurs paramètres.
