@@ -1,8 +1,16 @@
 #!/bin/sh
 
-# --------------------------------------------------
+# --------------------------------------------------------
+# Marc MALET
+# Script créé le 09-06-2023 
+# Script modifié le 09-06-2023
+#
+# Automated_Docker_installation_on_DEBIAN_11_x.sh
+# chmod +x Automated_Docker_installation_on_DEBIAN_11_x.sh
+#
+# --------------------------------------------------------
 # Installation automatisée de Docker sur DEBIAN 11.x
-# --------------------------------------------------
+# --------------------------------------------------------
 # I. Présentation.
 # II. Installer Docker sur Debian 11.
 # -> A. Installer les dépendances de Docker
