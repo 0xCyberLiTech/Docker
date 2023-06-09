@@ -12,6 +12,8 @@
 
 # Installation automatisée de Docker sur DEBIAN 11.x
 # --------------------------------------------------------
+#
+
 # I. Présentation.
 # II. Installer Docker sur Debian 11.
 # -> A. Installer les dépendances de Docker
