@@ -14,11 +14,10 @@
 # --------------------------------------------------------
 # 
 
-Installation de Portainer
+# Portainer est un conteneur Docker qui a pour but de faciliter l’installation et la gestion de vos autres conteneurs Docker. 
+# Pour faire simple, il va nous permettre de nous affranchir totalement de la ligne de commande pour déployer des conteneurs, les mettre à jour et gérer leurs paramètres.
 
-Portainer est un conteneur Docker qui a pour but de faciliter l’installation et la gestion de vos autres conteneurs Docker. Pour faire simple, il va nous permettre de nous affranchir totalement de la ligne de commande pour déployer des conteneurs, les mettre à jour et gérer leurs paramètres.
-
-Comme tous les conteneurs, son installation est particulièrement simple et ce sera le seul conteneur que nous aurons à créer depuis la ligne de commande. Pour ce faire, il suffit simplement de lancer cette commande :
+# Comme tous les conteneurs, son installation est particulièrement simple et ce sera le seul conteneur que nous aurons à créer depuis la ligne de commande. Pour ce faire, il suffit simplement de lancer cette commande :
 
 sudo docker run -d -p 9000:9000 --name portainer \
     --restart=always \
@@ -26,12 +25,13 @@ sudo docker run -d -p 9000:9000 --name portainer \
     -v portainer_data:/data \
     portainer/portainer-ce:latest
 
-Une fois le conteneur lancé, il suffit de se rendre sur http://@IPduserveur:9000 pour accéder à Portainer. Les étapes de configuration sont ensuite limpides et vous devriez vous en sortir.
+# Une fois le conteneur lancé, il suffit de se rendre sur http://@IPduserveur:9000 pour accéder à Portainer. Les étapes de configuration sont ensuite limpides et vous devriez vous en sortir.
 
-Mettre à jour Portainer
-Portainer permettant de mettre à jour facilement nos conteneurs, il peut être tentant de l’utiliser également pour le mettre à jour lui-même. Spoiler : c’est une mauvaise idée qui va tout simplement casser votre Portainer. Suivez le guide…
+# Mettre à jour Portainer
+# Portainer permettant de mettre à jour facilement nos conteneurs, il peut être tentant de l’utiliser également pour le mettre à jour lui-même. Spoiler : c’est une mauvaise idée qui va tout simplement casser votre Portainer. Suivez le guide…
 
-Nous allons tout d’abord arrêter le conteneur puis le supprimer. Comme nous utilisons un volume, les données importantes du conteneur ne seront pas supprimées. On télécharge ensuite la dernière image de Portainer, puis nous relançons le conteneur avec les mêmes réglages qu’à l’origine.
+# Nous allons tout d’abord arrêter le conteneur puis le supprimer. Comme nous utilisons un volume, les données importantes du conteneur ne seront pas supprimées.
+# On télécharge ensuite la dernière image de Portainer, puis nous relançons le conteneur avec les mêmes réglages qu’à l’origine.
 
 docker stop portainer
 docker rm portainer
@@ -42,4 +42,5 @@ sudo docker run -d -p 9000:9000 --name portainer \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v portainer_data:/data \
     portainer/portainer-ce:latest
-Portainer est maintenant à jour et tous ses réglages ont été conservés.
+
+# Portainer est maintenant à jour et tous ses réglages ont été conservés.
