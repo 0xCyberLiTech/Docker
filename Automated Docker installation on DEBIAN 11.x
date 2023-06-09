@@ -14,6 +14,13 @@
 # --------------------------------------------------------
 #
 
+# Prérequis avoir installé au paravant sudo si celui-ci n'est pas présent.
+
+# su - root
+# apt install sudo
+# adduser mmalet sudo
+# init 6
+
 # I. Présentation.
 # II. Installer Docker sur Debian 11.
 # -> A. Installer les dépendances de Docker
