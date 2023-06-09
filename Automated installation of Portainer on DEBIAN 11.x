@@ -14,6 +14,13 @@
 # --------------------------------------------------------
 # 
 
+# Prérequis avoir installé au paravant sudo si celui-ci n'est pas présent
+
+# su - root
+# apt install sudo
+# adduser mmalet sudo
+# init 6
+
 # Portainer est un conteneur Docker qui a pour but de faciliter l’installation et la gestion de vos autres conteneurs Docker. 
 # Pour faire simple, il va nous permettre de nous affranchir totalement de la ligne de commande pour déployer des conteneurs, les mettre à jour et gérer leurs paramètres.
 
