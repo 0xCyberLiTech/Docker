@@ -2,12 +2,12 @@
 
 # --------------------------------------------------------
 # Marc MALET
-# Script créé le 09-06-2023 
+# Script créé le 09-06-2023
 # Script modifié le 09-06-2023
 #
 # Automated_Docker_installation_on_DEBIAN_11_x.sh
 # chmod +x Automated_Docker_installation_on_DEBIAN_11_x.sh
-#
+# sudo ./Automated_Docker_installation_on_DEBIAN_11_x.sh
 # --------------------------------------------------------
 
 # Installation automatisée de Docker sur DEBIAN 11.x
@@ -32,12 +32,12 @@
 
 # I. Présentation.
 # ----------------
-# Dans ce tutoriel, nous allons voir comment installer Docker sur Debian 11 afin d'utiliser ses premiers containers sous Linux ! 
-# Cette installation pas-à-pas repose sur la méthode officielle décrite dans la documentation de Docker. 
+# Dans ce tutoriel, nous allons voir comment installer Docker sur Debian 11 afin d'utiliser ses premiers containers sous Linux !
+# Cette installation pas-à-pas repose sur la méthode officielle décrite dans la documentation de Docker.
 # Au-delà des dépendances que nous allons installer et de Docker en lui-même, les ressources de votre machine seront déterminantes pour exécuter plus ou moins de containers Docker.
 
-# L'utilisation d'un container reste très pratique pour tester rapidement un logiciel sans affecter la machine hôte, en phase de développement, etc. 
-# Un container Docker va permettre d'empaqueter facilement des applications afin de les rendre utilisables sur différentes plateformes. 
+# L'utilisation d'un container reste très pratique pour tester rapidement un logiciel sans affecter la machine hôte, en phase de développement, etc.
+# Un container Docker va permettre d'empaqueter facilement des applications afin de les rendre utilisables sur différentes plateformes.
 # De nos jours, c'est une technologie populaire et appréciée et que l'on utilise aussi bien on-premise que sur les environnements Cloud.
 
 # Pour fonctionner, Docker s'appuie sur différents composants qu'il est important de connaître :
@@ -59,7 +59,7 @@ sudo apt-get update && sudo apt upgrade -y
 
 # Puis, exécutez la commande ci-dessous pour installer les paquets :
 
-sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
+sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common -y
 
 # Une fois cette étape effectuée, passez à la suite.
 
@@ -81,10 +81,10 @@ sudo apt-get update
 
 # -> C. Installation des paquets Docker.
 
-# Troisièmement, c'est l'installation de Docker qui doit être réalisée. 
+# Troisièmement, c'est l'installation de Docker qui doit être réalisée.
 # Trois paquets sont à installer sur notre hôte pour bénéficier de l'ensemble des composants. Voici la commande à exécuter :
 
-sudo apt-get install docker-ce docker-ce-cli containerd.io
+sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 
 # Si vous souhaitez que Docker démarre automatiquement avec votre machine Debian, la commande suivante doit être exécutée :
 
@@ -92,17 +92,17 @@ sudo systemctl enable docker
 
 # -> D. Docker est-il bien installé ?
 
-# L'installation des paquets est terminée, mais Docker est-il correctement installé ? 
+# L'installation des paquets est terminée, mais Docker est-il correctement installé ?
 # Pour répondre à cette question, vous pouvez regarder le statut de Docker, ce qui sera une première indication si le service est identifié sur la machine.
 
-sudo systemctl status docker
+sudo systemctl status docker.service
 
-# Ensuite, le meilleur moyen de vérifier si Docker est installé, c'est d'exécuter le container nommé "hello-world". 
+# Ensuite, le meilleur moyen de vérifier si Docker est installé, c'est d'exécuter le container nommé "hello-world".
 # La commande ci-dessous permettra de télécharger l'image de ce container et de l'exécuter.
 
 sudo docker run hello-world
 
-# Lorsque ce container sera exécuté, le message "Hello from Docker!" sera retourné dans la console. 
+# Lorsque ce container sera exécuté, le message "Hello from Docker!" sera retourné dans la console.
 # C'est le signe que les différents composants sont opérationnels et que Docker a pu générer et exécuter le container.
 
 # -> E. Quelle est la version de Docker installée ?
@@ -122,7 +122,8 @@ sudo docker run hello-world
 #sudo docker ps -a
 
 # -> Supprimer un container Docker.
-# A partir d'un ID, il est possible de supprimer un container Docker. Par exemple, cela peut permettre de supprimer le container "hello-world" (ID 3c745b055853 sur ma machine) car il n'a plus d'intérêt.
+# A partir d'un ID, il est possible de supprimer un container Docker.
+# Par exemple, cela peut permettre de supprimer le container "hello-world" (ID 3c745b055853 sur ma machine) car il n'a plus d'intérêt.
 #sudo docker rm 3c745b055853
 
 # Sur ma machine Debian 11, l'instance Docker dispose de trois images.
@@ -132,7 +133,8 @@ sudo docker run hello-world
 #sudo docker rmi hello-world
 
 # -> Démarrer un container Docker :
-# Avec Docker, on peut démarrer un container existant mais arrêté avec "docker start" mais aussi créer un container et le démarrer avec "docker run". Un container peut-être démarré en l'appelant par son identifiant :
+# Avec Docker, on peut démarrer un container existant mais arrêté avec "docker start" mais aussi créer un container et le démarrer avec "docker run".
+# Un container peut-être démarré en l'appelant par son identifiant :
 #sudo docker start d964015967b4
 
 # -> Arrêter un container Docker :
@@ -140,5 +142,6 @@ sudo docker run hello-world
 #sudo docker stop 6108d7c37298
 
 # -> Télécharger une image Docker à partir de Docker Hub :
-# Le site Docker Hub référence les images Docker, et il est possible de télécharger une image à partir de cette source. Voici un exemple où l'image d'un container Docker Apache est téléchargée :
+# Le site Docker Hub référence les images Docker, et il est possible de télécharger une image à partir de cette source.
+# Voici un exemple où l'image d'un container Docker Apache est téléchargée :
 #sudo docker pull httpd
