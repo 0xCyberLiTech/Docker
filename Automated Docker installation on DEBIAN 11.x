@@ -23,7 +23,7 @@
 
 # I. Présentation.
 # II. Installer Docker sur Debian 11.
-# -> A. Installer les dépendances de Docker
+# -> A. Installer les dépendances de Docker.
 # -> B. Ajouter le dépôt officiel Docker.
 # -> C. Installation des paquets Docker.
 # -> D. Docker est-il bien installé ?
@@ -109,50 +109,36 @@ sudo docker run hello-world
 
 # Pour finir avec la phase d'installation, sachez qu'à tout moment vous pouvez voir quelle est la version de Docker que vous utilisez grâce à la commande suivante :
 
-sudo docker version
-
 # III. Quelques commandes Docker
 # ------------------------------
 # Docker est installé sur notre serveur Debian 11, mais comment faire pour l'utiliser ? Pour finir, nous allons voir quelques commandes utiles qui vous permettront de débuter avec Docker.
 
-# - Lister les containers Docker en cours d'exécution
-
-sudo docker ps
+# -> Lister les containers Docker en cours d'exécution
+#sudo docker ps
 
 # Le résultat de la commande permet d'avoir une liste avec différentes informations dont l'ID unique du container, le nom de l'image, et le statut.
 
-# - Lister tous les containers Docker enregistrés sur votre machine, peu importe l'état.
+# -> Lister tous les containers Docker enregistrés sur votre machine, peu importe l'état.
+#sudo docker ps -a
 
-sudo docker ps -a
-
-# - Supprimer un container Docker.
-
+# -> Supprimer un container Docker.
 # A partir d'un ID, il est possible de supprimer un container Docker. Par exemple, cela peut permettre de supprimer le container "hello-world" (ID 3c745b055853 sur ma machine) car il n'a plus d'intérêt.
-
-sudo docker rm 3c745b055853
+#sudo docker rm 3c745b055853
 
 # Sur ma machine Debian 11, l'instance Docker dispose de trois images.
 
-# Supprimer une image Docker
-
+# -> Supprimer une image Docker
 # L'image du container "hello-world" peut être supprimée, après avoir arrêté puis supprimé le container associé, via cette commande :
+#sudo docker rmi hello-world
 
-sudo docker rmi hello-world
-
-# - Démarrer un container Docker :
-
+# -> Démarrer un container Docker :
 # Avec Docker, on peut démarrer un container existant mais arrêté avec "docker start" mais aussi créer un container et le démarrer avec "docker run". Un container peut-être démarré en l'appelant par son identifiant :
+#sudo docker start d964015967b4
 
-sudo docker start d964015967b4
-
-# - Arrêter un container Docker :
-
+# -> Arrêter un container Docker :
 # La commande ci-dessus stoppe le container Docker avec l'ID "6108d7c37298" récupéré via la commande "docker ps".
+#sudo docker stop 6108d7c37298
 
-sudo docker stop 6108d7c37298
-
-# - Télécharger une image Docker à partir de Docker Hub :
-
+# -> Télécharger une image Docker à partir de Docker Hub :
 # Le site Docker Hub référence les images Docker, et il est possible de télécharger une image à partir de cette source. Voici un exemple où l'image d'un container Docker Apache est téléchargée :
-
-sudo docker pull httpd
+#sudo docker pull httpd
