@@ -114,6 +114,9 @@ C'est le signe que les différents composants sont opérationnels et que Docker 
 ### Quelle est la version de Docker installée ?
 
 Pour finir avec la phase d'installation, sachez qu'à tout moment vous pouvez voir quelle est la version de Docker que vous utilisez grâce à la commande suivante :
+```
+sudo docker version
+```
 
 <a name="quelques-commandes-docker"></a>
 ## Quelques commandes Docker
