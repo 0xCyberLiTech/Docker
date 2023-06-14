@@ -17,16 +17,17 @@ adduser mmalet sudo
 init 6
 ```
 
-### I. [Présentation.](#presentation)
-### II. [Installer Docker sur Debian 11.](#installation)
+### I. [Présentation.](#présentation)
+### II. [Installer Docker sur Debian 11.](#installer-docker-sur-debian-11)
    - A. Installer les dépendances de Docker.
    - B. Ajouter le dépôt officiel Docker.
    - C. Installation des paquets Docker.
    - D. Docker est-il bien installé ?
    - E. Quelle est la version de Docker installée ?
-### III. [Quelques commandes Docker.](#commands)
+### III. [Quelques commandes Docker.](#quelques-commandes-docker)
 
-## I. Présentation.
+<a name="présentation"></a>
+## Présentation.
 Dans ce tutoriel, nous allons voir comment installer Docker sur Debian 11 afin d'utiliser ses premiers containers sous Linux !
 Cette installation pas-à-pas repose sur la méthode officielle décrite dans la documentation de Docker.
 Au-delà des dépendances que nous allons installer et de Docker en lui-même, les ressources de votre machine seront déterminantes pour exécuter plus ou moins de containers Docker.
@@ -44,8 +45,9 @@ Docker Client correspondant à l'utilitaire en ligne de commande qui va permettr
 Docker Container correspondant aux containers en eux-mêmes, tout en sachant qu'une image peut permettre de créer plusieurs containers avec chacun un identifiant unique
 La documentation de Docker est disponible à cette adresse : docs.docker.com
 
-## II. Installer Docker sur Debian 11.
-#### A. Installer les dépendances de Docker.
+<a name="installer-docker-sur-debian-11"></a>
+## Installer Docker sur Debian 11.
+#### Installer les dépendances de Docker.
 
 Premièrement, nous devons installer les dépendances nécessaires au bon fonctionnement de Docker. Commençons par mettre à jour le cache des paquets :
 ```
@@ -58,7 +60,7 @@ sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-pr
 Une fois cette étape effectuée, passez à la suite.
 
 -----------------------------------------
-#### B. Ajouter le dépôt officiel Docker.
+#### Ajouter le dépôt officiel Docker.
 
 Deuxièmement, nous devons ajouter le dépôt officiel de Docker à notre machine Debian afin de pouvoir récupérer les sources. Commençons par récupérer la clé GPG qui nous permettra de valider les paquets récupérés depuis le dépôt Docker :
 ```
@@ -75,7 +77,7 @@ sudo apt-get update
 Nous allons pouvoir passer à l'installation de Docker.
 
 -----------------------------------------
-#### C. Installation des paquets Docker.
+#### Installation des paquets Docker.
 
 Troisièmement, c'est l'installation de Docker qui doit être réalisée.
 Trois paquets sont à installer sur notre hôte pour bénéficier de l'ensemble des composants. Voici la commande à exécuter :
@@ -88,7 +90,7 @@ sudo systemctl enable docker
 ```
 
 -----------------------------------------
-#### D. Docker est-il bien installé ?
+#### Docker est-il bien installé ?
 
 L'installation des paquets est terminée, mais Docker est-il correctement installé ?
 Pour répondre à cette question, vous pouvez regarder le statut de Docker, ce qui sera une première indication si le service est identifié sur la machine.
@@ -104,11 +106,12 @@ Lorsque ce container sera exécuté, le message "Hello from Docker!" sera retour
 C'est le signe que les différents composants sont opérationnels et que Docker a pu générer et exécuter le container.
 
 -----------------------------------------
-#### E. Quelle est la version de Docker installée ?
+#### Quelle est la version de Docker installée ?
 
 Pour finir avec la phase d'installation, sachez qu'à tout moment vous pouvez voir quelle est la version de Docker que vous utilisez grâce à la commande suivante :
 
-## III. Quelques commandes Docker
+<a name="quelques-commandes-docker"></a>
+## Quelques commandes Docker
 Docker est installé sur notre serveur Debian 11, mais comment faire pour l'utiliser ? Pour finir, nous allons voir quelques commandes utiles qui vous permettront de débuter avec Docker.
 
  - Lister les containers Docker en cours d'exécution
