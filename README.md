@@ -19,11 +19,11 @@ init 6
 
 ### I. [Présentation.](#présentation)
 ### II. [Installer Docker sur Debian 11.](#installer-docker-sur-debian-11)
-   - A. Installer les dépendances de Docker.
-   - B. Ajouter le dépôt officiel Docker.
-   - C. Installation des paquets Docker.
-   - D. Docker est-il bien installé ?
-   - E. Quelle est la version de Docker installée ?
+   - A. [Installer les dépendances de Docker.](#installer-les-dépendances-de-docker)
+   - B. [Ajouter le dépôt officiel Docker.](#ajouter-le-dépôt-officiel-docker)
+   - C. [Installation des paquets Docker.](#installation-des-paquets-docker)
+   - D. [Docker est-il bien installé ?](#docker-est-il-bien-installé-)
+   - E. [Quelle est la version de Docker installée ?](#quelle-est-la-version-de-docker-installée-)
 ### III. [Quelques commandes Docker.](#quelques-commandes-docker)
 
 <a name="présentation"></a>
@@ -47,7 +47,8 @@ La documentation de Docker est disponible à cette adresse : docs.docker.com
 
 <a name="installer-docker-sur-debian-11"></a>
 ## Installer Docker sur Debian 11.
-#### Installer les dépendances de Docker.
+<a name="installer-les-dépendances-de-docker"></a>
+### Installer les dépendances de Docker.
 
 Premièrement, nous devons installer les dépendances nécessaires au bon fonctionnement de Docker. Commençons par mettre à jour le cache des paquets :
 ```
@@ -60,7 +61,8 @@ sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-pr
 Une fois cette étape effectuée, passez à la suite.
 
 -----------------------------------------
-#### Ajouter le dépôt officiel Docker.
+<a name="ajouter-le-dépôt-officiel-docker"></a>
+### Ajouter le dépôt officiel Docker.
 
 Deuxièmement, nous devons ajouter le dépôt officiel de Docker à notre machine Debian afin de pouvoir récupérer les sources. Commençons par récupérer la clé GPG qui nous permettra de valider les paquets récupérés depuis le dépôt Docker :
 ```
@@ -77,7 +79,8 @@ sudo apt-get update
 Nous allons pouvoir passer à l'installation de Docker.
 
 -----------------------------------------
-#### Installation des paquets Docker.
+<a name="installation-des-paquets-docker"></a>
+### Installation des paquets Docker.
 
 Troisièmement, c'est l'installation de Docker qui doit être réalisée.
 Trois paquets sont à installer sur notre hôte pour bénéficier de l'ensemble des composants. Voici la commande à exécuter :
@@ -90,7 +93,8 @@ sudo systemctl enable docker
 ```
 
 -----------------------------------------
-#### Docker est-il bien installé ?
+<a name="docker-est-il-bien-installé-"></a>
+### Docker est-il bien installé ?
 
 L'installation des paquets est terminée, mais Docker est-il correctement installé ?
 Pour répondre à cette question, vous pouvez regarder le statut de Docker, ce qui sera une première indication si le service est identifié sur la machine.
@@ -106,7 +110,8 @@ Lorsque ce container sera exécuté, le message "Hello from Docker!" sera retour
 C'est le signe que les différents composants sont opérationnels et que Docker a pu générer et exécuter le container.
 
 -----------------------------------------
-#### Quelle est la version de Docker installée ?
+<a name="quelle-est-la-version-de-docker-installée-"></a>
+### Quelle est la version de Docker installée ?
 
 Pour finir avec la phase d'installation, sachez qu'à tout moment vous pouvez voir quelle est la version de Docker que vous utilisez grâce à la commande suivante :
 
