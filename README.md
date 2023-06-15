@@ -2,7 +2,7 @@
 # Installation Docker Debian 11
 
 ## Via un fichier bash
-[Disponible ici](install.sh)
+[Disponible ici](install-docker.sh)
 ```
 touch install.sh
 chmod +x install.sh
