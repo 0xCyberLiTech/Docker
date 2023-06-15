@@ -4,9 +4,9 @@
 ## Via un fichier bash
 [Disponible ici](install.sh)
 ```
-touch Automated_Docker_installation_on_DEBIAN_11_x.sh
-chmod +x Automated_Docker_installation_on_DEBIAN_11_x.sh
-sudo ./Automated_Docker_installation_on_DEBIAN_11_x.sh
+touch install.sh
+chmod +x install.sh
+sudo ./install.sh
 ```
 ## Installation automatisée de Docker sur DEBIAN 11.x
 ### Prérequis avoir installé au paravant sudo si celui-ci n'est pas présent.
