@@ -168,7 +168,8 @@ La commande ci-dessus stoppe le container Docker avec l'ID "6108d7c37298" récup
 sudo docker stop 6108d7c37298
 ```
  - Télécharger une image Docker à partir de Docker Hub :
-Le site Docker Hub référence les images Docker, et il est possible de télécharger une image à partir de cette source.
+   Le site Docker Hub référence les images Docker, et il est possible de télécharger une image à partir de cette source.
+
 Voici un exemple où l'image d'un container Docker Apache est téléchargée :
 ```
 sudo docker pull httpd
@@ -177,10 +178,11 @@ sudo docker pull httpd
 
 ## Via un fichier bash
 [Disponible ici](install-portainer.sh)
-
+```
 touch install-portainer.sh
 chmod +x install-portainer.sh
 sudo ./install-portainer.sh
+```
 
 <a name="installer-portainer"></a>
 ## Installation manuelle de Portainer sur DEBIAN 11 & 12
