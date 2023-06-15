@@ -5,9 +5,9 @@
 # Script créé le 09-06-2023 
 # Script modifié le 09-06-2023
 #
-# touch Automated_installation_of_Portainer_on_DEBIAN_11_x.sh
-# chmod +x Automated_installation_of_Portainer_on_DEBIAN_11_x.sh
-# sudo ./Automated_installation_of_Portainer_on_DEBIAN_11_x.sh
+# touch install-portainer.sh
+# chmod +x install-portainer.sh
+# sudo ./install-portainer.sh
 # --------------------------------------------------------
 
 # Installation automatisée de Portainer sur DEBIAN 11.x
