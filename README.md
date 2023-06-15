@@ -1,13 +1,13 @@
 ![Docker Banner](https://thingsolver.com/wp-content/uploads/docker-cover.png)
 
-# A la découverte de Docker :
+# A la découverte de Docker & Portainer :
 
    - A. [Installer Docker sur Debian 11 & 12.](#installer-docker)
-        - a1. [Installation automatisée de Docker sur DEBIAN 11 & 12](install-docker.sh)
+        - A1. [Installation automatisée de Docker sur DEBIAN 11 & 12](install-docker.sh)
    - B. [Installer Portainer sur Debian 11 & 12.](#installer-portainer)
-        - b1. [Installation automatisée de Portainer sur DEBIAN 11 & 12](install-portainer.sh)
+        - B1. [Installation automatisée de Portainer sur DEBIAN 11 & 12](install-portainer.sh)
    - C. [Mise à jour de Portainer sur DEBIAN 11 & 12.](#upgrade-portainer)
-        - c1. [Mise à jour automatisée de Docker sur DEBIAN 11 & 12](upgrade-portainer.sh)
+        - C1. [Mise à jour automatisée de Portainer sur DEBIAN 11 & 12](upgrade-portainer.sh)
 
 ## Installation automatisée de Docker sur DEBIAN 11 & 12
 
