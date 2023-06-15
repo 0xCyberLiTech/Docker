@@ -200,5 +200,35 @@ sudo docker run -d -p 9000:9000 --name portainer \
 Une fois le conteneur lancé, il suffit de se rendre sur http://@IPduserveur:9000 pour accéder à Portainer. 
 Les étapes de configuration sont ensuite limpides et vous devriez vous en sortir.
 
+## Mise à jour automatisée de Portainer sur DEBIAN 11 / 12
+
 ## Via un fichier bash
-[Disponible ici](install-portainer.sh)
+[Disponible ici](upgrade-portainer.sh)
+
+touch upgrade-portainer.sh
+chmod +x upgrade-portainer.sh
+sudo ./upgrade-portainer.sh
+
+## Mise à jour manuelle de Portainer sur DEBIAN 11 / 12
+
+Portainer permettant de mettre à jour facilement nos conteneurs, il peut être tentant de l’utiliser également pour le mettre à jour lui-même. 
+Spoiler : c’est une mauvaise idée qui va tout simplement casser votre Portainer. 
+
+Nous allons tout d’abord arrêter le conteneur puis le supprimer. 
+Comme nous utilisons un volume, les données importantes du conteneur ne seront pas supprimées.
+On télécharge ensuite la dernière image de Portainer, puis nous relançons le conteneur avec les mêmes réglages qu’à l’origine.
+
+``
+sudo docker stop portainer
+sudo docker rm portainer
+sudo docker pull portainer/portainer-ce:latest
+``
+
+``
+sudo docker run -d -p 9000:9000 --name portainer \
+    --restart=always \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v portainer_data:/data \
+    portainer/portainer-ce:latest
+``
+Portainer est maintenant à jour et tous ses réglages ont été conservés.
