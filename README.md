@@ -1,4 +1,10 @@
 ![Docker Banner](https://thingsolver.com/wp-content/uploads/docker-cover.png)
+
+
+   - A. [Installer Docker sur Debian 11 & 12.](#installer-docker)
+   - B. [Installer Portainer sur Debian 11 & 12.](#installer-portainer)
+   - C. [Installation des paquets Docker.](#installation-des-paquets-docker)
+   - 
 ## Installation automatisée de Docker sur DEBIAN 11 & 12
 
 ## Via un fichier bash
@@ -172,7 +178,8 @@ touch install-portainer.sh
 chmod +x install-portainer.sh
 sudo ./install-portainer.sh
 
-## Installation manuellement de Portainer sur DEBIAN 11 / 12
+<a name="installer-portainer"></a>
+## Installation de Portainer sur DEBIAN 11 / 12
 
 ## Prérequis avoir installé au paravant sudo si celui-ci n'est pas présent.
 
@@ -209,6 +216,7 @@ touch upgrade-portainer.sh
 chmod +x upgrade-portainer.sh
 sudo ./upgrade-portainer.sh
 
+<a name="upgrade-portainer"></a>
 ## Mise à jour manuelle de Portainer sur DEBIAN 11 / 12
 
 Portainer permettant de mettre à jour facilement nos conteneurs, il peut être tentant de l’utiliser également pour le mettre à jour lui-même. 
