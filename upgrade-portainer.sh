@@ -5,9 +5,9 @@
 # Script créé le 09-06-2023 
 # Script modifié le 09-06-2023
 #
-# touch Automated_upgrade_Portainer_on_DEBIAN_11_x.sh
-# chmod +x Automated_upgrade_Portainer_on_DEBIAN_11_x.sh
-# sudo ./Automated_upgrade_Portainer_on_DEBIAN_11_x.sh
+# touch upgrade-portainer.sh
+# chmod +x upgrade-portainer.sh
+# sudo ./upgrade-portainer.sh
 # --------------------------------------------------------
 
 # Mise à jour automatisée de Portainer sur DEBIAN 11.x
