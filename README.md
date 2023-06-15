@@ -18,7 +18,7 @@ init 6
 ```
 
 ### I. [Présentation.](#présentation)
-### II. [Installer Docker sur Debian 11.](#installer-docker-sur-debian-11)
+### II. [Installer Docker sur Debian 11 & 12.](#installer-docker)
    - A. [Installer les dépendances de Docker.](#installer-les-dépendances-de-docker)
    - B. [Ajouter le dépôt officiel Docker.](#ajouter-le-dépôt-officiel-docker)
    - C. [Installation des paquets Docker.](#installation-des-paquets-docker)
