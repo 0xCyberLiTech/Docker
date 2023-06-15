@@ -1,6 +1,6 @@
 ![Docker Banner](https://thingsolver.com/wp-content/uploads/docker-cover.png)
 
-# Mise à disposition de trois procédures :
+# A la découverte de Docker :
 
    - A. [Installer Docker sur Debian 11 & 12.](#installer-docker)
    - B. [Installer Portainer sur Debian 11 & 12.](#installer-portainer)
