@@ -168,7 +168,7 @@ sudo docker pull httpd
 ## Via un fichier bash
 [Disponible ici](install-portainer.sh)
 
-# Upgrade Portainer 11
+# Upgrade Portainer Debian 11
 
 ## Via un fichier bash
 [Disponible ici](upgrade-portainer.sh)
