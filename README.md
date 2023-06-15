@@ -2,7 +2,7 @@
 
    - 1. [Installer Docker sur Debian 11 & 12.](#installer-docker)
    - 2. [Installer Portainer sur Debian 11 & 12.](#installer-portainer)
-   - 3. [Mise à jour de Portainer sur DEBIAN 11 / 12.](#upgrade-portainer)
+   - 3. [Mise à jour de Portainer sur DEBIAN 11 & 12.](#upgrade-portainer)
 
 ## Installation automatisée de Docker sur DEBIAN 11 & 12
 
@@ -168,7 +168,7 @@ Voici un exemple où l'image d'un container Docker Apache est téléchargée :
 ```
 sudo docker pull httpd
 ```
-## Installation automatisée de Portainer sur DEBIAN 11 / 12
+## Installation automatisée de Portainer sur DEBIAN 11 & 12
 
 ## Via un fichier bash
 [Disponible ici](install-portainer.sh)
@@ -178,7 +178,7 @@ chmod +x install-portainer.sh
 sudo ./install-portainer.sh
 
 <a name="installer-portainer"></a>
-## Installation de Portainer sur DEBIAN 11 / 12
+## Installation manuelle de Portainer sur DEBIAN 11 & 12
 
 ## Prérequis avoir installé au paravant sudo si celui-ci n'est pas présent.
 
@@ -206,7 +206,7 @@ sudo docker run -d -p 9000:9000 --name portainer \
 Une fois le conteneur lancé, il suffit de se rendre sur http://@IPduserveur:9000 pour accéder à Portainer. 
 Les étapes de configuration sont ensuite limpides et vous devriez vous en sortir.
 
-## Mise à jour automatisée de Portainer sur DEBIAN 11 / 12
+## Mise à jour automatisée de Portainer sur DEBIAN 11 & 12
 
 ## Via un fichier bash
 [Disponible ici](upgrade-portainer.sh)
@@ -216,7 +216,7 @@ chmod +x upgrade-portainer.sh
 sudo ./upgrade-portainer.sh
 
 <a name="upgrade-portainer"></a>
-## Mise à jour manuelle de Portainer sur DEBIAN 11 / 12
+## Mise à jour manuelle de Portainer sur DEBIAN 11 & 12
 
 Portainer permettant de mettre à jour facilement nos conteneurs, il peut être tentant de l’utiliser également pour le mettre à jour lui-même. 
 Spoiler : c’est une mauvaise idée qui va tout simplement casser votre Portainer. 
