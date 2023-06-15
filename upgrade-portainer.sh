@@ -9,7 +9,6 @@
 # chmod +x upgrade-portainer.sh
 # sudo ./upgrade-portainer.sh
 # --------------------------------------------------------
-
 sudo docker stop portainer
 sudo docker rm portainer
 sudo docker pull portainer/portainer-ce:latest
