@@ -1,5 +1,5 @@
 ![Docker Banner](https://thingsolver.com/wp-content/uploads/docker-cover.png)
-## Installation automatisée de Docker sur DEBIAN 11 / 12
+## Installation automatisée de Docker sur DEBIAN 11 & 12
 
 ## Via un fichier bash
 [Disponible ici](install-docker.sh)
@@ -8,7 +8,7 @@ touch install-docker.sh
 chmod +x install-docker.sh
 sudo ./install-docker.sh
 ```
-## Installation manuellement de Portainer sur DEBIAN 11 / 12
+## Installation manuellement de Portainer sur DEBIAN 11 & 12
 ### Prérequis avoir installé au paravant sudo si celui-ci n'est pas présent.
 ```
 su - root
@@ -46,8 +46,8 @@ Pour fonctionner, Docker s'appuie sur différents composants qu'il est important
 
 La documentation de Docker est disponible à cette adresse : docs.docker.com
 
-<a name="installer-docker-sur-debian-11"></a>
-## Installer Docker sur Debian 11.
+<a name="installer-docker"></a>
+## Installer Docker sur Debian 11 & 12
 <a name="installer-les-dépendances-de-docker"></a>
 ### Installer les dépendances de Docker.
 
