@@ -163,3 +163,12 @@ Voici un exemple où l'image d'un container Docker Apache est téléchargée :
 ```
 sudo docker pull httpd
 ```
+# Installation Portainer Debian 11
+
+## Via un fichier bash
+[Disponible ici](install-portainer.sh)
+
+# Upgrade Portainer 11
+
+## Via un fichier bash
+[Disponible ici](upgrade-portainer.sh)
