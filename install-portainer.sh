@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # --------------------------------------------------------
-# Marc MALET
+# CyberLiTech
 # Script créé le 09-06-2023 
 # Script modifié le 09-06-2023
 #
