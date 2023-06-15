@@ -163,12 +163,10 @@ Voici un exemple où l'image d'un container Docker Apache est téléchargée :
 ```
 sudo docker pull httpd
 ```
-# Installation Portainer Debian 11
+# Installation de Portainer sur Debian 11 / 12
 
 ## Via un fichier bash
 [Disponible ici](install-portainer.sh)
-
-# Upgrade Portainer Debian 11
 
 Prérequis avoir installé au paravant sudo si celui-ci n'est pas présent
 
@@ -197,4 +195,4 @@ Une fois le conteneur lancé, il suffit de se rendre sur http://@IPduserveur:900
 Les étapes de configuration sont ensuite limpides et vous devriez vous en sortir.
 
 ## Via un fichier bash
-[Disponible ici](upgrade-portainer.sh)
+[Disponible ici](install-portainer.sh)
