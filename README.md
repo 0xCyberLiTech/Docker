@@ -1,10 +1,9 @@
 ![Docker Banner](https://thingsolver.com/wp-content/uploads/docker-cover.png)
 
+   - 1. [Installer Docker sur Debian 11 & 12.](#installer-docker)
+   - 2. [Installer Portainer sur Debian 11 & 12.](#installer-portainer)
+   - 3. [Mise à jour de Portainer sur DEBIAN 11 / 12.](#upgrade-portainer)
 
-   - A. [Installer Docker sur Debian 11 & 12.](#installer-docker)
-   - B. [Installer Portainer sur Debian 11 & 12.](#installer-portainer)
-   - C. [Installation des paquets Docker.](#installation-des-paquets-docker)
-   - 
 ## Installation automatisée de Docker sur DEBIAN 11 & 12
 
 ## Via un fichier bash
