@@ -5,9 +5,9 @@
 # Script créé le 09-06-2023
 # Script modifié le 09-06-2023
 #
-# touch install.sh
-# chmod +x install.sh
-# sudo ./install.sh
+# touch install-docker.sh.sh
+# chmod +x install-docker.sh.sh
+# sudo ./install-docker.sh.sh
 # --------------------------------------------------------
 
 sudo apt-get update && sudo apt upgrade -y
