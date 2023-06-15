@@ -1,16 +1,15 @@
 ![Docker Banner](https://thingsolver.com/wp-content/uploads/docker-cover.png)
-# Installation Docker Debian 11
+## Installation automatisée de Docker sur DEBIAN 11 / 12
 
 ## Via un fichier bash
 [Disponible ici](install-docker.sh)
 ```
-touch install.sh
-chmod +x install.sh
-sudo ./install.sh
+touch install-docker.sh
+chmod +x install-docker.sh
+sudo ./install-docker.sh
 ```
-## Installation automatisée de Docker sur DEBIAN 11.x
+## Installation manuellement de Portainer sur DEBIAN 11 / 12
 ### Prérequis avoir installé au paravant sudo si celui-ci n'est pas présent.
-
 ```
 su - root
 apt install sudo
@@ -39,11 +38,12 @@ De nos jours, c'est une technologie populaire et appréciée et que l'on utilise
 
 Pour fonctionner, Docker s'appuie sur différents composants qu'il est important de connaître :
 
-Docker Engine ou Docker Daemon correspondant au processus qui fait tourner Docker sur le système, en charge de la génération et l'exécution des containers
-Docker Registry est un emplacement de stockage pour héberger les images de containers Docker (il peut être public ou privé)
-Docker Image correspondant à un fichier qui contient la définition d'un container Docker (dépendances, configuration, etc.)
-Docker Client correspondant à l'utilitaire en ligne de commande qui va permettre de gérer les containers (commande "docker")
-Docker Container correspondant aux containers en eux-mêmes, tout en sachant qu'une image peut permettre de créer plusieurs containers avec chacun un identifiant unique
+- Docker Engine ou Docker Daemon correspondant au processus qui fait tourner Docker sur le système, en charge de la génération et l'exécution des containers
+- Docker Registry est un emplacement de stockage pour héberger les images de containers Docker (il peut être public ou privé)
+- Docker Image correspondant à un fichier qui contient la définition d'un container Docker (dépendances, configuration, etc.)
+- Docker Client correspondant à l'utilitaire en ligne de commande qui va permettre de gérer les containers (commande "docker")
+- Docker Container correspondant aux containers en eux-mêmes, tout en sachant qu'une image peut permettre de créer plusieurs containers avec chacun un identifiant unique
+
 La documentation de Docker est disponible à cette adresse : docs.docker.com
 
 <a name="installer-docker-sur-debian-11"></a>
@@ -163,12 +163,18 @@ Voici un exemple où l'image d'un container Docker Apache est téléchargée :
 ```
 sudo docker pull httpd
 ```
-# Installation de Portainer sur Debian 11 / 12
+## Installation automatisée de Portainer sur DEBIAN 11 / 12
 
 ## Via un fichier bash
 [Disponible ici](install-portainer.sh)
 
-Prérequis avoir installé au paravant sudo si celui-ci n'est pas présent
+touch install-portainer.sh
+chmod +x install-portainer.sh
+sudo ./install-portainer.sh
+
+## Installation manuellement de Portainer sur DEBIAN 11 / 12
+
+## Prérequis avoir installé au paravant sudo si celui-ci n'est pas présent.
 
 ```
 su - root
