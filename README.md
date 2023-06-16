@@ -205,9 +205,9 @@ Les étapes de configuration sont ensuite limpides et vous devriez vous en sorti
 ### Via un fichier bash.
 [Disponible ici](installation-automatisée-de-portainer.sh)
 ```
-touch install-docker.sh
-chmod +x install-docker.sh
-sudo ./install-docker.sh
+touch installation-automatisée-de-portainer.sh
+chmod +x installation-automatisée-de-portainer.sh
+sudo ./installation-automatisée-de-portainer.sh
 ```
 <a name="mise-à-jour-manuelle-de-portainer"></a>
 ## - C. Mise à jour manuelle de Portainer sur DEBIAN 11 & 12.
