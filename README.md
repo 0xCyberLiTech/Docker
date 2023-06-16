@@ -172,9 +172,9 @@ sudo docker pull httpd
 ### Via un fichier bash.
 [Disponible ici](installation-automatisée-de-docker.sh)
 ```
-touch install-docker.sh
-chmod +x install-docker.sh
-sudo ./install-docker.sh
+touch installation-automatisée-de-docker.sh
+chmod +x installation-automatisée-de-docker.sh
+sudo ./installation-automatisée-de-docker.sh
 ```
 <a name="installation-manuelle-de-portainer"></a>
 ## - B. Installation manuelle de Portainer sur DEBIAN 11 & 12.
