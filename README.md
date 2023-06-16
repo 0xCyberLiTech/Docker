@@ -5,11 +5,11 @@
 | Cat | Sommaire |
 |------|------| 
 | - A. | [Installation manuelle de Docker sur Debian 11 & 12.](#installation-manuelle-de-docker) |
-| - A1. | [Installation automatisée de Docker sur DEBIAN 11 & 12](installation-automatisée-de-docker.sh) |
+| - A1. | [Installation automatisée de Docker sur DEBIAN 11 & 12](#installation-automatisée-de-docker) |
 | - B. | [Installation manuelle de Portainer sur Debian 11 & 12.](#installation-manuelle-de-portainer) |
-| - B1. | [Installation automatisée de Portainer sur DEBIAN 11 & 12](installation-automatisée-de-portainer.sh) |
+| - B1. | [Installation automatisée de Portainer sur DEBIAN 11 & 12](#installation-automatisée-de-portainer) |
 | - C. | [Mise à jour manuelle de Portainer sur DEBIAN 11 & 12.](#mise-à-jour-manuelle-de-portainer) |
-| - C1. | [Mise à jour automatisée de Portainer sur DEBIAN 11 & 12](mise-à-jour-automatisée-de-portainer.sh) |
+| - C1. | [Mise à jour automatisée de Portainer sur DEBIAN 11 & 12](#mise-à-jour-automatisée-de-portainer) |
 
 ## Installation manuelle de Docker sur DEBIAN 11 & 12.
 ### Prérequis avoir installé au paravant sudo si celui-ci n'est pas présent.
@@ -167,6 +167,7 @@ Voici un exemple où l'image d'un container Docker Apache est téléchargée :
 ```
 sudo docker pull httpd
 ```
+<a name="installation-automatisée-de-docker"></a>
 ## - A1. Installation automatisée de Docker sur DEBIAN 11 & 12.
 ### Via un fichier bash.
 [Disponible ici](installation-automatisée-de-docker.sh)
@@ -199,6 +200,7 @@ sudo docker run -d -p 9000:9000 --name portainer \
 Une fois le conteneur lancé, il suffit de se rendre sur http://@IPduserveur:9000 pour accéder à Portainer. 
 Les étapes de configuration sont ensuite limpides et vous devriez vous en sortir.
 
+<a name="installation-automatisée-de-portainer"></a>
 ## - B1. Installation automatisée de Portainer sur DEBIAN 11 & 12.
 ### Via un fichier bash.
 [Disponible ici](installation-automatisée-de-portainer.sh)
@@ -232,6 +234,7 @@ sudo docker run -d -p 9000:9000 --name portainer \
 ```
 Portainer est maintenant à jour et tous ses réglages ont été conservés.
 
+<a name="mise-à-jour-automatisée-de-portainer"></a>
 ##  - C1. Mise à jour automatisée de Portainer sur DEBIAN 11 & 12.
 ### Via un fichier bash.
 [Disponible ici](mise-à-jour-automatisée-de-portainer.sh)
