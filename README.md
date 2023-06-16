@@ -5,7 +5,7 @@
 | Cat | Sommaire |
 |------|------| 
 | - A. | [Installation manuelle de Docker sur Debian 11 & 12.](#installation-manuelle-de-docker) |
-| - A1. | [Installation automatisée de Docker sur DEBIAN 11 & 12](installation-automatisée-de-docker.sh) |
+| - A1. | [Installation automatisée de Docker sur DEBIAN 11 & 12](installation-automatisee-de-docker.sh) |
 | - B. | [Installer Portainer sur Debian 11 & 12.](#installer-portainer) |
 | - B1. | [Installation automatisée de Portainer sur DEBIAN 11 & 12](install-portainer.sh) |
 | - C. | [Mise à jour de Portainer sur DEBIAN 11 & 12.](#upgrade-portainer) |
