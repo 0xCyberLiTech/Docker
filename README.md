@@ -167,10 +167,9 @@ Voici un exemple où l'image d'un container Docker Apache est téléchargée :
 ```
 sudo docker pull httpd
 ```
-<a name="installation-automatisée-de-docker"></a>
+[Disponible ici](installation-automatisée-de-docker.sh)
 ## - A1. Installation automatisée de Docker sur DEBIAN 11 & 12
 ## Via un fichier bash
-[Disponible ici](install-docker.sh)
 ```
 touch install-docker.sh
 chmod +x install-docker.sh
