@@ -11,7 +11,7 @@
 | - C. | [Mise à jour manuelle de Portainer sur DEBIAN 11 & 12.](#mise-à-jour-manuelle-de-portainer) |
 | - C1. | [Mise à jour automatisée de Portainer sur DEBIAN 11 & 12](mise-à-jour-automatisée-de-portainer.sh) |
 
-## Installation manuelle de Docker sur DEBIAN 11 & 12
+## Installation manuelle de Docker sur DEBIAN 11 & 12.
 ### Prérequis avoir installé au paravant sudo si celui-ci n'est pas présent.
 ```
 # su - root
@@ -51,7 +51,7 @@ La documentation de Docker est disponible à cette adresse : docs.docker.com
 [ La documentation de Docker est disponible ici.](https://docs.docker.com/)
 
 <a name="installation-manuelle-de-docker"></a>
-## - A. Installation manuelle de Docker sur Debian 11 & 12
+## - A. Installation manuelle de Docker sur Debian 11 & 12.
 ### Installer les dépendances de Docker.
 
 Premièrement, nous devons installer les dépendances nécessaires au bon fonctionnement de Docker. Commençons par mettre à jour le cache des paquets :
@@ -123,7 +123,7 @@ sudo docker version
 ```
 
 <a name="quelques-commandes-docker"></a>
-### Quelques commandes Docker
+### Quelques commandes Docker :
 Docker est installé sur notre serveur Debian 11, mais comment faire pour l'utiliser ? Pour finir, nous allons voir quelques commandes utiles qui vous permettront de débuter avec Docker.
 
  - Lister les containers Docker en cours d'exécution
@@ -167,16 +167,16 @@ Voici un exemple où l'image d'un container Docker Apache est téléchargée :
 ```
 sudo docker pull httpd
 ```
+## - A1. Installation automatisée de Docker sur DEBIAN 11 & 12.
+### Via un fichier bash.
 [Disponible ici](installation-automatisée-de-docker.sh)
-## - A1. Installation automatisée de Docker sur DEBIAN 11 & 12
-### Via un fichier bash
 ```
 touch install-docker.sh
 chmod +x install-docker.sh
 sudo ./install-docker.sh
 ```
 <a name="installation-manuelle-de-portainer"></a>
-## - B. Installation manuelle de Portainer sur DEBIAN 11 & 12
+## - B. Installation manuelle de Portainer sur DEBIAN 11 & 12.
 ### Prérequis avoir installé au paravant sudo si celui-ci n'est pas présent.
 ```
 # su - root
@@ -199,12 +199,12 @@ sudo docker run -d -p 9000:9000 --name portainer \
 Une fois le conteneur lancé, il suffit de se rendre sur http://@IPduserveur:9000 pour accéder à Portainer. 
 Les étapes de configuration sont ensuite limpides et vous devriez vous en sortir.
 
-## - B1. Installation automatisée de Portainer sur DEBIAN 11 & 12
-### Via un fichier bash
+## - B1. Installation automatisée de Portainer sur DEBIAN 11 & 12.
+### Via un fichier bash.
 [Disponible ici](installation-automatisée-de-portainer.sh)
 
 <a name="mise-à-jour-manuelle-de-portainer"></a>
-## - C. Mise à jour manuelle de Portainer sur DEBIAN 11 & 12
+## - C. Mise à jour manuelle de Portainer sur DEBIAN 11 & 12.
 ### Prérequis avoir installé au paravant sudo si celui-ci n'est pas présent.
 ```
 # su - root
@@ -232,6 +232,6 @@ sudo docker run -d -p 9000:9000 --name portainer \
 ```
 Portainer est maintenant à jour et tous ses réglages ont été conservés.
 
-##  - C1. Mise à jour automatisée de Portainer sur DEBIAN 11 & 12
-### Via un fichier bash
+##  - C1. Mise à jour automatisée de Portainer sur DEBIAN 11 & 12.
+### Via un fichier bash.
 [Disponible ici](mise-à-jour-automatisée-de-portainer.sh)
