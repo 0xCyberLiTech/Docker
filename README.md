@@ -243,7 +243,7 @@ Portainer est maintenant à jour et tous ses réglages ont été conservés.
 ### Via un fichier bash.
 [Disponible ici](mise-à-jour-automatisée-de-portainer.sh)
 ```
-touch install-docker.sh
-chmod +x install-docker.sh
-sudo ./install-docker.sh
+touch mise-à-jour-automatisée-de-portainer.sh
+chmod +x mise-à-jour-automatisée-de-portainer.sh
+sudo ./mise-à-jour-automatisée-de-portainer.sh
 ```
