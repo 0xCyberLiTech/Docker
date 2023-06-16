@@ -1,6 +1,6 @@
 ![Docker Banner](https://thingsolver.com/wp-content/uploads/docker-cover.png)
 
-# A la découverte de Docker & Portainer sur DEBIAN 11 & 12:
+# A la découverte de Docker & Portainer sur DEBIAN 11 & 12.
 
 | Cat | Sommaire |
 |------|------| 
