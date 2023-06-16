@@ -2,7 +2,7 @@
 
 # A la découverte de Docker & Portainer :
 
-| ------ | ------ |
+|------|------| 
   | - A. | [Installer Docker sur Debian 11 & 12.](#installer-docker) |
   | - A1. | [Installation automatisée de Docker sur DEBIAN 11 & 12](install-docker.sh) |
   | - B. | [Installer Portainer sur Debian 11 & 12.](#installer-portainer) |
