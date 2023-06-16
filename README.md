@@ -175,8 +175,8 @@ touch install-docker.sh
 chmod +x install-docker.sh
 sudo ./install-docker.sh
 ```
-<a name="installer-portainer"></a>
-## Installation manuelle de Portainer sur DEBIAN 11 & 12
+<a name="installation-manuelle-de-portainer"></a>
+## - B. Installation manuelle de Portainer sur DEBIAN 11 & 12
 
 ## Prérequis avoir installé au paravant sudo si celui-ci n'est pas présent.
 ```
