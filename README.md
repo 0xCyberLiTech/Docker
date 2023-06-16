@@ -4,8 +4,8 @@
 
 | Cat | Sommaire |
 |------|------| 
-| - A. | [Installer manuelle de Docker sur Debian 11 & 12.](#installer-docker) |
-| - A1. | [Installation automatisée de Docker sur DEBIAN 11 & 12](install-docker.sh) |
+| - A. | [Installation manuelle de Docker sur Debian 11 & 12.](#installation-manuelle-de-docker) |
+| - A1. | [Installation automatisée de Docker sur DEBIAN 11 & 12](install-automatisée-de-docker.sh) |
 | - B. | [Installer Portainer sur Debian 11 & 12.](#installer-portainer) |
 | - B1. | [Installation automatisée de Portainer sur DEBIAN 11 & 12](install-portainer.sh) |
 | - C. | [Mise à jour de Portainer sur DEBIAN 11 & 12.](#upgrade-portainer) |
@@ -50,9 +50,8 @@ Pour fonctionner, Docker s'appuie sur différents composants qu'il est important
 La documentation de Docker est disponible à cette adresse : docs.docker.com
 [ La documentation de Docker est disponible ici.](https://docs.docker.com/)
 
-<a name="installer-docker"></a>
+<a name="installation-manuelle-de-docker"></a>
 ## - A. Installation manuelle de Docker sur Debian 11 & 12
-<a name="installer-les-dépendances-de-docker"></a>
 ### Installer les dépendances de Docker.
 
 Premièrement, nous devons installer les dépendances nécessaires au bon fonctionnement de Docker. Commençons par mettre à jour le cache des paquets :
@@ -168,8 +167,8 @@ Voici un exemple où l'image d'un container Docker Apache est téléchargée :
 ```
 sudo docker pull httpd
 ```
-## - A1 Installation automatisée de Docker sur DEBIAN 11 & 12
-
+<a name="installation-automatisée-de-docker"></a>
+## - A1. Installation automatisée de Docker sur DEBIAN 11 & 12
 ## Via un fichier bash
 [Disponible ici](install-docker.sh)
 ```
@@ -177,16 +176,6 @@ touch install-docker.sh
 chmod +x install-docker.sh
 sudo ./install-docker.sh
 ```
-## Installation automatisée de Portainer sur DEBIAN 11 & 12
-
-## Via un fichier bash
-[Disponible ici](install-portainer.sh)
-```
-touch install-portainer.sh
-chmod +x install-portainer.sh
-sudo ./install-portainer.sh
-```
-
 <a name="installer-portainer"></a>
 ## Installation manuelle de Portainer sur DEBIAN 11 & 12
 
@@ -197,13 +186,11 @@ sudo ./install-portainer.sh
 # adduser 'user' sudo
 # init 6
 ```
-
 Portainer est un conteneur Docker qui a pour but de faciliter l’installation et la gestion de vos autres conteneurs Docker. 
 Pour faire simple, il va nous permettre de nous affranchir totalement de la ligne de commande pour déployer des conteneurs, les mettre à jour et gérer leurs paramètres.
 
 Comme tous les conteneurs, son installation est particulièrement simple et ce sera le seul conteneur que nous aurons à créer depuis la ligne de commande. 
 Pour ce faire, il suffit simplement de lancer cette commande :
-
 ```
 sudo docker run -d -p 9000:9000 --name portainer \
     --restart=always \
@@ -211,22 +198,27 @@ sudo docker run -d -p 9000:9000 --name portainer \
     -v portainer_data:/data \
     portainer/portainer-ce:latest
 ```
-
 Une fois le conteneur lancé, il suffit de se rendre sur http://@IPduserveur:9000 pour accéder à Portainer. 
 Les étapes de configuration sont ensuite limpides et vous devriez vous en sortir.
 
+## Installation automatisée de Portainer sur DEBIAN 11 & 12
+## Via un fichier bash
+[Disponible ici](install-portainer.sh)
+```
+touch install-portainer.sh
+chmod +x install-portainer.sh
+sudo ./install-portainer.sh
+```
 ## Mise à jour automatisée de Portainer sur DEBIAN 11 & 12
-
 ## Via un fichier bash
 [Disponible ici](upgrade-portainer.sh)
-
+```
 touch upgrade-portainer.sh
 chmod +x upgrade-portainer.sh
 sudo ./upgrade-portainer.sh
-
+```
 <a name="upgrade-portainer"></a>
 ## Mise à jour manuelle de Portainer sur DEBIAN 11 & 12
-
 ## Prérequis avoir installé au paravant sudo si celui-ci n'est pas présent.
 ```
 # su - root
@@ -234,20 +226,17 @@ sudo ./upgrade-portainer.sh
 # adduser 'user' sudo
 # init 6
 ```
-
 Portainer permettant de mettre à jour facilement nos conteneurs, il peut être tentant de l’utiliser également pour le mettre à jour lui-même. 
 Spoiler : c’est une mauvaise idée qui va tout simplement casser votre Portainer. 
 
 Nous allons tout d’abord arrêter le conteneur puis le supprimer. 
 Comme nous utilisons un volume, les données importantes du conteneur ne seront pas supprimées.
 On télécharge ensuite la dernière image de Portainer, puis nous relançons le conteneur avec les mêmes réglages qu’à l’origine.
-
 ```
 sudo docker stop portainer
 sudo docker rm portainer
 sudo docker pull portainer/portainer-ce:latest
 ```
-
 ```
 sudo docker run -d -p 9000:9000 --name portainer \
     --restart=always \
