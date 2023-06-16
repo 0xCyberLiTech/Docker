@@ -21,10 +21,10 @@ sudo ./install-docker.sh
 ## Installation manuelle de Docker sur DEBIAN 11 & 12
 ### Prérequis avoir installé au paravant sudo si celui-ci n'est pas présent.
 ```
-su - root
-apt install sudo
-adduser mmalet sudo
-init 6
+# su - root
+# apt install sudo
+# adduser 'user' sudo
+# init 6
 ```
 
 ### I. [Présentation.](#présentation)
@@ -188,11 +188,10 @@ sudo ./install-portainer.sh
 ## Installation manuelle de Portainer sur DEBIAN 11 & 12
 
 ## Prérequis avoir installé au paravant sudo si celui-ci n'est pas présent.
-
 ```
-su - root
-apt install sudo
-adduser mmalet sudo
+# su - root
+# apt install sudo
+# adduser 'user' sudo
 init 6
 ```
 
@@ -224,6 +223,14 @@ sudo ./upgrade-portainer.sh
 
 <a name="upgrade-portainer"></a>
 ## Mise à jour manuelle de Portainer sur DEBIAN 11 & 12
+
+## Prérequis avoir installé au paravant sudo si celui-ci n'est pas présent.
+```
+# su - root
+# apt install sudo
+# adduser 'user' sudo
+init 6
+```
 
 Portainer permettant de mettre à jour facilement nos conteneurs, il peut être tentant de l’utiliser également pour le mettre à jour lui-même. 
 Spoiler : c’est une mauvaise idée qui va tout simplement casser votre Portainer. 
