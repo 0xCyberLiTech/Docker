@@ -200,9 +200,9 @@ sudo docker run -d -p 9000:9000 --name portainer \
 Une fois le conteneur lancé, il suffit de se rendre sur http://@IPduserveur:9000 pour accéder à Portainer. 
 Les étapes de configuration sont ensuite limpides et vous devriez vous en sortir.
 
-## Installation automatisée de Portainer sur DEBIAN 11 & 12
+## - B1. Installation automatisée de Portainer sur DEBIAN 11 & 12
 ## Via un fichier bash
-[Disponible ici](install-portainer.sh)
+[Disponible ici](installation-automatisée-de-portainer.sh)
 ```
 touch install-portainer.sh
 chmod +x install-portainer.sh
