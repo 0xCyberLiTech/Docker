@@ -52,7 +52,10 @@ La documentation de Docker est disponible à cette adresse : docs.docker.com
 
 <a name="installation-manuelle-de-docker"></a>
 ## - A. Installation manuelle de Docker sur Debian 11 & 12.
-### Installer les dépendances de Docker.
+
+-----------------------------------------
+<a name="installer-les-dépendances-de-docker"></a>
+### Installation des dépendances de Docker.
 
 Premièrement, nous devons installer les dépendances nécessaires au bon fonctionnement de Docker. Commençons par mettre à jour le cache des paquets :
 ```
@@ -95,7 +98,6 @@ Si vous souhaitez que Docker démarre automatiquement avec votre machine Debian,
 ```
 sudo systemctl enable docker
 ```
-
 -----------------------------------------
 <a name="docker-est-il-bien-installé-"></a>
 ### Docker est-il bien installé ?
@@ -121,7 +123,6 @@ Pour finir avec la phase d'installation, sachez qu'à tout moment vous pouvez vo
 ```
 sudo docker version
 ```
-
 <a name="quelques-commandes-docker"></a>
 ### Quelques commandes Docker :
 Docker est installé sur notre serveur Debian 11, mais comment faire pour l'utiliser ? Pour finir, nous allons voir quelques commandes utiles qui vous permettront de débuter avec Docker.
