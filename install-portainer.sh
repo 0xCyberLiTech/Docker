@@ -9,6 +9,12 @@
 # chmod +x install-portainer.sh
 # sudo ./install-portainer.sh
 # --------------------------------------------------------
+
+# su - root
+# apt install sudo
+# adduser 'user' sudo
+# init 6
+
 sudo docker run -d -p 9000:9000 --name portainer \
     --restart=always \
     -v /var/run/docker.sock:/var/run/docker.sock \
