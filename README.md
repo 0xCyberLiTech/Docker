@@ -22,11 +22,11 @@
 
 ### I. [Présentation.](#présentation)
 ### II. [Installation de Docker sur Debian 11 & 12.](#installation-manuelle-de-docker)
-   - A. [Installation des dépendances de Docker.](#installer-les-dépendances-de-docker)
-   - B. [Ajouter le dépôt officiel Docker.](#ajouter-le-dépôt-officiel-docker)
-   - C. [Installation des paquets Docker.](#installation-des-paquets-docker)
-   - D. [Docker est-il bien installé ?](#docker-est-il-bien-installé-)
-   - E. [Quelle est la version de Docker installée ?](#quelle-est-la-version-de-docker-installée-)
+   - . [Installation des dépendances de Docker.](#installer-les-dépendances-de-docker)
+   - . [Ajouter le dépôt officiel Docker.](#ajouter-le-dépôt-officiel-docker)
+   - . [Installation des paquets Docker.](#installation-des-paquets-docker)
+   - . [Docker est-il bien installé ?](#docker-est-il-bien-installé-)
+   - . [Quelle est la version de Docker installée ?](#quelle-est-la-version-de-docker-installée-)
 ### III. [Quelques commandes Docker.](#quelques-commandes-docker)
 
 <a name="présentation"></a>
