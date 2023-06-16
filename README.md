@@ -192,7 +192,7 @@ sudo ./install-portainer.sh
 # su - root
 # apt install sudo
 # adduser 'user' sudo
-init 6
+# init 6
 ```
 
 Portainer est un conteneur Docker qui a pour but de faciliter l’installation et la gestion de vos autres conteneurs Docker. 
@@ -229,7 +229,7 @@ sudo ./upgrade-portainer.sh
 # su - root
 # apt install sudo
 # adduser 'user' sudo
-init 6
+# init 6
 ```
 
 Portainer permettant de mettre à jour facilement nos conteneurs, il peut être tentant de l’utiliser également pour le mettre à jour lui-même. 
