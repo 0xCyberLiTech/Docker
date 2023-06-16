@@ -4,22 +4,13 @@
 
 | Cat | Sommaire |
 |------|------| 
-| - A. | [Installer Docker sur Debian 11 & 12.](#installer-docker) |
+| - A. | [Installer manuelle de Docker sur Debian 11 & 12.](#installer-docker) |
 | - A1. | [Installation automatisée de Docker sur DEBIAN 11 & 12](install-docker.sh) |
 | - B. | [Installer Portainer sur Debian 11 & 12.](#installer-portainer) |
 | - B1. | [Installation automatisée de Portainer sur DEBIAN 11 & 12](install-portainer.sh) |
 | - C. | [Mise à jour de Portainer sur DEBIAN 11 & 12.](#upgrade-portainer) |
 | - C1. | [Mise à jour automatisée de Portainer sur DEBIAN 11 & 12](upgrade-portainer.sh) |
 
-## Installation automatisée de Docker sur DEBIAN 11 & 12
-
-## Via un fichier bash
-[Disponible ici](install-docker.sh)
-```
-touch install-docker.sh
-chmod +x install-docker.sh
-sudo ./install-docker.sh
-```
 ## Installation manuelle de Docker sur DEBIAN 11 & 12
 ### Prérequis avoir installé au paravant sudo si celui-ci n'est pas présent.
 ```
@@ -57,10 +48,10 @@ Pour fonctionner, Docker s'appuie sur différents composants qu'il est important
 - Docker Container correspondant aux containers en eux-mêmes, tout en sachant qu'une image peut permettre de créer plusieurs containers avec chacun un identifiant unique
 
 La documentation de Docker est disponible à cette adresse : docs.docker.com
-[La documentation de Docker est disponible ici.](https://docs.docker.com/)
+[ La documentation de Docker est disponible ici.](https://docs.docker.com/)
 
 <a name="installer-docker"></a>
-## Installer Docker sur Debian 11 & 12
+## - A. Installation manuelle de Docker sur Debian 11 & 12
 <a name="installer-les-dépendances-de-docker"></a>
 ### Installer les dépendances de Docker.
 
@@ -176,6 +167,15 @@ sudo docker stop 6108d7c37298
 Voici un exemple où l'image d'un container Docker Apache est téléchargée :
 ```
 sudo docker pull httpd
+```
+## - A1 Installation automatisée de Docker sur DEBIAN 11 & 12
+
+## Via un fichier bash
+[Disponible ici](install-docker.sh)
+```
+touch install-docker.sh
+chmod +x install-docker.sh
+sudo ./install-docker.sh
 ```
 ## Installation automatisée de Portainer sur DEBIAN 11 & 12
 
