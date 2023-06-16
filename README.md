@@ -1,17 +1,17 @@
 ![Docker Banner](https://thingsolver.com/wp-content/uploads/docker-cover.png)
 
-# A la découverte de Docker & Portainer :
+# A la découverte de Docker & Portainer sur DEBIAN 11 & 12:
 
 | Cat | Sommaire |
 |------|------| 
-| - A. | [Installation manuelle de Docker sur Debian 11 & 12.](#installation-manuelle-de-docker) |
-| - A1. | [Installation automatisée de Docker sur DEBIAN 11 & 12](#installation-automatisée-de-docker) |
-| - B. | [Installation manuelle de Portainer sur Debian 11 & 12.](#installation-manuelle-de-portainer) |
-| - B1. | [Installation automatisée de Portainer sur DEBIAN 11 & 12](#installation-automatisée-de-portainer) |
-| - C. | [Mise à jour manuelle de Portainer sur DEBIAN 11 & 12.](#mise-à-jour-manuelle-de-portainer) |
-| - C1. | [Mise à jour automatisée de Portainer sur DEBIAN 11 & 12](#mise-à-jour-automatisée-de-portainer) |
+| - A. | [Installation manuelle de Docker.](#installation-manuelle-de-docker) |
+| - A1. | [Installation automatisée de Docker.](#installation-automatisée-de-docker) |
+| - B. | [Installation manuelle de Portainer.](#installation-manuelle-de-portainer) |
+| - B1. | [Installation automatisée de Portainer.](#installation-automatisée-de-portainer) |
+| - C. | [Mise à jour manuelle de Portainer.](#mise-à-jour-manuelle-de-portainer) |
+| - C1. | [Mise à jour automatisée de Portainer.](#mise-à-jour-automatisée-de-portainer) |
 
-## Installation manuelle de Docker sur DEBIAN 11 & 12.
+## Installation manuelle de Docker.
 ### Prérequis avoir installé au paravant sudo si celui-ci n'est pas présent.
 ```
 # su - root
@@ -21,7 +21,7 @@
 ```
 
 ### I. [Présentation.](#présentation)
-### II. [Installation de Docker sur Debian 11 & 12.](#installation-manuelle-de-docker)
+### II. [Installation de Docker.](#installation-manuelle-de-docker)
    - . [Installation des dépendances de Docker.](#installer-les-dépendances-de-docker)
    - . [Ajouter le dépôt officiel Docker.](#ajouter-le-dépôt-officiel-docker)
    - . [Installation des paquets Docker.](#installation-des-paquets-docker)
@@ -51,7 +51,7 @@ La documentation de Docker est disponible à cette adresse : docs.docker.com
 [ La documentation de Docker est disponible ici.](https://docs.docker.com/)
 
 <a name="installation-manuelle-de-docker"></a>
-## - A. Installation manuelle de Docker sur Debian 11 & 12.
+## - A. Installation manuelle de Docker.
 
 -----------------------------------------
 <a name="installer-les-dépendances-de-docker"></a>
@@ -169,7 +169,7 @@ Voici un exemple où l'image d'un container Docker Apache est téléchargée :
 sudo docker pull httpd
 ```
 <a name="installation-automatisée-de-docker"></a>
-## - A1. Installation automatisée de Docker sur DEBIAN 11 & 12.
+## - A1. Installation automatisée de Docker.
 ### Via un fichier bash.
 [Disponible ici](installation-automatisée-de-docker.sh)
 ```
@@ -178,7 +178,7 @@ chmod +x installation-automatisée-de-docker.sh
 sudo ./installation-automatisée-de-docker.sh
 ```
 <a name="installation-manuelle-de-portainer"></a>
-## - B. Installation manuelle de Portainer sur DEBIAN 11 & 12.
+## - B. Installation manuelle de Portainer.
 ### Prérequis avoir installé au paravant sudo si celui-ci n'est pas présent.
 ```
 # su - root
@@ -202,7 +202,7 @@ Une fois le conteneur lancé, il suffit de se rendre sur http://@IPduserveur:900
 Les étapes de configuration sont ensuite limpides et vous devriez vous en sortir.
 
 <a name="installation-automatisée-de-portainer"></a>
-## - B1. Installation automatisée de Portainer sur DEBIAN 11 & 12.
+## - B1. Installation automatisée de Portainer.
 ### Via un fichier bash.
 [Disponible ici](installation-automatisée-de-portainer.sh)
 ```
