@@ -3,11 +3,11 @@
 # --------------------------------------------------------
 # 0xCyberLiTech
 # Script créé le 09-06-2023 
-# Script modifié le 15-06-2023
+# Script modifié le 21-06-2023
 #
-# touch upgrade-portainer.sh
-# chmod +x upgrade-portainer.sh
-# sudo ./upgrade-portainer.sh
+# touch mise-à-jour-automatisée-de-portainer.sh
+# chmod +x mise-à-jour-automatisée-de-portainer.sh
+# sudo ./mise-à-jour-automatisée-de-portainer.sh
 # --------------------------------------------------------
 
 # su - root
