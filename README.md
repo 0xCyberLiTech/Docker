@@ -53,7 +53,6 @@ La documentation de Docker est disponible à cette adresse : docs.docker.com
 <a name="installation-manuelle-de-docker"></a>
 ## - A. Installation manuelle de Docker.
 
------------------------------------------
 <a name="installer-les-dépendances-de-docker"></a>
 ### Installation des dépendances de Docker.
 
@@ -67,7 +66,6 @@ sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-pr
 ```
 Une fois cette étape effectuée, passez à la suite.
 
------------------------------------------
 <a name="ajouter-le-dépôt-officiel-docker"></a>
 ### Ajouter le dépôt officiel Docker.
 
@@ -85,7 +83,6 @@ sudo apt-get update
 ```
 Nous allons pouvoir passer à l'installation de Docker.
 
------------------------------------------
 <a name="installation-des-paquets-docker"></a>
 ### Installation des paquets Docker.
 
@@ -98,7 +95,7 @@ Si vous souhaitez que Docker démarre automatiquement avec votre machine Debian,
 ```
 sudo systemctl enable docker
 ```
------------------------------------------
+
 <a name="docker-est-il-bien-installé-"></a>
 ### Docker est-il bien installé ?
 
@@ -115,7 +112,6 @@ sudo docker run hello-world
 Lorsque ce container sera exécuté, le message "Hello from Docker!" sera retourné dans la console.
 C'est le signe que les différents composants sont opérationnels et que Docker a pu générer et exécuter le container.
 
------------------------------------------
 <a name="quelle-est-la-version-de-docker-installée-"></a>
 ### Quelle est la version de Docker installée ?
 
