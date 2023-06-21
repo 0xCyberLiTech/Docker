@@ -3,11 +3,11 @@
 # --------------------------------------------------------
 # 0xCyberLiTech
 # Script créé le 09-06-2023
-# Script modifié le 15-06-2023
+# Script modifié le 21-06-2023
 #
-# touch install-docker.sh.sh
-# chmod +x install-docker.sh.sh
-# sudo ./install-docker.sh.sh
+# touch installation-automatisée-de-docker.sh
+# chmod +x installation-automatisée-de-docker.sh
+# sudo ./installation-automatisée-de-docker.sh
 # --------------------------------------------------------
 
 # su - root
