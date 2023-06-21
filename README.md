@@ -121,7 +121,7 @@ sudo docker version
 ```
 <a name="quelques-commandes-docker"></a>
 ### Quelques commandes Docker :
-Docker est installé sur notre serveur Debian 11, mais comment faire pour l'utiliser ? Pour finir, nous allons voir quelques commandes utiles qui vous permettront de débuter avec Docker.
+Docker est installé sur notre serveur Debian 11 ou 12, mais comment faire pour l'utiliser ? Pour finir, nous allons voir quelques commandes utiles qui vous permettront de débuter avec Docker.
 
  - Lister les containers Docker en cours d'exécution
 ```
@@ -139,7 +139,7 @@ Par exemple, cela peut permettre de supprimer le container "hello-world" (ID 3c7
 ```
 sudo docker rm 3c745b055853
 ```
-Sur ma machine Debian 11, l'instance Docker dispose de trois images.
+Sur ma machine Debian (11 ou 12), l'instance Docker dispose de trois images.
 
  - Supprimer une image Docker
 L'image du container "hello-world" peut être supprimée, après avoir arrêté puis supprimé le container associé, via cette commande :
@@ -207,7 +207,7 @@ chmod +x installation-automatisée-de-portainer.sh
 sudo ./installation-automatisée-de-portainer.sh
 ```
 <a name="mise-à-jour-manuelle-de-portainer"></a>
-## - C. Mise à jour manuelle de Portainer sur DEBIAN 11 & 12.
+## - C. Mise à jour manuelle de Portainer.
 ### Prérequis avoir installé au paravant sudo si celui-ci n'est pas présent.
 ```
 # su - root
@@ -236,7 +236,7 @@ sudo docker run -d -p 9000:9000 --name portainer \
 Portainer est maintenant à jour et tous ses réglages ont été conservés.
 
 <a name="mise-à-jour-automatisée-de-portainer"></a>
-##  - C1. Mise à jour automatisée de Portainer sur DEBIAN 11 & 12.
+##  - C1. Mise à jour automatisée de Portainer.
 ### Via un fichier bash.
 [Disponible ici](mise-à-jour-automatisée-de-portainer.sh)
 ```
