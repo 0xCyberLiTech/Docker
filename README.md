@@ -10,6 +10,8 @@
 | - B1. | [Installation automatisée de Portainer.](#installation-automatisée-de-portainer) |
 | - C. | [Mise à jour manuelle de Portainer.](#mise-à-jour-manuelle-de-portainer) |
 | - C1. | [Mise à jour automatisée de Portainer.](#mise-à-jour-automatisée-de-portainer) |
+| - D. | [Installation manuelle de docker-compose dans sa dernière version.](#installation-manuelle-de-docker-compose) |
+| - D1. | [Installation automatisée de docker-compose dans sa dernière version.](#installation-automatisée-de-docker-compose) |
 
 ## Installation manuelle de Docker.
 ### Prérequis avoir installé au paravant sudo si celui-ci n'est pas présent.
@@ -243,4 +245,14 @@ Portainer est maintenant à jour et tous ses réglages ont été conservés.
 touch mise-à-jour-automatisée-de-portainer.sh
 chmod +x mise-à-jour-automatisée-de-portainer.sh
 sudo ./mise-à-jour-automatisée-de-portainer.sh
+```
+<a name="installation-manuelle-de-docker-compose"></a>
+## - D. Installation manuelle de docker-compose dans sa dernière version.
+
+```
+COMPOSE_VERSION=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep 'tag_name' | cut -d\" -f4)
+sh -c "curl -L https://github.com/docker/compose/releases/download/${COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose"
+chmod +x /usr/local/bin/docker-compose
+sh -c "curl -L https://raw.githubusercontent.com/docker/compose/${COMPOSE_VERSION}/contrib/completion/bash/docker-compose > /etc/bash_completion.d/docker-compose"
+docker-compose -v
 ```
