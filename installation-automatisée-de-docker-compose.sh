@@ -7,7 +7,7 @@
 #
 # touch installation-automatisée-de-docker-compose.sh
 # chmod +x installation-automatisée-de-docker-compose.sh
-# sudo ./installation-automatisée-de-docker-compose.sh
+# sh ./installation-automatisée-de-docker-compose.sh
 # --------------------------------------------------------
 
 # Récupération de la dernière version de docker-compose disponible :
