@@ -256,3 +256,8 @@ chmod +x /usr/local/bin/docker-compose
 sh -c "curl -L https://raw.githubusercontent.com/docker/compose/${COMPOSE_VERSION}/contrib/completion/bash/docker-compose > /etc/bash_completion.d/docker-compose"
 docker-compose -v
 ```
+<a name="installation-automatisée-de-docker-compose"></a>
+## - D1. Installation automatisée de Docker compose dans sa dernière version.
+### Via un fichier bash.
+[Disponible ici](installation-automatisée-de-docker-compose.sh)
+```
