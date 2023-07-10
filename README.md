@@ -10,7 +10,7 @@
 | - B1. | [Installation automatisée de Portainer.](#installation-automatisée-de-portainer) |
 | - C. | [Mise à jour manuelle de Portainer.](#mise-à-jour-manuelle-de-portainer) |
 | - C1. | [Mise à jour automatisée de Portainer.](#mise-à-jour-automatisée-de-portainer) |
-| - C2. | [Docker-compose c'est quoi ?](#Docker-compose-c-est-quoi) |
+| - C2. | [Docker-compose c'est quoi ?](#Docker-compose-c-est-quoi.md) |
 | - D. | [Installation manuelle de docker-compose dans sa dernière version.](#installation-manuelle-de-docker-compose) |
 | - D1. | [Installation automatisée de docker-compose dans sa dernière version.](#installation-automatisée-de-docker-compose) |
 
