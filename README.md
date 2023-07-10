@@ -248,14 +248,35 @@ chmod +x mise-à-jour-automatisée-de-portainer.sh
 sudo ./mise-à-jour-automatisée-de-portainer.sh
 ```
 <a name="installation-manuelle-de-docker-compose"></a>
-## - D. Installation manuelle de docker-compose dans sa dernière version.
+## - D. Installation manuelle de docker-compose dans sa dernière version sur DEBIAN 11 & DEBIAN 12.
 
+Vous avez besoin que curl et wget soient installés sur votre système pour cette opération. 
+
+Accès au Terminal en tant qu'utilisateur avec les privilèges sudo ou root.
 ```
-COMPOSE_VERSION=$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep 'tag_name' | cut -d\" -f4)
-sh -c "curl -L https://github.com/docker/compose/releases/download/${COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose"
-chmod +x /usr/local/bin/docker-compose
-sh -c "curl -L https://raw.githubusercontent.com/docker/compose/${COMPOSE_VERSION}/contrib/completion/bash/docker-compose > /etc/bash_completion.d/docker-compose"
-docker-compose -v
+sudo apt update
+sudo apt install -y curl wget
+```
+Une fois curl installé, téléchargez la dernière version de Compose sur votre machine Linux.
+```
+curl -s https://api.github.com/repos/docker/compose/releases/latest | grep browser_download_url  | grep docker-compose-linux-x86_64 | cut -d '"' -f 4 | wget -qi -
+```
+Rendre le fichier binaire exécutable.
+```
+chmod +x docker-compose-linux-x86_64
+```
+Déplacez le fichier vers /usr/local/bin/docker-compose.
+```
+sudo mv docker-compose-linux-x86_64 /usr/local/bin/docker-compose
+```
+Confirmez la version.
+```
+docker-compose version v2.19.1
+```
+Ajouter un utilisateur au groupe Docker :
+```
+sudo usermod -aG docker $USER
+newgrp docker
 ```
 <a name="installation-automatisée-de-docker-compose"></a>
 ## - D1. Installation automatisée de Docker compose dans sa dernière version.
