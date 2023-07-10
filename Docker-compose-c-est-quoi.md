@@ -10,7 +10,7 @@ Docker Compose n’est pas installé par défaut et s’appuie sur le moteur Doc
 
 | Cat | Sommaire |
 |------|------| 
-| - A. | [Installation manuelle de Docker.](balise_01) |
+| - A. | [Installation manuelle de Docker.](balise-01) |
 
 
 
