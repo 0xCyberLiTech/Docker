@@ -10,14 +10,6 @@ Docker Compose n’est pas installé par défaut et s’appuie sur le moteur Doc
 
 Il faut se rendre vers le [README.md](README.md)
 
-
-
-
-docker-compose --version
-docker-compose version 1.24.0, build 0aa59064
-
-Si vous n’avez pas d’erreur, alors vous pouvez poursuivre la lecture de ce chapitre.
-
 Docker Compose et Dockerfile
 
 Le but de cet article est d’améliorer notre ancienne application LAMP. Par la suite nous allons séparer le conteneur de notre application web par rapport au conteneur de notre base de données.
@@ -28,7 +20,7 @@ Amélioration du Dockerfile
 
 Profitons de cet article pour améliorer le Dockerfile de notre stack LAMP en réduisant son nombre d’instructions. Pour cela, on se basera sur une nouvelle image.
 
-    Si vous souhaitez conteneuriser une application assez connue, alors je vous conseille de toujours fouiller dans le Hub Docker, afin de savoir si une image officielle de l’application existe déjà.
+Si vous souhaitez conteneuriser une application assez connue, alors je vous conseille de toujours fouiller dans le Hub Docker, afin de savoir si une image officielle de l’application existe déjà.
 
 En cherchant dans le Hub Docker, j’ai pu dénicher les images adéquates, notamment :
 
