@@ -8,9 +8,7 @@ Installation du docker-compose
 
 Docker Compose n’est pas installé par défaut et s’appuie sur le moteur Docker pour fonctionner.
 
-| Cat | Sommaire |
-|------|------| 
-| - A. | [Installation manuelle de Docker.](README.md) |
+Il faut se rendre vers le [README.md](README.md)
 
 
 
