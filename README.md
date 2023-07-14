@@ -316,19 +316,15 @@ Pour une architecture différente, remplacez-la par l’architecture souhaitée.
 
 Appliquez des autorisations exécutables au fichier binaire :
 ```
-chmod +x docker-compose-linux-x86_64
+chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
 ```
 ou, si vous avez choisi d’installer Compose pour tous les utilisateurs :
 ```
-sudo chmod +x docker-compose-linux-x86_64
-```
-Déplacez le fichier vers /usr/local/bin/docker-compose.
-```
-sudo mv docker-compose-linux-x86_64 /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
 ```
 Confirmez la version.
 ```
-docker-compose version
+docker compose version
 
 2) Mettez à jour l’index du package et installez la dernière version de Docker Compose :
 
