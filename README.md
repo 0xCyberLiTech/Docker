@@ -182,7 +182,7 @@ sudo ./installation-automatisée-de-docker.sh
 ```
 # su - root
 # apt install sudo
-# adduser 'user' sudo
+# usermod -aG sudo cyberlitech
 # init 6
 ```
 Portainer est un conteneur Docker qui a pour but de faciliter l’installation et la gestion de vos autres conteneurs Docker. 
@@ -215,7 +215,7 @@ sudo ./installation-automatisée-de-portainer.sh
 ```
 # su - root
 # apt install sudo
-# adduser 'user' sudo
+# usermod -aG sudo cyberlitech
 # init 6
 ```
 Portainer permettant de mettre à jour facilement nos conteneurs, il peut être tentant de l’utiliser également pour le mettre à jour lui-même. 
