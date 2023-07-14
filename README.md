@@ -121,11 +121,11 @@ Pour cet exemple, vous utiliserez un utilisateur "ex : cyberlitech" pour exécut
 
 Si vous avez besoin de créer un nouvel utilisateur « ex : cyberlitech » sur votre système Debian utiliser la commande suivante.
 ```
-useradd -m -s /bin/bash cyberlitech
+sudo useradd -m -s /bin/bash cyberlitech
 ```
 Après cela, exécutez la commande suivante pour ajouter l'utilisateur 'ex : cyberlitech' au groupe 'docker'.
 ```
-usermod -aG docker cyberlitech
+sudo usermod -aG docker cyberlitech
 ```
 Connectez-vous maintenant en tant qu'utilisateur 'johndoe' à l'aide de la commande ci-dessous et vérifiez la configuration.
 ```
