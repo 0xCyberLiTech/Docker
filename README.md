@@ -19,7 +19,7 @@
 ```
 # su - root
 # apt install sudo
-# adduser 'user' sudo
+# usermod -aG sudo cyberlitech
 # init 6
 ```
 
