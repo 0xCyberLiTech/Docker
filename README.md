@@ -11,8 +11,7 @@
 | - C. | [Mise à jour manuelle de Portainer.](#mise-à-jour-manuelle-de-portainer) |
 | - C1. | [Mise à jour automatisée de Portainer.](#mise-à-jour-automatisée-de-portainer) |
 | - C2. | [Docker-compose c'est quoi ?](Docker-compose-c-est-quoi.md) |
-| - D. | [Installation manuelle de docker-compose dans sa dernière version.](#installation-manuelle-de-docker-compose) |
-| - D1. | [Installation automatisée de docker-compose dans sa dernière version.](#installation-automatisée-de-docker-compose) |
+| - D. | [Installation manuelle de docker-compose_plugin V2.](#installation-manuelle-de-docker-compose) |
 
 ## Installation manuelle de Docker.
 ### Prérequis avoir installé au paravant sudo si celui-ci n'est pas présent.
@@ -279,22 +278,49 @@ chmod +x mise-à-jour-automatisée-de-portainer.sh
 sudo ./mise-à-jour-automatisée-de-portainer.sh
 ```
 <a name="installation-manuelle-de-docker-compose"></a>
-## - D. Installation manuelle de docker-compose dans sa dernière version sur DEBIAN 11 & DEBIAN 12.
+## - D. Installation manuelle de docker-compose V2 sur DEBIAN 11 & DEBIAN 12.
 
-Vous avez besoin que curl et wget soient installés sur votre système pour cette opération. 
+À partir de juillet 2023, Compose V1 a cessé de recevoir des mises à jour.
 
-Accès au Terminal en tant qu'utilisateur avec les privilèges sudo ou root.
+Il n’est également plus disponible dans les nouvelles versions de Docker Desktop.
+
+Compose V2 est inclus dans toutes les versions actuellement prises en charge de Docker Desktop.
 ```
 sudo apt update
 sudo apt install -y curl wget
 ```
 Une fois curl installé, téléchargez la dernière version de Compose sur votre machine Linux.
+
+Installer le plugin manuellement :
+
+Note :
+
+Cette option nécessite que vous gériez les mises à niveau manuellement. Nous vous recommandons de configurer le référentiel de Docker pour faciliter la maintenance.
+
+Pour télécharger et installer le plug-in Compose CLI, exécutez :
 ```
-curl -s https://api.github.com/repos/docker/compose/releases/latest | grep browser_download_url  | grep docker-compose-linux-x86_64 | cut -d '"' -f 4 | wget -qi -
+DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
+mkdir -p $DOCKER_CONFIG/cli-plugins
+curl -SL https://github.com/docker/compose/releases/download/v2.20.0/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
 ```
-Rendre le fichier binaire exécutable.
+Cette commande télécharge la dernière version de Docker Compose (à partir du référentiel Compose releases) et installe Compose pour l’utilisateur actif sous répertoire.$HOME.
+
+Pour installer :
+
+Docker Compose pour tous les utilisateurs de votre système, remplacez par :
+```
+~/.docker/cli-plugins      /usr/local/lib/docker/cli-plugins
+```
+Une version différente de Compose, remplacez-la par la version de Compose que vous souhaitez utiliser.v2.20.0.
+Pour une architecture différente, remplacez-la par l’architecture souhaitée.x86_64.
+
+Appliquez des autorisations exécutables au fichier binaire :
 ```
 chmod +x docker-compose-linux-x86_64
+```
+ou, si vous avez choisi d’installer Compose pour tous les utilisateurs :
+```
+sudo chmod +x docker-compose-linux-x86_64
 ```
 Déplacez le fichier vers /usr/local/bin/docker-compose.
 ```
@@ -303,14 +329,20 @@ sudo mv docker-compose-linux-x86_64 /usr/local/bin/docker-compose
 Confirmez la version.
 ```
 docker-compose version
-```
-Ajouter un utilisateur au groupe Docker :
-```
-sudo usermod -aG docker $USER
-newgrp docker
-```
-<a name="installation-automatisée-de-docker-compose"></a>
-## - D1. Installation automatisée de Docker compose dans sa dernière version.
-### Via un fichier bash.
-[Disponible ici](installation-automatisée-de-docker-compose.sh)
 
+2) Mettez à jour l’index du package et installez la dernière version de Docker Compose :
+
+Pour Ubuntu et Debian, exécutez :
+```
+sudo apt-get update
+sudo apt-get install docker-compose-plugin
+```
+Mettre à jour la composition via les binaires.
+
+Pour mettre à jour le plug-in Compose, exécutez les commandes suivantes :
+
+Pour Ubuntu et Debian, exécutez :
+```
+sudo apt-get update
+sudo apt-get install docker-compose-plugin
+```
