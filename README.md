@@ -271,7 +271,7 @@ sudo mv docker-compose-linux-x86_64 /usr/local/bin/docker-compose
 ```
 Confirmez la version.
 ```
-docker-compose version v2.19.1
+docker-compose version
 ```
 Ajouter un utilisateur au groupe Docker :
 ```
