@@ -112,6 +112,26 @@ systemctl is-enabled docker
 systemctl is-enabled containerd
 systemctl status docker containerd
 ```
+Autoriser l'utilisateur non root à utiliser Docker :
+
+Par défaut, Docker autorise uniquement l'utilisateur "root" à exécuter des conteneurs.
+
+Et pour qu'un utilisateur non root puisse exécuter des conteneurs, vous devez ajouter votre utilisateur non root au groupe 'docker', qui est automatiquement créé lors de l'installation de Docker.
+
+Pour cet exemple, vous utiliserez un utilisateur "ex : cyberlitech" pour exécuter un conteneur Docker.
+
+Si vous avez besoin de créer un nouvel utilisateur « ex : cyberlitech » sur votre système Debian utiliser la commande suivante.
+```
+useradd -m -s /bin/bash cyberlitech
+```
+Après cela, exécutez la commande suivante pour ajouter l'utilisateur 'ex : cyberlitech' au groupe 'docker'.
+```
+usermod -aG menu fixe cybelitech
+```
+Connectez-vous maintenant en tant qu'utilisateur 'johndoe' à l'aide de la commande ci-dessous et vérifiez la configuration.
+```
+su - cyberlitech
+```
 Ensuite, le meilleur moyen de vérifier si Docker est installé, c'est d'exécuter le container nommé "hello-world".
 La commande ci-dessous permettra de télécharger l'image de ce container et de l'exécuter.
 ```
