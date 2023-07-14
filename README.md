@@ -325,7 +325,7 @@ sudo chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
 Confirmez la version.
 ```
 docker compose version
-
+```
 2) Mettez à jour l’index du package et installez la dernière version de Docker Compose :
 
 Pour Ubuntu et Debian, exécutez :
