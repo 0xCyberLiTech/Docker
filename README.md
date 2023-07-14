@@ -167,6 +167,12 @@ Voici un exemple où l'image d'un container Docker Apache est téléchargée :
 ```
 sudo docker pull httpd
 ```
+Supprimer toutes les images en une seule fois.
+
+Pour supprimer toutes les images, il existe une commande simple pour le faire.
+```
+docker rmi $(docker images -q)
+```
 <a name="installation-automatisée-de-docker"></a>
 ## - A1. Installation automatisée de Docker.
 ### Via un fichier bash.
