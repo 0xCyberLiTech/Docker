@@ -125,7 +125,7 @@ useradd -m -s /bin/bash cyberlitech
 ```
 Après cela, exécutez la commande suivante pour ajouter l'utilisateur 'ex : cyberlitech' au groupe 'docker'.
 ```
-usermod -aG menu fixe cybelitech
+usermod -aG docker cyberlitech
 ```
 Connectez-vous maintenant en tant qu'utilisateur 'johndoe' à l'aide de la commande ci-dessous et vérifiez la configuration.
 ```
