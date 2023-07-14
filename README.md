@@ -65,7 +65,11 @@ sudo apt-get update && sudo apt upgrade -y
 ```
 Puis, exécutez la commande ci-dessous pour installer les paquets :
 ```
-sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common -y
+sudo apt-get install apt-transport-https \
+             ca-certificates \
+             curl \
+             gnupg2 \
+             software-properties-common -y
 ```
 Une fois cette étape effectuée, passez à la suite.
 
@@ -74,11 +78,11 @@ Une fois cette étape effectuée, passez à la suite.
 
 Deuxièmement, nous devons ajouter le dépôt officiel de Docker à notre machine Debian afin de pouvoir récupérer les sources. Commençons par récupérer la clé GPG qui nous permettra de valider les paquets récupérés depuis le dépôt Docker :
 ```
-sudo curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 ```
 Ensuite, on ajoute le dépôt Docker à la liste des sources de notre machine :
 ```
-sudo echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 Pour finir, nous devons mettre à jour le cache des paquets pour prendre en compte les paquets de ce nouveau dépôt :
 ```
@@ -98,19 +102,20 @@ Si vous souhaitez que Docker démarre automatiquement avec votre machine Debian,
 ```
 sudo systemctl enable docker
 ```
-
 <a name="docker-est-il-bien-installé-"></a>
 ### Docker est-il bien installé ?
 
 L'installation des paquets est terminée, mais Docker est-il correctement installé ?
 Pour répondre à cette question, vous pouvez regarder le statut de Docker, ce qui sera une première indication si le service est identifié sur la machine.
 ```
-sudo systemctl status docker.service
+systemctl is-enabled docker
+systemctl is-enabled containerd
+systemctl status docker containerd
 ```
 Ensuite, le meilleur moyen de vérifier si Docker est installé, c'est d'exécuter le container nommé "hello-world".
 La commande ci-dessous permettra de télécharger l'image de ce container et de l'exécuter.
 ```
-sudo docker run hello-world
+docker run hello-world
 ```
 Lorsque ce container sera exécuté, le message "Hello from Docker!" sera retourné dans la console.
 C'est le signe que les différents composants sont opérationnels et que Docker a pu générer et exécuter le container.
@@ -120,7 +125,7 @@ C'est le signe que les différents composants sont opérationnels et que Docker 
 
 Pour finir avec la phase d'installation, sachez qu'à tout moment vous pouvez voir quelle est la version de Docker que vous utilisez grâce à la commande suivante :
 ```
-sudo docker version
+docker version
 ```
 <a name="quelques-commandes-docker"></a>
 ### Quelques commandes Docker :
@@ -128,13 +133,13 @@ Docker est installé sur notre serveur Debian 11 ou 12, mais comment faire pour 
 
  - Lister les containers Docker en cours d'exécution
 ```
-sudo docker ps
+docker ps
 ```
 Le résultat de la commande permet d'avoir une liste avec différentes informations dont l'ID unique du container, le nom de l'image, et le statut.
 
  - Lister tous les containers Docker enregistrés sur votre machine, peu importe l'état.
 ```
-sudo docker ps -a
+docker ps -a
 ```
  - Supprimer un container Docker.
 A partir d'un ID, il est possible de supprimer un container Docker.
