@@ -134,7 +134,7 @@ su - cyberlitech
 Ensuite, le meilleur moyen de vérifier si Docker est installé, c'est d'exécuter le container nommé "hello-world".
 La commande ci-dessous permettra de télécharger l'image de ce container et de l'exécuter.
 ```
-docker run hello-world
+sudo docker run hello-world
 ```
 Lorsque ce container sera exécuté, le message "Hello from Docker!" sera retourné dans la console.
 C'est le signe que les différents composants sont opérationnels et que Docker a pu générer et exécuter le container.
@@ -144,7 +144,7 @@ C'est le signe que les différents composants sont opérationnels et que Docker 
 
 Pour finir avec la phase d'installation, sachez qu'à tout moment vous pouvez voir quelle est la version de Docker que vous utilisez grâce à la commande suivante :
 ```
-docker version
+sudo docker version
 ```
 <a name="quelques-commandes-docker"></a>
 ### Quelques commandes Docker :
@@ -152,13 +152,13 @@ Docker est installé sur notre serveur Debian 11 ou 12, mais comment faire pour 
 
  - Lister les containers Docker en cours d'exécution
 ```
-docker ps
+sudo docker ps
 ```
 Le résultat de la commande permet d'avoir une liste avec différentes informations dont l'ID unique du container, le nom de l'image, et le statut.
 
  - Lister tous les containers Docker enregistrés sur votre machine, peu importe l'état.
 ```
-docker ps -a
+sudo docker ps -a
 ```
  - Supprimer un container Docker.
 A partir d'un ID, il est possible de supprimer un container Docker.
