@@ -325,9 +325,9 @@ Confirmez la version.
 ```
 docker compose version
 ```
-2) Mettez à jour l’index du package et installez la dernière version de Docker Compose :
+2) Réactualiser la mise à jour des dépôts et installez le paquet 'docker-compose-plugin', (docker compose v2).
 
-Pour Ubuntu et Debian, exécutez :
+Pour Debian 12, exécutez :
 ```
 sudo apt-get update
 sudo apt-get install docker-compose-plugin
