@@ -7,8 +7,7 @@
 | - A. | [Installation manuelle de Docker.](#installation-manuelle-de-docker) |
 | - B. | [Installation manuelle de Portainer.](#installation-manuelle-de-portainer) |
 | - C. | [Mise à jour manuelle de Portainer.](#mise-à-jour-manuelle-de-portainer) |
-| - C1. | [Mise à jour automatisée de Portainer.](#mise-à-jour-automatisée-de-portainer) |
-| - C2. | [Docker-compose c'est quoi ?](Docker-compose-c-est-quoi.md) |
+| - c1. | [Mise à jour automatisée de Portainer.](#mise-à-jour-automatisée-de-portainer) |
 | - D. | [Installation manuelle de docker-compose_plugin V2.](#installation-manuelle-de-docker-compose) |
 
 ## Installation manuelle de Docker.
