@@ -79,14 +79,10 @@ Une fois cette étape effectuée, passez à la suite.
 
 Commençons par récupérer la clé GPG qui nous permettra de valider les paquets récupérés depuis le dépôt Docker repository :
 ```
-# curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/debian.gpg
 ```
 Ensuite, on ajoute le dépôt Docker à la liste des sources de notre machine Docker repository stable :
 ```
-#echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" #| sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-
 sudo add-apt-repository "deb [arch=$(dpkg --print-architecture)] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
 ```
 Pour finir, nous devons mettre à jour le cache des paquets pour prendre en compte les paquets de ce nouveau dépôt :
@@ -99,7 +95,6 @@ sudo apt update
 
 Nous allons pouvoir passer à l'installation de Docker.
 ```
-# sudo apt install docker-ce docker-ce-cli containerd.io (docker-compose-plugin) # V2
 sudo apt install \
          docker-ce \
          docker-ce-cli \
@@ -116,11 +111,6 @@ Si vous souhaitez que Docker démarre automatiquement avec votre machine Debian,
 ```
 sudo systemctl start docker && sudo systemctl enable docker
 ```
-
-
-
-
-
 <a name="docker-est-il-bien-installé-"></a>
 ### Docker est-il bien installé ?
 
