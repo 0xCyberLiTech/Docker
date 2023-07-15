@@ -290,7 +290,7 @@ sudo apt update
 ```
 sudo apt install curl wget -y
 ```
-# 1) - Installer le doker compose v2 manuellement.
+# 1) - Installer doker compose v2 manuellement.
 
 Note :
 
@@ -326,7 +326,7 @@ Confirmez la version.
 ```
 docker compose version
 ```
-# 2) Installer le docker compose v2 depuis le paquet 'docker-compose-plugin'.
+# 2) Installer docker compose v2 depuis le paquet 'docker-compose-plugin'.
 
 Réactualiser la mise à jour des dépôts.
 ```
