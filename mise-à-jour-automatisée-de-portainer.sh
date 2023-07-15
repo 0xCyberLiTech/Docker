@@ -3,7 +3,7 @@
 # --------------------------------------------------------
 # 0xCyberLiTech
 # Script créé le 09-06-2023 
-# Script modifié le 21-06-2023
+# Script modifié le 14-07-2023
 #
 # touch mise-à-jour-automatisée-de-portainer.sh
 # chmod +x mise-à-jour-automatisée-de-portainer.sh
