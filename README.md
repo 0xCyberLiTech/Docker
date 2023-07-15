@@ -315,6 +315,7 @@ Pour une architecture différente, remplacez-la par l’architecture souhaitée.
 
 Appliquez des autorisations exécutables au fichier binaire :
 ```
+# (chmod +x ~/.docker/cli-plugins)
 chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
 ```
 ou, si vous avez choisi d’installer Compose pour tous les utilisateurs :
