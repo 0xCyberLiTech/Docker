@@ -10,7 +10,7 @@
 | - c1. | [Mise à jour automatisée de Portainer.](#mise-à-jour-automatisée-de-portainer) |
 | - D. | [Installation manuelle de docker-compose_plugin V2.](#installation-manuelle-de-docker-compose) |
 
-## Installation manuelle de Docker.
+## - A. Installation manuelle de Docker.
 ### Prérequis avoir installé au paravant sudo si celui-ci n'est pas présent.
 ```
 # su - root
