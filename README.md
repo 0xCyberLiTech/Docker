@@ -99,7 +99,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 ```
 Si vous souhaitez que Docker démarre automatiquement avec votre machine Debian, la commande suivante doit être exécutée :
 ```
-sudo systemctl enable docker
+sudo systemctl start docker && sudo systemctl enable docker
 ```
 <a name="docker-est-il-bien-installé-"></a>
 ### Docker est-il bien installé ?
@@ -123,9 +123,10 @@ Si vous avez besoin de créer un nouvel utilisateur « ex : cyberlitech » sur v
 ```
 sudo useradd -m -s /bin/bash cyberlitech
 ```
-Après cela, exécutez la commande suivante pour ajouter l'utilisateur 'ex : cyberlitech' au groupe 'docker'.
+Une fois l’installation terminée, vous devez ajouter votre utilisateur 'cyberlitech' au groupe Docker pour pouvoir exécuter des commandes Docker sans utiliser sudo.
 ```
 sudo usermod -aG docker cyberlitech
+newgrp docker
 ```
 Connectez-vous maintenant en tant qu'utilisateur 'johndoe' à l'aide de la commande ci-dessous et vérifiez la configuration.
 ```
