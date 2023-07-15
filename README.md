@@ -53,7 +53,7 @@ La documentation de Docker est disponible à cette adresse : docs.docker.com
 ## - A. Installation manuelle de Docker.
 
 <a name="installer-les-dépendances-de-docker"></a>
-### Installation des dépendances de Docker.
+### - Installation des dépendances de Docker.
 
 Mettre à jour votre système :
 
