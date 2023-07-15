@@ -5,9 +5,7 @@
 | Cat | Sommaire |
 |------|------| 
 | - A. | [Installation manuelle de Docker.](#installation-manuelle-de-docker) |
-| - A1. | [Installation automatisée de Docker.](#installation-automatisée-de-docker) |
 | - B. | [Installation manuelle de Portainer.](#installation-manuelle-de-portainer) |
-| - B1. | [Installation automatisée de Portainer.](#installation-automatisée-de-portainer) |
 | - C. | [Mise à jour manuelle de Portainer.](#mise-à-jour-manuelle-de-portainer) |
 | - C1. | [Mise à jour automatisée de Portainer.](#mise-à-jour-automatisée-de-portainer) |
 | - C2. | [Docker-compose c'est quoi ?](Docker-compose-c-est-quoi.md) |
