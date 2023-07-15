@@ -4,11 +4,11 @@
 
 | Cat | Sommaire |
 |------|------| 
-| - A. | [Installation manuelle de Docker.](#installation-manuelle-de-docker) |
+| - A. | [Installation manuelle de Docker Engine & Docker compose (docker-compose-plugin v2)](#balise-01) |
 | - B. | [Installation manuelle de Portainer.](#installation-manuelle-de-portainer) |
 | - C. | [Mise à jour manuelle de Portainer.](#mise-à-jour-manuelle-de-portainer) |
 | - c1. | [Mise à jour automatisée de Portainer.](#mise-à-jour-automatisée-de-portainer) |
-| - D. | [Installation manuelle de docker-compose-plugin V2.](#installation-manuelle-de-docker-compose) |
+
 
 ## - A. Installation manuelle de Docker.
 ### Prérequis avoir installé au paravant sudo si celui-ci n'est pas présent.
@@ -18,7 +18,6 @@
 # usermod -aG sudo cyberlitech
 # init 6
 ```
-
 ### I. [Présentation.](#présentation)
 ### II. [Installation de Docker.](#installation-manuelle-de-docker)
    - . [Installation des dépendances de Docker.](#installer-les-dépendances-de-docker)
@@ -49,8 +48,29 @@ Pour fonctionner, Docker s'appuie sur différents composants qu'il est important
 La documentation de Docker est disponible à cette adresse : docs.docker.com
 [ La documentation de Docker est disponible ici.](https://docs.docker.com/)
 
-<a name="installation-manuelle-de-docker"></a>
-## - A. Installation manuelle de Docker.
+<a name="base-01"></a>
+## - A. Installation manuelle de Docker Engine & Docker compose (docker-compose-plugin v2).
+
+Installer Docker Engine sur Debian.
+
+Pour commencer à utiliser Docker Engine sur Debian, assurez-vous de remplir les conditions préalables, puis suivez les étapes d’installation.
+
+Conditions préalables.
+
+Note :
+
+Si vous utilisez ufw ou firewalld pour gérer les paramètres du pare-feu, sachez que lorsque vous exposez des ports de conteneur à l’aide de Docker, ces ports contournent votre Règles de pare-feu. Pour plus d’informations, reportez-vous à Docker et ufw.
+
+Configuration requise pour le système d’exploitation.
+Pour installer Docker Engine, vous avez besoin de la version 64 bits de Debian.
+
+Debian Bookworm 12 (stable)
+
+Installation à l’aide des dépôts : apt
+
+Avant d’installer Docker Engine pour la première fois sur une nouvelle machine hôte, vous doivent configurer les dépôts de Docker. 
+
+Ensuite, vous pouvez installer et mettre à jour Docker à partir de ceux-ci.
 
 <a name="installer-les-dépendances-de-docker"></a>
 ### - Installation des dépendances de Docker.
@@ -65,40 +85,45 @@ Pour pouvoir installer Docker et tous les paquets requis, nous devons ajouter le
 
 Nous allons commencer par installer les paquets requis:
 ```
-sudo apt install lsb-release \
-         gnupg2 \
-         apt-transport-https \
-         ca-certificates \
-         curl \
-         software-properties-common -y
+sudo apt-get install \
+             ca-certificates \
+             curl \
+             gnupg -y
 ```
 Une fois cette étape effectuée, passez à la suite.
 
 <a name="ajouter-le-dépôt-officiel-docker"></a>
-### Ajouter le dépôt officiel Docker.
+### Ajoutez la clé GPG officielle de Docker:.
 
-Commençons par récupérer la clé GPG qui nous permettra de valider les paquets récupérés depuis le dépôt Docker repository :
+Commençons par récupérer la clé GPG qui nous permettra de valider les paquets.
 ```
-curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/debian.gpg
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
 ```
-Ensuite, on ajoute le dépôt Docker à la liste des sources de notre machine Docker repository stable :
+Utilisez la commande suivante pour configurer les nouveaux dépôts vers /etc/apt/sources.list.d/docker.list 
 ```
-sudo add-apt-repository "deb [arch=$(dpkg --print-architecture)] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
+echo \
+  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
+  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
-Pour finir, nous devons mettre à jour le cache des paquets pour prendre en compte les paquets de ce nouveau dépôt :
-Une fois le dépôt ajouté, vous pouvez continuer et installer Docker sur Debian 12 (Bookworm) en utilisant les commandes ci-dessous :
+Poursuivre l'installation de docker.
+
+Mettez à jour l’index de la liste des dépôts 'apt'.
 ```
-sudo apt update
+sudo apt-get update
 ```
 <a name="installation-des-paquets-docker"></a>
-### Installation des paquets Docker.
+### Installez Docker Engine, containerd, et Docker Compose.
 
-Nous allons pouvoir passer à l'installation de Docker.
+Pour installer la dernière version, exécutez :
 ```
-sudo apt install \
-         docker-ce \
-         docker-ce-cli \
-         containerd.io -y
+sudo apt-get install docker-ce \
+             docker-ce-cli \
+             containerd.io \
+             docker-buildx-plugin \
+             docker-compose-plugin -y
 ```
 Une fois l’installation terminée, vous devez ajouter votre utilisateur au groupe Docker pour pouvoir exécuter des commandes Docker sans utiliser sudo.
 ```
@@ -196,15 +221,6 @@ Pour supprimer toutes les images, il existe une commande simple pour le faire.
 ```
 docker rmi $(docker images -q)
 ```
-<a name="installation-automatisée-de-docker"></a>
-## - A1. Installation automatisée de Docker.
-### Via un fichier bash.
-[Disponible ici](installation-automatisée-de-docker.sh)
-```
-touch installation-automatisée-de-docker.sh
-chmod +x installation-automatisée-de-docker.sh
-sudo ./installation-automatisée-de-docker.sh
-```
 <a name="installation-manuelle-de-portainer"></a>
 ## - B. Installation manuelle de Portainer.
 ### Prérequis avoir installé au paravant sudo si celui-ci n'est pas présent.
@@ -275,71 +291,4 @@ Portainer est maintenant à jour et tous ses réglages ont été conservés.
 touch mise-à-jour-automatisée-de-portainer.sh
 chmod +x mise-à-jour-automatisée-de-portainer.sh
 sudo ./mise-à-jour-automatisée-de-portainer.sh
-```
-<a name="installation-manuelle-de-docker-compose"></a>
-## - D. Installation manuelle de docker-compose v2 sur DEBIAN 12.
-
-À partir de juillet 2023, Compose v1 a cessé de recevoir des mises à jour.
-
-Il n’est également plus disponible dans les nouvelles versions de Docker Desktop.
-
-Compose v2 est inclus dans toutes les versions actuellement prises en charge de Docker Desktop.
-```
-sudo apt update
-```
-```
-sudo apt install curl wget -y
-```
-# 1) - Installer doker compose v2 manuellement.
-
-Note :
-
-Cette option nécessite que vous gériez les mises à niveau manuellement. Nous vous recommandons de configurer le référentiel de Docker pour faciliter la maintenance.
-
-Pour télécharger et installer le plug-in Compose CLI, exécutez :
-```
-DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
-mkdir -p $DOCKER_CONFIG/cli-plugins
-curl -SL https://github.com/docker/compose/releases/download/v2.20.0/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
-```
-Cette commande télécharge la dernière version de Docker Compose (à partir du paquet Compose releases) et installe Compose pour l’utilisateur actif sous répertoire.$HOME.
-
-Pour installer Docker Compose pour tous les utilisateurs de votre système, remplacez par :
-```
-~/.docker/cli-plugins      /usr/local/lib/docker/cli-plugins
-```
-Ex : Pour l’utilisateur actif sous le répertoire.$HOME.
-```
-curl -SL https://github.com/docker/compose/releases/download/v2.20.0/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
-```
-Ex : Pour tous les utilisateurs de votre système.
-```
-curl -SL https://github.com/docker/compose/releases/download/v2.20.0/docker-compose-linux-x86_64 -o /usr/local/lib/docker/cli-plugins/docker-compose
-```
-- Une version différente de Compose, remplacez-la par la version de Compose que vous souhaitez utiliser.v2.20.0.
-- Pour une architecture différente, remplacez-la par l’architecture souhaitée.x86_64.
-
-Appliquez des autorisations exécutables au fichier binaire :
-```
-chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
-```
-Ou, si vous avez choisi d’installer Compose pour tous les utilisateurs :
-```
-sudo chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
-```
-Confirmez la version.
-```
-docker compose version
-
-Docker Compose version v2.19.1
-```
-# 2) Installer docker compose v2 depuis le paquet 'docker-compose-plugin'.
-
-Réactualiser la mise à jour des dépôts.
-```
-sudo apt-get update
-```
-Installer paquet 'docker-compose-plugin'.
-```
-sudo apt-get install docker-compose-plugin
 ```
