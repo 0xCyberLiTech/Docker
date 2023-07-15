@@ -302,29 +302,36 @@ DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
 mkdir -p $DOCKER_CONFIG/cli-plugins
 curl -SL https://github.com/docker/compose/releases/download/v2.20.0/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
 ```
-Cette commande télécharge la dernière version de Docker Compose (à partir du référentiel Compose releases) et installe Compose pour l’utilisateur actif sous répertoire.$HOME.
+Cette commande télécharge la dernière version de Docker Compose (à partir du paquet Compose releases) et installe Compose pour l’utilisateur actif sous répertoire.$HOME.
 
-Pour installer :
-
-Docker Compose pour tous les utilisateurs de votre système, remplacez par :
+Pour installer Docker Compose pour tous les utilisateurs de votre système, remplacez par :
 ```
 ~/.docker/cli-plugins      /usr/local/lib/docker/cli-plugins
 ```
-Une version différente de Compose, remplacez-la par la version de Compose que vous souhaitez utiliser.v2.20.0.
-Pour une architecture différente, remplacez-la par l’architecture souhaitée.x86_64.
+Ex : Pour l’utilisateur actif sous le répertoire.$HOME.
+```
+curl -SL https://github.com/docker/compose/releases/download/v2.20.0/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
+```
+Ex : Pour tous les utilisateurs de votre système.
+```
+curl -SL https://github.com/docker/compose/releases/download/v2.20.0/docker-compose-linux-x86_64 -o /usr/local/lib/docker/cli-plugins/docker-compose
+```
+- Une version différente de Compose, remplacez-la par la version de Compose que vous souhaitez utiliser.v2.20.0.
+- Pour une architecture différente, remplacez-la par l’architecture souhaitée.x86_64.
 
 Appliquez des autorisations exécutables au fichier binaire :
 ```
-# (chmod +x ~/.docker/cli-plugins)
 chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
 ```
-ou, si vous avez choisi d’installer Compose pour tous les utilisateurs :
+Ou, si vous avez choisi d’installer Compose pour tous les utilisateurs :
 ```
 sudo chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
 ```
 Confirmez la version.
 ```
 docker compose version
+
+Docker Compose version v2.19.1
 ```
 # 2) Installer docker compose v2 depuis le paquet 'docker-compose-plugin'.
 
