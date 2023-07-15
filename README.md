@@ -58,51 +58,76 @@ La documentation de Docker est disponible à cette adresse : docs.docker.com
 <a name="installer-les-dépendances-de-docker"></a>
 ### Installation des dépendances de Docker.
 
-Premièrement, nous devons installer les dépendances nécessaires au bon fonctionnement de Docker. Commençons par mettre à jour le cache des paquets :
+Mettre à jour votre système :
+
+Il est toujours important de travailler avec un système qui est à jour avec tous les paquets mis à jour. Pour ce faire, exécutez la commande ci-dessous sur votre shell :
 ```
 sudo apt-get update && sudo apt upgrade -y
 ```
-Puis, exécutez la commande ci-dessous pour installer les paquets :
+Pour pouvoir installer Docker et tous les paquets requis, nous devons ajouter le dépôt officiel à notre système Debian 12.
+
+Nous allons commencer par installer les paquets requis:
 ```
-sudo apt-get install apt-transport-https \
-             ca-certificates \
-             curl \
-             gnupg2 \
-             software-properties-common -y
+sudo apt install lsb-release \
+         gnupg2 \
+         apt-transport-https \
+         ca-certificates \
+         curl \
+         software-properties-common -y
 ```
 Une fois cette étape effectuée, passez à la suite.
 
 <a name="ajouter-le-dépôt-officiel-docker"></a>
 ### Ajouter le dépôt officiel Docker.
 
-Deuxièmement, nous devons ajouter le dépôt officiel de Docker à notre machine Debian afin de pouvoir récupérer les sources. Commençons par récupérer la clé GPG qui nous permettra de valider les paquets récupérés depuis le dépôt Docker :
+Commençons par récupérer la clé GPG qui nous permettra de valider les paquets récupérés depuis le dépôt Docker repository :
 ```
-curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+# curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/debian.gpg
 ```
-Ensuite, on ajoute le dépôt Docker à la liste des sources de notre machine :
+Ensuite, on ajoute le dépôt Docker à la liste des sources de notre machine Docker repository stable :
 ```
-echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+#echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" #| sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+sudo add-apt-repository "deb [arch=$(dpkg --print-architecture)] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
 ```
 Pour finir, nous devons mettre à jour le cache des paquets pour prendre en compte les paquets de ce nouveau dépôt :
+Une fois le dépôt ajouté, vous pouvez continuer et installer Docker sur Debian 12 (Bookworm) en utilisant les commandes ci-dessous :
 ```
-sudo apt-get update
+sudo apt update
 ```
-Nous allons pouvoir passer à l'installation de Docker.
-
 <a name="installation-des-paquets-docker"></a>
 ### Installation des paquets Docker.
 
-Troisièmement, c'est l'installation de Docker qui doit être réalisée.
-Trois paquets sont à installer sur notre hôte pour bénéficier de l'ensemble des composants. Voici la commande à exécuter :
+Nous allons pouvoir passer à l'installation de Docker.
 ```
-sudo apt-get install docker-ce docker-ce-cli containerd.io -y
+# sudo apt install docker-ce docker-ce-cli containerd.io (docker-compose-plugin) # V2
+sudo apt install \
+         docker-ce \
+         docker-ce-cli \
+         containerd.io -y
 ```
+Une fois l’installation terminée, vous devez ajouter votre utilisateur au groupe Docker pour pouvoir exécuter des commandes Docker sans utiliser sudo.
+```
+sudo usermod -aG docker cyberlitech
+newgrp docker
+```
+Assurez-vous également que le service Docker est démarré et activé :
+
 Si vous souhaitez que Docker démarre automatiquement avec votre machine Debian, la commande suivante doit être exécutée :
 ```
 sudo systemctl start docker && sudo systemctl enable docker
 ```
+
+
+
+
+
 <a name="docker-est-il-bien-installé-"></a>
 ### Docker est-il bien installé ?
+
+Vérifiez si le service est en cours d’exécution :
 
 L'installation des paquets est terminée, mais Docker est-il correctement installé ?
 Pour répondre à cette question, vous pouvez regarder le statut de Docker, ce qui sera une première indication si le service est identifié sur la machine.
@@ -111,27 +136,13 @@ systemctl is-enabled docker
 systemctl is-enabled containerd
 systemctl status docker containerd
 ```
-Autoriser l'utilisateur non root à utiliser Docker :
+Utiliser Docker sur Debian 12 :
+Après avoir installé Docker, vous pouvez l’utiliser pour gérer les conteneurs comme vous le souhaitez.
 
-Par défaut, Docker autorise uniquement l'utilisateur "root" à exécuter des conteneurs.
+Voici quelques-unes des opérations de base de Docker.
 
-Et pour qu'un utilisateur non root puisse exécuter des conteneurs, vous devez ajouter votre utilisateur non root au groupe 'docker', qui est automatiquement créé lors de l'installation de Docker.
+Connectez-vous maintenant en tant qu'utilisateur 'cyberlitech' à l'aide de la commande ci-dessous et vérifiez la configuration.
 
-Pour cet exemple, vous utiliserez un utilisateur "ex : cyberlitech" pour exécuter un conteneur Docker.
-
-Si vous avez besoin de créer un nouvel utilisateur « ex : cyberlitech » sur votre système Debian utiliser la commande suivante.
-```
-sudo useradd -m -s /bin/bash cyberlitech
-```
-Une fois l’installation terminée, vous devez ajouter votre utilisateur 'cyberlitech' au groupe Docker pour pouvoir exécuter des commandes Docker sans utiliser sudo.
-```
-sudo usermod -aG docker cyberlitech
-newgrp docker
-```
-Connectez-vous maintenant en tant qu'utilisateur 'johndoe' à l'aide de la commande ci-dessous et vérifiez la configuration.
-```
-su - cyberlitech
-```
 Ensuite, le meilleur moyen de vérifier si Docker est installé, c'est d'exécuter le container nommé "hello-world".
 La commande ci-dessous permettra de télécharger l'image de ce container et de l'exécuter.
 ```
