@@ -277,20 +277,20 @@ chmod +x mise-à-jour-automatisée-de-portainer.sh
 sudo ./mise-à-jour-automatisée-de-portainer.sh
 ```
 <a name="installation-manuelle-de-docker-compose"></a>
-## - D. Installation manuelle de docker-compose V2 sur DEBIAN 11 & DEBIAN 12.
+## - D. Installation manuelle de docker-compose v2 sur DEBIAN 12.
 
-À partir de juillet 2023, Compose V1 a cessé de recevoir des mises à jour.
+À partir de juillet 2023, Compose v1 a cessé de recevoir des mises à jour.
 
 Il n’est également plus disponible dans les nouvelles versions de Docker Desktop.
 
-Compose V2 est inclus dans toutes les versions actuellement prises en charge de Docker Desktop.
+Compose v2 est inclus dans toutes les versions actuellement prises en charge de Docker Desktop.
 ```
 sudo apt update
-sudo apt install -y curl wget
 ```
-Une fois curl installé, téléchargez la dernière version de Compose sur votre machine Linux.
-
-Installer le plugin manuellement :
+```
+sudo apt install curl wget -y
+```
+1) - Installer le doker compose v2 manuellement :
 
 Note :
 
@@ -326,19 +326,13 @@ Confirmez la version.
 ```
 docker compose version
 ```
-2) Réactualiser la mise à jour des dépôts et installez le paquet 'docker-compose-plugin', (docker compose v2).
+2) - Installer le docker compose v2 depuis le paquet 'docker-compose-plugin'.
 
-Pour Debian 12, exécutez :
+Réactualiser la mise à jour des dépôts.
 ```
 sudo apt-get update
-sudo apt-get install docker-compose-plugin
 ```
-Mettre à jour la composition via les binaires.
-
-Pour mettre à jour le plug-in Compose, exécutez les commandes suivantes :
-
-Pour Ubuntu et Debian, exécutez :
+Installer paquet 'docker-compose-plugin'.
 ```
-sudo apt-get update
 sudo apt-get install docker-compose-plugin
 ```
