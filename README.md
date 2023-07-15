@@ -62,13 +62,12 @@ Note :
 Si vous utilisez ufw ou firewalld pour gérer les paramètres du pare-feu, sachez que lorsque vous exposez des ports de conteneur à l’aide de Docker, ces ports contournent votre Règles de pare-feu. Pour plus d’informations, reportez-vous à Docker et ufw.
 
 Configuration requise pour le système d’exploitation.
-Pour installer Docker Engine, vous avez besoin de la version 64 bits de Debian.
 
-Debian Bookworm 12 (stable)
+Pour installer Docker Engine, vous avez besoin de la version 64 bits de Debian 12, (Stable).
 
 Installation à l’aide des dépôts : apt
 
-Avant d’installer Docker Engine pour la première fois sur une nouvelle machine hôte, vous doivent configurer les dépôts de Docker. 
+Avant d’installer Docker Engine pour la première fois sur une nouvelle machine hôte, vous devez configurer les dépôts de Docker. 
 
 Ensuite, vous pouvez installer et mettre à jour Docker à partir de ceux-ci.
 
@@ -77,20 +76,21 @@ Ensuite, vous pouvez installer et mettre à jour Docker à partir de ceux-ci.
 
 Mettre à jour votre système :
 
-Il est toujours important de travailler avec un système qui est à jour avec tous les paquets mis à jour. Pour ce faire, exécutez la commande ci-dessous sur votre shell :
+Il est toujours important de travailler avec un système qui est à jour.
+
+Pour ce faire, exécutez la commande ci-dessous sur votre shell :
 ```
 sudo apt-get update && sudo apt upgrade -y
 ```
-Pour pouvoir installer Docker et tous les paquets requis, nous devons ajouter le dépôt officiel à notre système Debian 12.
+Pour pouvoir installer Docker, Docker-compose-plugin et tous les paquets requis, nous devons ajouter le dépôt officiel de docker à notre système d'exploitation Debian 12.
 
 Nous allons commencer par installer les paquets requis:
 ```
-sudo apt-get install \
-             ca-certificates \
+sudo apt-get install ca-certificates \
              curl \
              gnupg -y
 ```
-Une fois cette étape effectuée, passez à la suite.
+Une fois cette étape effectuée, passez à la suivante.
 
 <a name="ajouter-le-dépôt-officiel-docker"></a>
 ### Ajoutez la clé GPG officielle de Docker:.
