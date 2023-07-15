@@ -6,6 +6,7 @@
 |------|------| 
 | - A. | [Installation manuelle de Docker Engine & Docker compose (docker-compose-plugin v2)](#balise-01) |
 | - B. | [Installation manuelle de Portainer.](#installation-manuelle-de-portainer) |
+| - b1. | [Installation automatisée de Portainer.](installation-automatisée-de-portainer.md) |
 | - C. | [Mise à jour manuelle de Portainer.](#mise-à-jour-manuelle-de-portainer) |
 | - c1. | [Mise à jour automatisée de Portainer.](#mise-à-jour-automatisée-de-portainer) |
 
