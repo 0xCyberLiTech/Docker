@@ -103,7 +103,11 @@ Une fois cette étape effectuée, passez à la suivante.
 Commençons par récupérer la clé GPG qui nous permettra de valider l'installation des paquets.
 ```
 sudo install -m 0755 -d /etc/apt/keyrings
+```
+```
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+```
+```
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
 ```
 Utilisez la commande suivante pour configurer les nouveaux dépôts vers /etc/apt/sources.list.d/docker.list 
@@ -175,6 +179,9 @@ C'est le signe que les différents composants sont opérationnels et que Docker 
 Pour finir avec la phase d'installation, sachez qu'à tout moment vous pouvez voir quelle est la version de Docker Engine que vous utilisez grâce à la commande suivante :
 ```
 sudo docker version
+```
+```
+sudo docker compose version
 ```
 <a name="quelques-commandes-docker"></a>
 ### Quelques commandes Docker :
