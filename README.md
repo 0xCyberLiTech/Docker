@@ -81,13 +81,13 @@ Ensuite, vous pouvez installer et mettre à jour Docker à partir de ceux-ci.
 
 Mettre à jour votre système :
 
-Il est toujours important de travailler avec un système qui est à jour.
+Il est toujours important de travailler avec un système qui soit à jour.
 
 Pour ce faire, exécutez la commande ci-dessous sur votre shell :
 ```
 sudo apt-get update && sudo apt upgrade -y
 ```
-Pour pouvoir installer Docker, Docker-compose-plugin et tous les paquets requis, nous devons ajouter le dépôt officiel de docker à notre système d'exploitation Debian 12.
+Pour pouvoir installer Docker, Docker-compose-plugin v2 et tous les paquets requis, nous devons ajouter le dépôt officiel de docker à notre système d'exploitation Debian 12.
 
 Nous allons commencer par installer les paquets requis:
 ```
@@ -100,7 +100,7 @@ Une fois cette étape effectuée, passez à la suivante.
 <a name="ajouter-le-dépôt-officiel-docker"></a>
 ### Ajoutez la clé GPG officielle de Docker:.
 
-Commençons par récupérer la clé GPG qui nous permettra de valider les paquets.
+Commençons par récupérer la clé GPG qui nous permettra de valider l'installation des paquets.
 ```
 sudo install -m 0755 -d /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
@@ -142,44 +142,47 @@ Si vous souhaitez que Docker démarre automatiquement avec votre machine Debian,
 sudo systemctl start docker && sudo systemctl enable docker
 ```
 <a name="docker-est-il-bien-installé-"></a>
-### Docker est-il bien installé ?
+### Docker Engine est-il bien installé ?
 
 Vérifiez si le service est en cours d’exécution :
 
 L'installation des paquets est terminée, mais Docker est-il correctement installé ?
-Pour répondre à cette question, vous pouvez regarder le statut de Docker, ce qui sera une première indication si le service est identifié sur la machine.
+Pour répondre à cette question, vous pouvez regarder le statut de Docker Engine, ce qui sera une première indication si le service est identifié sur la machine.
 ```
 systemctl is-enabled docker
 systemctl is-enabled containerd
 systemctl status docker containerd
 ```
-Utiliser Docker sur Debian 12 :
+Utiliser Docker Engine sur Debian 12 :
 Après avoir installé Docker, vous pouvez l’utiliser pour gérer les conteneurs comme vous le souhaitez.
 
-Voici quelques-unes des opérations de base de Docker.
+Voici quelques-unes des opérations de base de Docker Engine.
 
-Connectez-vous maintenant en tant qu'utilisateur 'cyberlitech' à l'aide de la commande ci-dessous et vérifiez la configuration.
+Connectez-vous maintenant en tant qu'utilisateur 'ex : cyberlitech' à l'aide de la commande ci-dessous et vérifiez la configuration.
 
-Ensuite, le meilleur moyen de vérifier si Docker est installé, c'est d'exécuter le container nommé "hello-world".
+Ensuite, le meilleur moyen de vérifier si Docker Engine est installé, c'est d'exécuter le container nommé "hello-world".
 La commande ci-dessous permettra de télécharger l'image de ce container et de l'exécuter.
 ```
 sudo docker run hello-world
 ```
 Lorsque ce container sera exécuté, le message "Hello from Docker!" sera retourné dans la console.
-C'est le signe que les différents composants sont opérationnels et que Docker a pu générer et exécuter le container.
+
+C'est le signe que les différents composants sont opérationnels et que Docker Engine a pu générer et exécuter le container.
 
 <a name="quelle-est-la-version-de-docker-installée-"></a>
-### Quelle est la version de Docker installée ?
+### Quelle est la version de Docker Engine installée ?
 
-Pour finir avec la phase d'installation, sachez qu'à tout moment vous pouvez voir quelle est la version de Docker que vous utilisez grâce à la commande suivante :
+Pour finir avec la phase d'installation, sachez qu'à tout moment vous pouvez voir quelle est la version de Docker Engine que vous utilisez grâce à la commande suivante :
 ```
 sudo docker version
 ```
 <a name="quelques-commandes-docker"></a>
 ### Quelques commandes Docker :
-Docker est installé sur notre serveur Debian 11 ou 12, mais comment faire pour l'utiliser ? Pour finir, nous allons voir quelques commandes utiles qui vous permettront de débuter avec Docker.
+Docker Engine est installé sur notre serveur Debian 12, mais comment faire pour l'utiliser ? 
 
- - Lister les containers Docker en cours d'exécution
+Pour finir, nous allons voir quelques commandes utiles qui vous permettront de débuter avec Docker Engine.
+
+ - Lister les containers Docker Engine en cours d'exécution
 ```
 sudo docker ps
 ```
