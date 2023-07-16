@@ -56,9 +56,9 @@ Important.
 
 À partir de juillet 2023, Compose V1 a cessé de recevoir des mises à jour. Il n’est également plus disponible dans les nouvelles versions de Docker Desktop. Compose V2 est inclus dans toutes les versions actuellement prises en charge de Docker Desktop. 
 
-Installer de Docker Engine & Docker-compose-plugin sur Debian.
+Installation de Docker Engine & Docker-compose-plugin v2 sur Debian.
 
-Pour commencer à utiliser Docker Engine sur Debian, assurez-vous de remplir les conditions préalables, puis suivez les étapes d’installation.
+Pour commencer à utiliser Docker Engine & Docker-compose-plugin v2 sur Debian, assurez-vous de remplir les conditions préalables, puis suivez les étapes d’installation.
 
 Conditions préalables.
 
@@ -70,9 +70,9 @@ Configuration requise pour le système d’exploitation.
 
 Pour installer Docker Engine, vous avez besoin de la version 64 bits de Debian 12, (Stable).
 
-Installation à l’aide des dépôts : apt
+Configuration et installation des dépôts 'APT'.
 
-Avant d’installer Docker Engine pour la première fois sur une nouvelle machine hôte, vous devez configurer les dépôts de Docker. 
+Avant d’installer Docker Engine & Docker-compose-plugin v2 pour la première fois sur une nouvelle machine hôte, vous devez configurer les dépôts de Docker. 
 
 Ensuite, vous pouvez installer et mettre à jour Docker à partir de ceux-ci.
 
