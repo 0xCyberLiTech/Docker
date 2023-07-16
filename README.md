@@ -1,6 +1,6 @@
 ![Docker Banner](https://thingsolver.com/wp-content/uploads/docker-cover.png)
 
-# Docker Engine, Docker-compose-plugin (Docker compose v2) & Portainer sur DEBIAN 12.
+# Installation de Docker Engine, Docker-compose-plugin (Docker compose v2) & Portainer sur DEBIAN 12.
 
 | Cat | Sommaire |
 |------|------| 
