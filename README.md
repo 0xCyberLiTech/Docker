@@ -52,7 +52,15 @@ La documentation de Docker est disponible à cette adresse : docs.docker.com
 <a name="balise-01"></a>
 ## - A. Installation manuelle de Docker Engine & Docker compose (docker-compose-plugin v2).
 
-Installer Docker Engine sur Debian.
+Important.
+
+À partir de juillet 2023, Compose V1 a cessé de recevoir des mises à jour.
+
+Il n’est également plus disponible dans les nouvelles versions de Docker Desktop.
+
+Compose V2 est inclus dans toutes les versions actuellement prises en charge de Docker Desktop. 
+
+Installer de Docker Engine & Docker-compose-plugin sur Debian.
 
 Pour commencer à utiliser Docker Engine sur Debian, assurez-vous de remplir les conditions préalables, puis suivez les étapes d’installation.
 
