@@ -11,8 +11,8 @@
 | - c1. | [Mise à jour automatisée de Portainer.](mise-à-jour-automatisée-de-portainer.md) |
 
 
-## - A. Installation manuelle de Docker.
-### Prérequis avoir installé au paravant sudo si celui-ci n'est pas présent.
+## - A. Installation manuelle de Docker Engine & Docker-compose-plugin v2.
+### Prérequis avoir installé au paravant 'SUDO' si celui-ci n'est pas présent.
 ```
 # su - root
 # apt install sudo
@@ -20,13 +20,13 @@
 # init 6
 ```
 ### I. [Présentation.](#présentation)
-### II. [Installation de Docker.](#installation-manuelle-de-docker)
-   - . [Installation des dépendances de Docker.](#installer-les-dépendances-de-docker)
-   - . [Ajouter le dépôt officiel Docker.](#ajouter-le-dépôt-officiel-docker)
-   - . [Installation des paquets Docker.](#installation-des-paquets-docker)
-   - . [Docker est-il bien installé ?](#docker-est-il-bien-installé-)
-   - . [Quelle est la version de Docker installée ?](#quelle-est-la-version-de-docker-installée-)
-### III. [Quelques commandes Docker.](#quelques-commandes-docker)
+### II. [Installation de Docker Engine & Docker-compose-plugin v2.](#installation-manuelle-de-docker)
+   - . [Installation des dépendances de Docker Engine.](#installer-les-dépendances-de-docker)
+   - . [Ajouter le dépôt officiel Docker Engine.](#ajouter-le-dépôt-officiel-docker)
+   - . [Installation des paquets Docker Engine.](#installation-des-paquets-docker)
+   - . [Docker Engine est-il bien installé ?](#docker-est-il-bien-installé-)
+   - . [Quelle est la version de Docker Engine installée ?](#quelle-est-la-version-de-docker-installée-)
+### III. [Quelques commandes Docker Engine.](#quelques-commandes-docker)
 
 <a name="présentation"></a>
 ## Présentation.
@@ -77,7 +77,7 @@ Avant d’installer Docker Engine & Docker-compose-plugin v2 pour la première f
 Ensuite, vous pouvez installer et mettre à jour Docker à partir de ceux-ci.
 
 <a name="installer-les-dépendances-de-docker"></a>
-### - Installation des dépendances de Docker.
+### - Installation des dépendances de Docker Engine.
 
 Mettre à jour votre système :
 
@@ -98,7 +98,7 @@ sudo apt-get install ca-certificates \
 Une fois cette étape effectuée, passez à la suivante.
 
 <a name="ajouter-le-dépôt-officiel-docker"></a>
-### Ajoutez la clé GPG officielle de Docker:.
+### Ajoutez la clé GPG officielle de Docker Engine:.
 
 Commençons par récupérer la clé GPG qui nous permettra de valider l'installation des paquets.
 ```
@@ -120,7 +120,7 @@ Mettez à jour l’index de la liste des dépôts 'apt'.
 sudo apt-get update
 ```
 <a name="installation-des-paquets-docker"></a>
-### Installez Docker Engine, containerd, et Docker Compose.
+### Installez Docker Engine, containerd, et Docker Compose (docker-compose-plugin v2).
 
 Pour installer la dernière version, exécutez :
 ```
@@ -135,9 +135,9 @@ Une fois l’installation terminée, vous devez ajouter votre utilisateur au gro
 sudo usermod -aG docker cyberlitech
 newgrp docker
 ```
-Assurez-vous également que le service Docker est démarré et activé :
+Assurez-vous également que le service Docker Engine est démarré et activé :
 
-Si vous souhaitez que Docker démarre automatiquement avec votre machine Debian, la commande suivante doit être exécutée :
+Si vous souhaitez que Docker Engine démarre automatiquement avec votre machine Debian, la commande suivante doit être exécutée :
 ```
 sudo systemctl start docker && sudo systemctl enable docker
 ```
@@ -146,7 +146,7 @@ sudo systemctl start docker && sudo systemctl enable docker
 
 Vérifiez si le service est en cours d’exécution :
 
-L'installation des paquets est terminée, mais Docker est-il correctement installé ?
+L'installation des paquets est terminée, mais Docker Engine est-il correctement installé ?
 Pour répondre à cette question, vous pouvez regarder le statut de Docker Engine, ce qui sera une première indication si le service est identifié sur la machine.
 ```
 systemctl is-enabled docker
@@ -154,7 +154,7 @@ systemctl is-enabled containerd
 systemctl status docker containerd
 ```
 Utiliser Docker Engine sur Debian 12 :
-Après avoir installé Docker, vous pouvez l’utiliser pour gérer les conteneurs comme vous le souhaitez.
+Après avoir installé Docker Engine, vous pouvez l’utiliser pour gérer les conteneurs comme vous le souhaitez.
 
 Voici quelques-unes des opérations de base de Docker Engine.
 
