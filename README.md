@@ -256,6 +256,19 @@ docker container exec -ti d964015967b4 bash
 ```
 cat /etc/issue
 ```
+Voici quelques commandes utiles qui vous permettront de débuter avec Docker compose.
+```
+docker compose -f ./docker-compose.yml pull
+```
+```
+docker compose -f ./docker-compose.yml up -d
+```
+```
+docker compose -f ./docker-compose.yml stop
+```
+```
+docker compose -f ./docker-compose.yml down
+```
 <a name="installation-manuelle-de-portainer"></a>
 ## - B. Installation manuelle de Portainer.
 ### Prérequis avoir installé au paravant sudo si celui-ci n'est pas présent.
