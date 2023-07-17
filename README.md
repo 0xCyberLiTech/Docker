@@ -188,7 +188,7 @@ sudo docker compose version
 
 Docker Engine est installé sur notre serveur Debian 12, mais comment faire pour l'utiliser ? 
 
-Pour finir, nous allons voir quelques commandes utiles qui vous permettront de débuter avec Docker Engine.
+Voici quelques commandes utiles qui vous permettront de débuter avec Docker Engine.
 
 - Lister les containers Docker Engine en cours d'exécution
 ```
