@@ -315,7 +315,11 @@ Les étapes de configuration sont ensuite limpides et vous devriez vous en sorti
 [Disponible ici](installation-automatisée-de-portainer.md)
 ```
 touch installation-automatisée-de-portainer.sh
+```
+```
 chmod +x installation-automatisée-de-portainer.sh
+```
+```
 sudo ./installation-automatisée-de-portainer.sh
 ```
 <a name="balise-03"></a>
@@ -335,7 +339,11 @@ Comme nous utilisons un volume, les données importantes du conteneur ne seront 
 On télécharge ensuite la dernière image de Portainer, puis nous relançons le conteneur avec les mêmes réglages qu’à l’origine.
 ```
 sudo docker stop portainer
+```
+```
 sudo docker rm portainer
+```
+```
 sudo docker pull portainer/portainer-ce:latest
 ```
 ```
@@ -353,6 +361,10 @@ Portainer est maintenant à jour et tous ses réglages ont été conservés.
 [Disponible ici](mise-à-jour-automatisée-de-portainer.md)
 ```
 touch mise-à-jour-automatisée-de-portainer.sh
+```
+```
 chmod +x mise-à-jour-automatisée-de-portainer.sh
+```
+```
 sudo ./mise-à-jour-automatisée-de-portainer.sh
 ```
