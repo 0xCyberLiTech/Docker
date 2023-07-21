@@ -350,7 +350,7 @@ Portainer est maintenant à jour et tous ses réglages ont été conservés.
 <a name="mise-à-jour-automatisée-de-portainer"></a>
 ##  - C1. Mise à jour automatisée de Portainer.
 ### Via un fichier bash.
-[Disponible ici](mise-à-jour-automatisée-de-portainer.sh)
+[Disponible ici](mise-à-jour-automatisée-de-portainer.md)
 ```
 touch mise-à-jour-automatisée-de-portainer.sh
 chmod +x mise-à-jour-automatisée-de-portainer.sh
