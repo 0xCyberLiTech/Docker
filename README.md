@@ -4,10 +4,10 @@
 
 | Cat | Sommaire |
 |------|------| 
-| - A. | [Installation manuelle de Docker Engine & Docker compose (docker-compose-plugin v2)](#balise-01) |
-| - B. | [Installation manuelle de Portainer.](#installation-manuelle-de-portainer) |
+| - A. | [Installation manuelle de Docker Engine & Docker compose V2.](#balise-01) |
+| - B. | [Installation manuelle de Portainer.](#balise-02) |
 | - b1. | [Installation automatisée de Portainer.](installation-automatisée-de-portainer.md) |
-| - C. | [Mise à jour manuelle de Portainer.](#mise-à-jour-manuelle-de-portainer) |
+| - C. | [Mise à jour manuelle de Portainer.](#balise-03) |
 | - c1. | [Mise à jour automatisée de Portainer.](mise-à-jour-automatisée-de-portainer.md) |
 
 
@@ -275,7 +275,7 @@ docker compose -f ./docker-compose.yml stop
 ```
 docker compose -f ./docker-compose.yml down
 ```
-<a name="installation-manuelle-de-portainer"></a>
+<a name="balise-02"></a>
 ## - B. Installation manuelle de Portainer.
 ### Prérequis avoir installé au paravant sudo si celui-ci n'est pas présent.
 ```
@@ -318,7 +318,7 @@ touch installation-automatisée-de-portainer.sh
 chmod +x installation-automatisée-de-portainer.sh
 sudo ./installation-automatisée-de-portainer.sh
 ```
-<a name="mise-à-jour-manuelle-de-portainer"></a>
+<a name="balise-03"></a>
 ## - C. Mise à jour manuelle de Portainer.
 ### Prérequis avoir installé au paravant sudo si celui-ci n'est pas présent.
 ```
