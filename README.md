@@ -312,7 +312,7 @@ Les étapes de configuration sont ensuite limpides et vous devriez vous en sorti
 <a name="installation-automatisée-de-portainer"></a>
 ## - B1. Installation automatisée de Portainer.
 ### Via un fichier bash.
-[Disponible ici](installation-automatisée-de-portainer.sh)
+[Disponible ici](installation-automatisée-de-portainer.md)
 ```
 touch installation-automatisée-de-portainer.sh
 chmod +x installation-automatisée-de-portainer.sh
