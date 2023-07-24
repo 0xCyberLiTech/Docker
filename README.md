@@ -196,11 +196,11 @@ Docker Engine est installé sur notre serveur Debian 12, mais comment faire pour
 
 ### Voici quelques commandes utiles qui vous permettront de débuter avec Docker Engine.
 
-- Lister les containers Docker Engine en cours d'exécution
+- Lister les containers Docker Engine en cours d'exécution.
 ```
 sudo docker ps
 ```
-Le résultat de la commande permet d'avoir une liste avec différentes informations dont l'ID unique du container, le nom de l'image, et le statut.
+Le résultat de la commande permet d'avoir une liste avec différentes informations, dont l'ID unique du container, le nom de l'image, et le statut.
 
 - Listez tous les containers Docker enregistrés sur votre machine, peu importe l'état :
 ```
@@ -208,7 +208,7 @@ sudo docker ps -a
 ```
 - Supprimer un container Docker :
 
-A partir d'un ID, il est possible de supprimer un container Docker.
+À partir d'un ID, il est possible de supprimer un container Docker.
 Par exemple, cela peut permettre de supprimer le container "hello-world" (ID 3c745b055853 sur ma machine) car il n'a plus d'intérêt.
 ```
 sudo docker rm 3c745b055853
@@ -253,8 +253,7 @@ List des containers (UP).
 ```
 docker container ls -a
 ```
-Je vais demander à Docker d’exécuter le programme bash en mode interactif, de cette manière j’aurai un accès 
-complet au conteneur.
+Je vais demander à Docker d’exécuter le programme bash en mode interactif, de cette manière, j’aurai un accès complet au conteneur.
 ```
 docker container exec -ti d964015967b4 bash
 ```
@@ -277,7 +276,7 @@ docker compose -f ./docker-compose.yml down
 ```
 <a name="balise-02"></a>
 ## - B. Installation manuelle de Portainer.
-### Prérequis avoir installé au paravant sudo si celui-ci n'est pas présent.
+### Prérequis avoir installé auparavant sudo si celui-ci n'est pas présent.
 ```
 # su - root
 # apt install sudo
@@ -297,7 +296,7 @@ sudo docker run -d -p 9000:9000 --name portainer \
     -v portainer_data:/data \
     portainer/portainer-ce:latest
 ```
-Si vous voulez la prise en charge du HTTPS, il suffit de lancer cette commande :
+Si vous voulez là, prise en charge du HTTPS, il suffit de lancer cette commande :
 ```
 sudo docker run -d -p 9443:9443 --name portainer \
    --restart=always \
@@ -324,7 +323,7 @@ sudo ./installation-automatisée-de-portainer.sh
 ```
 <a name="balise-03"></a>
 ## - C. Mise à jour manuelle de Portainer.
-### Prérequis avoir installé au paravant sudo si celui-ci n'est pas présent.
+### Prérequis avoir installé auparavant sudo si celui-ci n'est pas présent.
 ```
 # su - root
 # apt install sudo
