@@ -12,7 +12,7 @@
 
 
 ## - A. Installation manuelle de Docker Engine & Docker-compose-plugin v2.
-### Prérequis avoir installé au paravant 'SUDO' si celui-ci n'est pas présent.
+### Prérequis avoir installé auparavant 'SUDO' si celui-ci n'est pas présent.
 ```
 # su - root
 # apt install sudo
@@ -20,7 +20,7 @@
 # init 6
 ```
 ### I. [Présentation.](#présentation)
-### II. [Installation de Docker Engine & Docker-compose-plugin v2.](#installation-manuelle-de-docker)
+### II. [Installation de Docker Engine & Docker-compose-plugin v2 sur Debian 12.](#installation-manuelle-de-docker)
    - . [Installation des dépendances de Docker Engine.](#installer-les-dépendances-de-docker)
    - . [Ajouter le dépôt officiel Docker Engine.](#ajouter-le-dépôt-officiel-docker)
    - . [Installation des paquets Docker Engine.](#installation-des-paquets-docker)
@@ -55,8 +55,8 @@ La documentation de Docker Engine est disponible à cette adresse : docs.docker.
 Important.
 
 À partir de juillet 2023, Compose V1 a cessé de recevoir des mises à jour. Il n’est également plus disponible dans les nouvelles versions de Docker Desktop. Compose V2 est inclus dans toutes les versions actuellement prises en charge de Docker Desktop. 
-
-Installation de Docker Engine & Docker-compose-plugin v2 sur Debian.
+<a name="installation-manuelle-de-docker"></a>
+Installation de Docker Engine & Docker-compose-plugin v2 sur Debian 12.
 
 Pour commencer à utiliser Docker Engine & Docker-compose-plugin v2 sur Debian, assurez-vous de remplir les conditions préalables, puis suivez les étapes d’installation.
 
