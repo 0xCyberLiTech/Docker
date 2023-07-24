@@ -54,7 +54,8 @@ La documentation de Docker Engine est disponible à cette adresse : docs.docker.
 
 Important.
 
-À partir de juillet 2023, Compose V1 a cessé de recevoir des mises à jour. Il n’est également plus disponible dans les nouvelles versions de Docker Desktop. Compose V2 est inclus dans toutes les versions actuellement prises en charge de Docker Desktop. 
+À partir de juillet 2023, Compose V1 a cessé de recevoir des mises à jour. Il n’est également plus disponible dans les nouvelles versions de Docker Desktop. Compose V2 est inclus dans toutes les versions actuellement prises en charge de Docker Desktop.
+
 <a name="installation-manuelle-de-docker"></a>
 Installation de Docker Engine & Docker-compose-plugin v2 sur Debian 12.
 
