@@ -41,10 +41,10 @@ De nos jours, c'est une technologie populaire et appréciée et que l'on utilise
 Pour fonctionner, Docker Engine s'appuie sur différents composants qu'il est important de connaître :
 
 - Docker Engine ou Docker Daemon correspondant au processus qui fait tourner Docker sur le système, en charge de la génération et l'exécution des containers
-- Docker Registry est un emplacement de stockage pour héberger les images de containers Docker (il peut être public ou privé)
+- Docker Registry est un emplacement de stockage pour héberger les images de containers Docker. (il peut être public ou privé.)
 - Docker Image correspondant à un fichier qui contient la définition d'un container Docker (dépendances, configuration, etc.)
-- Docker Client correspondant à l'utilitaire en ligne de commande qui va permettre de gérer les containers (commande "docker")
-- Docker Container correspondant aux containers en eux-mêmes, tout en sachant qu'une image peut permettre de créer plusieurs containers avec chacun un identifiant unique
+- Docker Client correspondant à l'utilitaire en ligne de commande qui va permettre de gérer les containers (commande "docker.")
+- Docker Container correspondant aux containers en eux-mêmes, tout en sachant qu'une image peut permettre de créer plusieurs containers avec chacun un identifiant unique.
 
 La documentation de Docker Engine est disponible à cette adresse : docs.docker.com
 [ La documentation de Docker Engine est disponible ici.](https://docs.docker.com/)
@@ -65,7 +65,7 @@ Conditions préalables.
 
 Note :
 
-Si vous utilisez ufw ou firewalld pour gérer les paramètres du pare-feu, sachez que lorsque vous exposez des ports de conteneur à l’aide de Docker, ces ports contournent votre Règles de pare-feu. Pour plus d’informations, reportez-vous à Docker et ufw.
+Si vous utilisez ufw ou firewalld pour gérer les paramètres du pare-feu, sachez que lorsque vous exposez des ports de conteneur à l’aide de Docker, ces ports contournent votre règle de pare-feu. Pour plus d’informations, reportez-vous à Docker et ufw.
 
 Configuration requise pour le système d’exploitation.
 
@@ -73,7 +73,7 @@ Pour installer Docker Engine, vous avez besoin de la version 64 bits de Debian 1
 
 Configuration et installation des dépôts 'APT'.
 
-Avant d’installer Docker Engine & Docker-compose-plugin v2 pour la première fois sur une nouvelle machine hôte, vous devez configurer les dépôts de Docker. 
+Avant d’installer Docker Engine & Docker-compose-plugin v2 pour la première fois sur une nouvelle machine hôte, vous devez configurer les dépôts de Docker.
 
 Ensuite, vous pouvez installer et mettre à jour Docker à partir de ceux-ci.
 
@@ -90,13 +90,13 @@ sudo apt-get update && sudo apt upgrade -y
 ```
 Pour pouvoir installer Docker, Docker-compose-plugin v2 et tous les paquets requis, nous devons ajouter le dépôt officiel de docker à notre système d'exploitation Debian 12.
 
-Nous allons commencer par installer les paquets requis:
+Nous allons commencer par installer les paquets requis :
 ```
 sudo apt-get install ca-certificates \
              curl \
              gnupg -y
 ```
-Une fois cette étape effectuée, passez à la suivante.
+Une fois, cette étape effectuée, passer à la suivante.
 
 <a name="ajouter-le-dépôt-officiel-docker"></a>
 ### Ajoutez la clé GPG officielle de Docker Engine:.
@@ -111,7 +111,7 @@ curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o 
 ```
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
 ```
-Utilisez la commande suivante pour configurer les nouveaux dépôts vers /etc/apt/sources.list.d/docker.list 
+Utilisez la commande suivante pour configurer les nouveaux dépôts vers /etc/apt/sources.list.d/docker.list
 ```
 echo \
   "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
@@ -176,10 +176,9 @@ La commande ci-dessous permettra de télécharger l'image de ce container et de 
 ```
 sudo docker run hello-world
 ```
-Lorsque ce container sera exécuté, le message "Hello from Docker!" sera retourné dans la console.
+Lorsque ce container sera exécuté, le message "Hello from Docker!" Sera retourné dans la console.
 
 C'est le signe que les différents composants sont opérationnels et que Docker Engine a pu générer et exécuter le container.
-
 <a name="quelle-est-la-version-de-docker-installée-"></a>
 ### Quelle est la version de Docker Engine installée ?
 
@@ -203,7 +202,7 @@ sudo docker ps
 ```
 Le résultat de la commande permet d'avoir une liste avec différentes informations dont l'ID unique du container, le nom de l'image, et le statut.
 
-- Lister tous les containers Docker enregistrés sur votre machine, peu importe l'état :
+- Listez tous les containers Docker enregistrés sur votre machine, peu importe l'état :
 ```
 sudo docker ps -a
 ```
