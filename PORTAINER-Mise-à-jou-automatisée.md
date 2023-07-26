@@ -1,4 +1,6 @@
-# PORTAINER, mise à jour automatisée de Portainer.
+![Docker Banner](https://thingsolver.com/wp-content/uploads/docker-cover.png)
+
+# PORTAINER, mise à jour automatisée.
 
 ### Via un fichier bash.
 [Disponible ici](mise-à-jour-automatisée-de-portainer.md)
