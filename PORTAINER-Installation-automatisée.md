@@ -1,5 +1,7 @@
-Installation automatisée de Portainer.
-### Via un fichier bash.
+
+# Installation automatisée de Portainer.
+
+## Via un fichier bash.
 [Disponible ici](installation-automatisée-de-portainer.md)
 ```
 touch installation-automatisée-de-portainer.sh
