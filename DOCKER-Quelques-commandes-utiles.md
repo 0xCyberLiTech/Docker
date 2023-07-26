@@ -2,10 +2,6 @@
 
 # DOCKER quelques commandes utiles.
 
-Docker Engine est installé sur notre serveur Debian 12, mais comment faire pour l'utiliser ? 
-
-## Voici quelques commandes utiles qui vous permettront de débuter avec Docker Engine.
-
 - Lister les containers Docker Engine en cours d'exécution.
 ```
 sudo docker ps
