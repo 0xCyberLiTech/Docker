@@ -1,3 +1,4 @@
+![Docker Banner](https://thingsolver.com/wp-content/uploads/docker-cover.png)
 
 # Mise à jour manuelle de Portainer.
 
