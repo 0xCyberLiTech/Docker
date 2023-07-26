@@ -8,16 +8,10 @@
 - 04 - [Installation automatisée de Portainer.](installation-automatisée-de-portainer.md)
 - 05 - [Mise à jour automatisée de Portainer.](mise-à-jour-automatisée-de-portainer.md)
 
-# Installation de Docker Engine, Docker-compose-plugin (Docker compose v2) & Portainer sur DEBIAN 12.
+
 
 ## - A. Installation manuelle de Docker Engine & Docker-compose-plugin v2.
-### Prérequis avoir installé auparavant 'SUDO' si celui-ci n'est pas présent.
-```
-# su - root
-# apt install sudo
-# usermod -aG sudo cyberlitech
-# init 6
-```
+
 ### I. [Présentation.](#présentation)
 ### II. [Installation de Docker Engine & Docker-compose-plugin v2 sur Debian 12.](#installation-manuelle-de-docker)
    - . [Installation des dépendances de Docker Engine.](#installer-les-dépendances-de-docker)
