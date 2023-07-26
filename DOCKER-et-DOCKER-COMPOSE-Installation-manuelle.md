@@ -1,6 +1,6 @@
 ![Docker Banner](https://thingsolver.com/wp-content/uploads/docker-cover.png)
 
-# - A. Installation manuelle de Docker Engine & Docker compose (docker-compose-plugin v2).
+# Installation manuelle de Docker Engine & Docker compose (docker-compose-plugin v2).
 
 Important.
 
