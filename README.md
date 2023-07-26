@@ -9,24 +9,3 @@
 - 05 - [Mise à jour automatisée de Portainer.](mise-à-jour-automatisée-de-portainer.md)
 
 
-
-
-
-
-
-
-## - C. 
-
-<a name="mise-à-jour-automatisée-de-portainer"></a>
-##  - C1. Mise à jour automatisée de Portainer.
-### Via un fichier bash.
-[Disponible ici](mise-à-jour-automatisée-de-portainer.md)
-```
-touch mise-à-jour-automatisée-de-portainer.sh
-```
-```
-chmod +x mise-à-jour-automatisée-de-portainer.sh
-```
-```
-sudo ./mise-à-jour-automatisée-de-portainer.sh
-```
