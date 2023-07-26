@@ -2,7 +2,7 @@
 
 # Installation manuelle de Docker Engine & Docker compose (docker-compose-plugin v2).
 
-## Important.
+Important.
 
 À partir de juillet 2023, Docker-compose V1 a cessé de recevoir des mises à jour.
 
