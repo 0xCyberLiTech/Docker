@@ -1,15 +1,14 @@
 ![Docker Banner](https://thingsolver.com/wp-content/uploads/docker-cover.png)
 
+👋 Sommaire des sujet traités :
+
+[Installation manuelle de Docker Engine & Docker compose V2.](#balise-01)
+[Installation manuelle de Portainer.](#balise-02)
+[Mise à jour manuelle de Portainer.](#balise-03)
+[Installation automatisée de Portainer.](installation-automatisée-de-portainer.md)
+[Mise à jour automatisée de Portainer.](mise-à-jour-automatisée-de-portainer.md)
+
 # Installation de Docker Engine, Docker-compose-plugin (Docker compose v2) & Portainer sur DEBIAN 12.
-
-| Cat | Sommaire |
-|------|------| 
-| - A. | [Installation manuelle de Docker Engine & Docker compose V2.](#balise-01) |
-| - B. | [Installation manuelle de Portainer.](#balise-02) |
-| - b1. | [Installation automatisée de Portainer.](installation-automatisée-de-portainer.md) |
-| - C. | [Mise à jour manuelle de Portainer.](#balise-03) |
-| - c1. | [Mise à jour automatisée de Portainer.](mise-à-jour-automatisée-de-portainer.md) |
-
 
 ## - A. Installation manuelle de Docker Engine & Docker-compose-plugin v2.
 ### Prérequis avoir installé auparavant 'SUDO' si celui-ci n'est pas présent.
