@@ -1,8 +1,10 @@
+![Docker Banner](https://thingsolver.com/wp-content/uploads/docker-cover.png)
+
 # DOCKER quelques commandes utiles.
 
 Docker Engine est installé sur notre serveur Debian 12, mais comment faire pour l'utiliser ? 
 
-### Voici quelques commandes utiles qui vous permettront de débuter avec Docker Engine.
+## Voici quelques commandes utiles qui vous permettront de débuter avec Docker Engine.
 
 - Lister les containers Docker Engine en cours d'exécution.
 ```
@@ -69,7 +71,7 @@ docker container exec -ti d964015967b4 bash
 ```
 cat /etc/issue
 ```
-### Voici quelques commandes utiles qui vous permettront de débuter avec Docker compose.
+Autres commandes :
 ```
 docker compose -f ./docker-compose.yml pull
 ```
