@@ -1,6 +1,6 @@
 ## PORTAINER, installation manuelle.
 
-Prérequis avoir installé auparavant sudo si celui-ci n'est pas présent.
+Prérequis avoir installé auparavant 'sudo' si celui-ci n'est pas présent.
 ```
 # su - root
 # apt install sudo
