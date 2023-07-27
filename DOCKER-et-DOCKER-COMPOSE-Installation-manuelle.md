@@ -1,6 +1,6 @@
 ![Docker Banner](https://thingsolver.com/wp-content/uploads/docker-cover.png)
 
-# Installation manuelle de Docker Engine & Docker compose (docker-compose-plugin v2).
+## Installation manuelle de Docker Engine & Docker compose (docker-compose-plugin v2).
 
 Important.
 
@@ -10,7 +10,7 @@ Il n’est également plus disponible dans les nouvelles versions de Docker Desk
 
 Docker compose V2 est inclus dans toutes les versions actuellement prises en charge de Docker Desktop.
 
-# Installation de Docker Engine & Docker-compose-plugin v2.
+## Installation de Docker Engine & Docker-compose-plugin v2.
 
 Pour commencer à utiliser Docker Engine & Docker-compose-plugin v2 sur Debian, assurez-vous de remplir les conditions préalables, puis suivez les étapes d’installation.
 
