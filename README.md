@@ -2,7 +2,7 @@
 
 ## Docker.
 
-👋 Sommaire des sujet abordés :
+👋 Sommaire des sujets abordés :
 
 - 01 - [DOCKER & DOCKER COMPOSE installation manuelle.](DOCKER-et-DOCKER-COMPOSE-Installation-manuelle.md)
 - 02 - [DOCKER quelques commandes utiles.](DOCKER-Quelques-commandes-utiles.md)
