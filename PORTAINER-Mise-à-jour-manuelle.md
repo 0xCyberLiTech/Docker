@@ -1,8 +1,8 @@
 ![Docker Banner](https://thingsolver.com/wp-content/uploads/docker-cover.png)
 
-# Mise à jour manuelle de Portainer.
+## Mise à jour manuelle de Portainer.
 
-## Prérequis avoir installé auparavant sudo si celui-ci n'est pas présent.
+Prérequis avoir installé auparavant sudo si celui-ci n'est pas présent.
 ```
 # su - root
 # apt install sudo
