@@ -3,7 +3,7 @@
 ## Installation automatisée de Portainer.
 
 Accès au script,
-[Disponible ici](installation-automatisée-de-portainer.md)
+[cliquer ici](installation-automatisée-de-portainer.md)
 ```
 touch installation-automatisée-de-portainer.sh
 ```
