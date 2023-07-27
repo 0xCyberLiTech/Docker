@@ -1,4 +1,4 @@
-# PORTAINER, installation manuelle.
+## PORTAINER, installation manuelle.
 
 ## Prérequis avoir installé auparavant sudo si celui-ci n'est pas présent.
 ```
