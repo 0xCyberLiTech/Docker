@@ -1,6 +1,6 @@
 ![Docker Banner](https://thingsolver.com/wp-content/uploads/docker-cover.png)
 
-# DOCKER Présentation.
+## DOCKER Présentation.
 
 Dans ce tutoriel, nous allons voir comment installer Docker Engine sur Debian 12 afin d'utiliser ses premiers containers sous Linux !
 Cette installation pas-à-pas repose sur la méthode officielle décrite dans la documentation de Docker Engine.
