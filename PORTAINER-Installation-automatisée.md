@@ -2,7 +2,7 @@
 
 ## Installation automatisée de Portainer.
 
-Via un fichier bash.
+Accès au script,
 [Disponible ici](installation-automatisée-de-portainer.md)
 ```
 touch installation-automatisée-de-portainer.sh
