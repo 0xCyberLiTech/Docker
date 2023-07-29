@@ -8,18 +8,28 @@ Sur la machine hôte, créer un sous dossier pour y construire votre stack (Labo
 
 ```
 cd ~
+```
+```
 mkdir -p Containers/Labo-02-Lamp/
+```
+```
 cd Containers/Labo-02-Lamp/
 ```
-Il faut maintenant créer le fichier docker-compose.yml à l'interrieur du sous dossier (Labo-02-Lamp).
-
+Il faut maintenant créer le fichier docker-compose.yml à l'interrieur de celui-ci.
+```
+touch docker-compose.yml
+```
+```
+nano docker-compose.yml
+```
+Copier le code ci-dessous dans le fichier docker-compose.yml
 ```
 version: '3.9'
 
-services:
+services: 
   db:
     image: mariadb:latest
-    container_name: mariadb
+    container_name: db_lamp
     restart: always
 
     volumes:
@@ -27,8 +37,8 @@ services:
       - ./backups:/backups
 
     environment:
-      MYSQL_DATABASE: db_test
-      MYSQL_USER: user
+      MYSQL_DATABASE: test
+      MYSQL_USER: user 
       MYSQL_PASSWORD: user
       MYSQL_ALLOW_EMPTY_PASSWORD: 'no'
       MYSQL_ROOT_PASSWORD: root
@@ -38,7 +48,7 @@ services:
     container_name: apache2
     restart: always
     depends_on: ['db']
-    ports: ['8585:80']
+    ports: ['80:80']
     links: ['db:db']
 
     volumes:
@@ -47,7 +57,7 @@ services:
     environment:
       MYSQL_DB_HOST: db
       MYSQL_DATABASE: test
-      MYSQL_USER: user
+      MYSQL_USER: user 
       MYSQL_PASSWORD: user
 
   phpmyadmin:
@@ -55,18 +65,18 @@ services:
     container_name: phpmyadmin
     restart: always
     depends_on: ['db']
-    ports: ['8181:80']
+    ports: ['1200:80']
     links: ['db:db']
-
     environment:
       - MYSQL_DB_HOST=db
-      - MYSQL_USER=user
+      - MYSQL_USER=user 
       - MYSQL_PASSWORD=user
 
 volumes:
   db_data: {}
 ```
 Je vous recommande de changer les identifiants et mots de passe de configuration MYSQL.
+Ces identifiants ne sont qu'un exemple et ne reflètent pas du tout un accès sécurisé.
 
 Puis toujours depuis votre dossier Lab-02-Lamp où se trouve votre fichier docker-compose.yml, exécuter la commande suivante :
 ```
