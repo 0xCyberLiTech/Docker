@@ -29,7 +29,7 @@ version: '3.9'
 services: 
   db:
     image: mariadb:latest
-    container_name: db_lamp
+    container_name: mariadb
     restart: always
 
     volumes:
@@ -164,7 +164,7 @@ MariaDB [(none)]> show databases;
 +--------------------+
 | Database           |
 +--------------------+
-| db_test            |
+| test               |
 | information_schema |
 | mysql              |
 | performance_schema |
@@ -196,13 +196,10 @@ MariaDB [(none)]>
 MariaDB [(none)]> show databases;
 ```
 ```
-MariaDB [(none)]> show databases;
-```
-```
 +--------------------+
 | Database           |
 +--------------------+
-| db_test            |
+| test               |
 | information_schema |
 +--------------------+
 2 rows in set (0.001 sec)
