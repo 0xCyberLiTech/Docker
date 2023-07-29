@@ -1,4 +1,6 @@
-Installer un serveur Lamp avec Docker Compose :
+![Docker Banner](https://thingsolver.com/wp-content/uploads/docker-cover.png)
+
+## Installer un serveur LAMP avec Docker Compose :
 
 Exemple :
 
