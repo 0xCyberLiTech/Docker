@@ -67,6 +67,7 @@ services:
     depends_on: ['db']
     ports: ['1200:80']
     links: ['db:db']
+
     environment:
       - MYSQL_DB_HOST=db
       - MYSQL_USER=user 
