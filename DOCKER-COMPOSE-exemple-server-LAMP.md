@@ -1,6 +1,6 @@
 ![Docker Banner](https://thingsolver.com/wp-content/uploads/docker-cover.png)
 
-## Installer un serveur LAMP avec Docker Compose :
+## DOCKER COMPOSE mise en service d'un serveur LAMP par l'exemple :
 
 Exemple :
 
@@ -85,15 +85,15 @@ docker-compose up -d
 ```
 ```
 [+] Running 38/21
- ✔ phpmyadmin 18 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulled                                                                                                             7.7s
- ✔ db 8 layers [⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulled                                                                                                                               14.5s
+ ✔ phpmyadmin 18 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulled                                                                                                      
+ ✔ db 8 layers [⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulled                                                                                                                            
  ✔ web 9 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulled       
 ```
 ```
 [+] Running 4/4
- ✔ Network labo-02-lamp_default  Created                                                                                                                                        0.1s
- ✔ Container mariadb             Started                                                                                                                                        0.6s
- ✔ Container phpmyadmin          Started                                                                                                                                        0.7s
+ ✔ Network labo-02-lamp_default  Created                                                                                                                                       
+ ✔ Container mariadb             Started                                                                                                                                       
+ ✔ Container phpmyadmin          Started                                                                                                                                       
  ✔ Container apache2             Started  
 ```
 Sur notre machine hôte, nous retrouverons les dossier partagés suivant en provenance de notre stack Labo-02-Lamp.
@@ -102,7 +102,6 @@ ls -al
 ```
 ```
 drwxr-xr-x 2 root   root   4096 29 juil. 11:36 backups
--rw-r--r-- 1 mmalet mmalet  949 29 juil. 11:34 docker-compose.yml
 drwxr-xr-x 2 root   root   4096 29 juil. 11:36 www
 ```
 ```
@@ -110,7 +109,7 @@ drwxr-xr-x 2 root   root   4096 29 juil. 11:36 www
 ```
 Décomposition de cette ligne ci-dessus :
 
-(./backup) - Point de motage sur la ma chine hôte (~Containers/Labo-02-Lamp/backup).
+(./backup) - Point de motage sur la machine hôte (~Containers/Labo-02-Lamp/backup).
 (/backups) - Dossier se trouvant dans le container mariadb à la racine.
 
 Identifions notre stack qui se compose de trois containers.
@@ -131,14 +130,14 @@ abc2bad8dbc6   phpmyadmin/phpmyadmin:latest     "/docker-entrypoint.…"        
 ```
 Récupérer l'ID du container mariadb, (47f240eb783d).
 
-Se connecter au container (47f240eb783d).
+Se connecter au container (47f240eb783d) depuis la machine hôte.
 ```
 docker exec -it 47f240eb783d bash
 ```
 ```
 root@47f240eb783d:/#
 ```
-Nous pouvons maintenant nous connecter à la console MySQL.
+Nous pouvons maintenant nous connecter à la console du serveur MySQL.
 ```
 mariadb -u root -p
 ```
@@ -157,6 +156,7 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
 MariaDB [(none)]>
 ```
+Lister les bases de données en place actuellement.
 ```
 MariaDB [(none)]> show databases;
 ```
@@ -174,9 +174,11 @@ MariaDB [(none)]> show databases;
 
 MariaDB [(none)]> exit;
 ```
+Sortir du serveur MySQL.
 ```
 mariadb -u user -p
 ```
+Vous pouvez également vous connecter avec votre compte (user).
 ```
 root@47f240eb783d:/# mariadb -u user -p
 Enter password:
@@ -195,6 +197,7 @@ MariaDB [(none)]>
 ```
 MariaDB [(none)]> show databases;
 ```
+Lister les bases de données en place actuellement.
 ```
 +--------------------+
 | Database           |
