@@ -203,3 +203,20 @@ Nous pouvons également accéder à PHPMYADMIN :
 http://192.168.50.250:8181
 
 ![phpmyadmin.png](./images/phpmyadmin.png)
+
+Si vous avez mis en place un firewall géré à l'aide de UFW
+
+N'oubliez pas d'ouvrir les ports appropriés :
+```
+ufw status numbered
+```
+```
+     To                         Action      From
+     --                         ------      ----
+[ 1] 80/tcp                     ALLOW IN    192.168.50.0/24
+[ 2] 443/tcp                    ALLOW IN    192.168.50.0/24
+[ 3] 10050/tcp                  ALLOW IN    192.168.50.0/24
+[ 4] 9443/tcp                   ALLOW IN    192.168.50.0/24
+[ 5] 9392/tcp                   ALLOW IN    192.168.0.0/16
+[ 6] 8181/tcp                   ALLOW IN    192.168.50.0/24
+```
