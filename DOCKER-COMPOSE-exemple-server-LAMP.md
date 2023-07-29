@@ -202,4 +202,4 @@ Nous pouvons également accéder à PHPMYADMIN :
 
 http://192.168.50.250:8181
 
-![phpmyadmin.png](phpmyadmin.png)
+![phpmyadmin.png](.images/phpmyadmin.png)
