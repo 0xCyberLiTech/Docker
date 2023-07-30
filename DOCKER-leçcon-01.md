@@ -16,7 +16,6 @@ mkdir -p ~/Containers/exercice-docker-compose/
 ```
 cd /Containers/exercice-docker-compose/
 ```
-
 ```
 touch docker-compose.yml
 ```
@@ -108,7 +107,7 @@ Pour interagir directement avec celui-ci copier et coller la commande ci-dessous
 docker exec -it 23a278e4bf2b bash
 ```
 ```
-mmalet@0xCLT:~/Containers/exercice-docker-compose$ docker exec -it 23a278e4bf2b bash
+    @0xCLT:~/Containers/exercice-docker-compose$ docker exec -it 23a278e4bf2b bash
 root@23a278e4bf2b:/#
 ```
 Nous sommes bien entrés dans le conteneur.
@@ -117,24 +116,22 @@ Tapez exit pour sortir et cliquez sur la combinaison ctrl + C sur l'autre termin
 
 ## Détacher le conteneur du terminal.
 
-Il est possible de faire la même chose, mais en détachant le conteneur du terminal. Celui-ci tournera alors en arrière-plan. Il suffit pour cela d'ajouter l'option -d.
+Il est possible de faire la même chose, mais en détachant le conteneur du terminal.
+
+Celui-ci tournera alors en arrière-plan. 
+
+Il suffit pour cela d'ajouter l'option -d.
 ```
-docker-compose up -d
+docker compose up -d
 ```
-En affichant la liste des conteneurs en cours, vous constaterez que celui-ci décrit dans le docker-compose.yml existe.
-```
-docker ps
-```
-![Docker Banner](./images/leçon_01_0E.png)
 ## Arrêter.
 
-Pour arrêter le conteneur, on peut utiliser la méthode que l'on connaît déjà.
+Pour arrêter le conteneur, exécuter la commande suivante.
 
-Mais nous pouvons procéder d'une autre façon.
 ```
 docker compose stop
 ```
-Pareillement pour supprimer notre conteneur, nous pouvons nous appuyer sur ce que nous avons déjà appris ou utiliser la commande qui suit.
+Pour supprimer notre conteneur, exécuter la commande suivante.
 ```
 docker compose rm
 ```
