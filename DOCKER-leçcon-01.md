@@ -99,6 +99,8 @@ Le conteneur est lancé. Maintenant ouvrez un autre terminal et tapez la command
 ```
 docker ps
 ```
+![Docker Banner](./images/leçon_01_04.png)
+
 Nous voyons bien notre conteneur qui a été lancé et ne s'est pas arrêté
 
 Pour interagir directement avec celui-ci copier et coller la commande ci-dessous.
