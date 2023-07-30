@@ -131,7 +131,9 @@ Ensuite nous allons nous occuper du docker-compose.yml et supprimer le volume cr
 ```
 sudo rm -rf data
 ```
-Après, nous allons ajouter le volume managé. ℹ️ Les choses se feront un peu différemment.
+Après, nous allons ajouter le volume managé. 
+
+Les choses se feront un peu différemment.
 ```
 version: '3.8'
 
@@ -154,7 +156,6 @@ Quoi faire ensuite ?
 Eh bien, tout simplement, la procédure qui suit est la même que pour les volumes mappés.
 
 Nous allons juste changer le nom du dossier dans le conteneur.
-
 ```
 version: '3.8'
 
@@ -179,7 +180,6 @@ docker compose up -d
 ![Docker Banner](./images/leçon_01_0G.png)
 
 Puis nous allons entrer dans le conteneur nouvellement créé, via docker exec -it <id du conteneur> bash.
-
 ```
 docker exec -it b7da8cf14e49 bash
 ```
