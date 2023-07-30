@@ -49,7 +49,7 @@ docker exec -it (celtak_ubuntu_2) bash
 ```
 ip -c addr
 ```
-![ip-02.png](./images/ip-02.png)
+![ip-2.png](./images/ip-2.png)
 ```
 ping celtak_ubuntu_1
 ```
