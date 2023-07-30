@@ -14,6 +14,6 @@
 
 👋 Apprendre à maitriser Docker :
 
-- 01 - [DOCKER leçon 01 - .](DOCKER-leçon-01.md)
+- 01 - [DOCKER leçon 01 - Débuter avec Docker.](DOCKER-leçon-01.md)
 - 02 - [DOCKER leçon 02.](DOCKER-leçon-02.md)
 
