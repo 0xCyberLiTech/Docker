@@ -73,9 +73,8 @@ Mais il sera bien présent (mais pas démarré).
 ```
 docker ps -a
 ```
-```
+![Docker Banner](./images/leçon_01_02.png)
 
-```
 Mais voilà, le conteneur s'est arrêté et nous n'avons pas pu interagir avec lui.
 
 Pour y remédier nous allons ajouter deux lignes à notre fichier.
