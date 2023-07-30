@@ -1,6 +1,6 @@
 ![Docker Banner](https://thingsolver.com/wp-content/uploads/docker-cover.png)
 
-## DOCKER Deux types de volumes.
+## DOCKER VOLUME - Deux types de volumes.
 
 Nous aborderons deux façons d'utiliser les volumes. Et pour bien comprendre ce que nous faisons nous utiliserons deux expressions.
 
