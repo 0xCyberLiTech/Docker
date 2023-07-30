@@ -103,7 +103,7 @@ Il n'y a pas d'adresse IP associé.
 
 Pour être certain de cela, nous allons ouvrir une autre fenêtre dans notre terminal.
 
-Un troisième conteneur va etre mis en service
+Un troisième conteneur va etre mis en service.
 
 Ensuite nous allons taper la même commande que précédemment, mais en omettant le paramètre --network=none.
 
@@ -112,5 +112,3 @@ Par conséquent, Docker va attribuer un réseau automatiquement à notre contene
 docker run --rm -it celtak/ubuntu-ping-ip
 ```
 ![ip-c-3.png](./images/ip-c-3.png)
-
-
