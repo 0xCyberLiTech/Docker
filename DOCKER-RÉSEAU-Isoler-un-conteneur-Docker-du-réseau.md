@@ -4,9 +4,7 @@
 
 Pour atteindre cet objectif, nous allons recourir à none.
 
-Faisons un test et tapons cette commande dans deux terminaux différents pour avoir deux conteneurs.
-
-Rappel
+Rappel communication entre deux containers :
 ```
 version: '3.8'
 
