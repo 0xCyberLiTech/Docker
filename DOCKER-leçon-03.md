@@ -71,3 +71,14 @@ ping celtak_ubuntu_2
 ```
 ![leçon_03_0B.png](./images/leçon_03_0B.png)
 
+Deuxième fenêtre :
+
+```
+Dans le conteneur (celtak_ubuntu_2) tapez la commande ci-dessous.
+```
+ping celtak_ubuntu_1
+```
+![leçon_03_0C.png](./images/leçon_03_0C.png)
+
+
+
