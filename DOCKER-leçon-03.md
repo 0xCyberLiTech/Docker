@@ -9,7 +9,8 @@
  
 Les réseaux dans docker-compose.yml
 
-- A) Conteneurs connectés automatiquement.
+<a name="balise-01"></a>
+-  Conteneurs connectés automatiquement.
 
 Il faut savoir qu'automatiquement les conteneurs de notre fichier, sont connectés entre eux.
 
@@ -85,7 +86,8 @@ Les conteneurs présents dans un fichier docker-compose.yml sont automatiquement
 
 Mais est-il possible de personnalisé les choses ?
 
-- B) Créer un réseau.
+<a name="balise-02"></a>
+- Créer un réseau.
 
 La première étape pour utiliser des réseaux personnalisés, consiste à les créer.
 
@@ -140,7 +142,8 @@ networks:
 ```
 Maintenant nous allons connecter les conteneurs entre eux.
 
-Connecter des conteneurs via des réseaux personnalisés.
+<a name="balise-03"></a>
+- Connecter des conteneurs via des réseaux personnalisés.
 
 Pour bien comprendre le fonctionnement, nous allons utiliser cinq conteneurs.
 
@@ -220,7 +223,8 @@ docker-compose up -d
 ```
 ![leçon_03_0E.png](./images/leçon_03_0E.png)
 
-Tester les réseaux.
+<a name="balise-04"></a>
+- Tester les réseaux.
 
 Maintenant, il est possible de faire des tests.
 
