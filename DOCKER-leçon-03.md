@@ -59,13 +59,15 @@ Première fenêtre :
 
 (Container - celtak_ubuntu_1)
 ```
-docker exec -it 5b65bc0c4012 bash
+docker exec -it e8bf1b5ec5bd bash
 ```
 (Container - celtak_ubuntu_2)
 ```
-docker exec -it 57e1fd9b9609 bash
+docker exec -it 1d47b93872f3 bash
 ```
 Dans le conteneur (celtak_ubuntu_1) tapez la commande ci-dessous.
 ```
 ping celtak_ubuntu_2
 ```
+![leçon_03_0A.png](./images/leçon_03_0A.png)
+
