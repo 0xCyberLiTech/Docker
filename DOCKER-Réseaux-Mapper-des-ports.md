@@ -58,8 +58,8 @@ Pour atteindre ce but, il faut taper la commande suivante.
 ```
 docker run --rm -p 9001:80 nginx
 ```
-![nginx.png](./images/nginx.png)
-
-
+Accéder à présent au serveur NGINX via votre navigateur/
 
 http://192.168.50.250:9001
+
+![nginx.png](./images/nginx.png)
