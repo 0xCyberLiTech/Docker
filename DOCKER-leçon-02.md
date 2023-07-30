@@ -44,15 +44,15 @@ services:
 ```
 💡 Expliquons ce que nous avons ajouté.
 
-C'est-à-dire volumes et - ./data/scripts:/usr/local/bin
-C'est-à-dire volumes et - ./data/log:/var/log
+- C'est-à-dire volumes et - ./data/scripts:/usr/local/bin
+- C'est-à-dire volumes et - ./data/log:/var/log
 
 L'indication (./data/scripts) et (./data/log) correspond au nom du dossier local et (:/usr/local/bin) et (:/var/log) au nom du dossier dans le conteneur. 
 
 Ces deux seront liés.
 
-(- ./data/scripts:/usr/local/bin)
-(- ./data/log:/var/log)
+- (- ./data/scripts:/usr/local/bin)
+- (- ./data/log:/var/log)
 
 Le : est un séparateur.
 
