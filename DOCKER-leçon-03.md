@@ -2,14 +2,14 @@
 
 ## DOCKER leçon 03 - Réseau.
 
-- 1) Conteneurs connectés automatiquement
-- 2) Créer un réseau
-- 3) Connecter des conteneurs via des réseaux personnalisés
-- 4) Tester les réseaux
+- A) Conteneurs connectés automatiquement
+- B) Créer un réseau
+- C) Connecter des conteneurs via des réseaux personnalisés
+- D) Tester les réseaux
  
 Les réseaux dans docker-compose.yml
 
-- 1) Conteneurs connectés automatiquement.
+- A) Conteneurs connectés automatiquement.
 
 Il faut savoir qu'automatiquement les conteneurs de notre fichier, sont connectés entre eux.
 
@@ -55,7 +55,7 @@ docker compose up -d
 
 Maintenant ouvrez deux fenêtres du terminal et connectez-vous aux deux conteneurs (une connexion par fenêtre).
 
-Première fenêtre :
+- Première fenêtre :
 
 (Container - celtak_ubuntu_1)
 ```
@@ -71,7 +71,7 @@ ping celtak_ubuntu_2
 ```
 ![leçon_03_0B.png](./images/leçon_03_0B.png)
 
-Deuxième fenêtre :
+- Deuxième fenêtre :
 
 Dans le conteneur (celtak_ubuntu_2) tapez la commande ci-dessous.
 ```
@@ -79,5 +79,75 @@ ping celtak_ubuntu_1
 ```
 ![leçon_03_0C.png](./images/leçon_03_0C.png)
 
+Ils réussissent à communiquer ce qui affirme ce que nous avons dit juste avant.
 
+Les conteneurs présents dans un fichier docker-compose.yml sont automatiquement connectés entre eux.
 
+Mais est-il possible de personnalisé les choses ?
+
+- B) Créer un réseau.
+
+La première étape pour utiliser des réseaux personnalisés, consiste à les créer.
+
+Pour cela, il faut utiliser le mot-clé networks:. Ensuite, après tabulation, on pourra insérer le nom du réseau.
+
+Pratiquons ce que nous venons de dire.
+```
+version: '3'
+
+services:
+  my_ubuntu_1:
+    image: celtak/ubuntu-ping-ip
+    container_name: celtak_ubuntu_1
+    stdin_open: true
+    tty: true
+
+  my_ubuntu_2:
+    image: celtak/ubuntu-ping-ip
+    container_name: celtak_ubuntu_2
+    stdin_open: true
+    tty: true
+
+networks:
+  test_networks:
+```
+Dans notre exemple, nous avons déterminé un réseau personnalisé qui porte le nom test_networks:. 
+
+Mais les deux conteneurs ne sont toujours pas connectés via ce réseau (mais par contre comme nous l'avons vu précédemment, ils le sont automatiquement via le réseau par défaut).
+
+Il est possible de spécifier le type (ou pilotes) du réseau.
+
+Pour l'exemple, nous allons spécifier le réseau bridge.
+```
+version: '3'
+
+services:
+  my_ubuntu_1:
+    image: celtak/ubuntu-ping-ip
+    container_name: celtak_ubuntu_1
+    stdin_open: true
+    tty: true
+
+  my_ubuntu_2:
+    image: celtak/ubuntu-ping-ip
+    container_name: celtak_ubuntu_2
+    stdin_open: true
+    tty: true
+
+networks:
+  test_networks:
+    driver: bridge
+```
+Maintenant nous allons connecter les conteneurs entre eux.
+
+Connecter des conteneurs via des réseaux personnalisés.
+
+Pour bien comprendre le fonctionnement, nous allons utiliser cinq conteneurs.
+
+- Les deux premiers seront reliés par un réseau. 
+- Les deux suivants seront connectés par un autre réseau.
+- Et enfin le dernier sera seul dans son réseau.
+
+Nous allons utiliser un schéma pour entrevoir ce que nous souhaitons.
+
+![leçon_03_0D.png](./images/leçon_03_0D.png)
