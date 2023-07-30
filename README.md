@@ -12,8 +12,8 @@
 - 06 - [PORTAINER mise à jour automatisée.](PORTAINER-Mise-à-jour-automatisée.md)
 - 07 - [DOCKER COMPOSE exemple mise en service d'un serveur LAMP.](DOCKER-COMPOSE-exemple-server-LAMP.md)
 
-👋 Apprendre à maitriser Docker-Compose :
+👋 Apprendre à maitriser Docker :
 
-- 01 - [DOCKER leçon 01.](DOCKER-leçon-01.md)
+- 01 - [DOCKER leçon 01 - .](DOCKER-leçon-01.md)
 - 02 - [DOCKER leçon 02.](DOCKER-leçon-02.md)
 
