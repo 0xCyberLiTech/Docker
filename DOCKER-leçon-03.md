@@ -220,4 +220,26 @@ docker-compose up -d
 ```
 ![leçon_03_0E.png](./images/leçon_03_0E.png)
 
+Tester les réseaux.
 
+Maintenant, il est possible de faire des tests.
+
+Normalement à ce stade, vous savez les faire.
+
+Je ne vais donc pas vous montrer les commandes. Je vais juste vous proposer des tests sous formes de question.
+
+Je vous encourage à tester de votre côté pour bien comprendre.
+
+Est-ce qu'il est possible de faire communiquer my_ubuntu_1 et my_ubuntu_2 ?
+
+Oui, car ils font parties du même réseau.
+
+Pouvons-nous transmettre des informations à my_ubuntu_3 à partir de my_ubuntu_1 ?
+
+Non ce n'est pas possible. Ils ne font pas partie du même réseau.
+
+Avec my_ubuntu_5, sur quels conteneurs je peux communiquer ?
+
+Aucun d'entre eux, car my_ubuntu_5 est seul dans son réseau.
+
+Parfait 🙂 ! Vous savez à présent bien utiliser les réseaux via le docker-compose.yml.
