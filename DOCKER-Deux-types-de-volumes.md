@@ -18,3 +18,20 @@ Par exemple, si nous avons un dossier dans notre machine qui s'appelle /test ave
 
 ![docker-mapper-volume.png](./images/docker-mapper-volume.png)
 
+Et s'il y avait eu des autres fichiers dans le dossier /home, ils disparaîtront, car ils n'existeraient pas dans le dossier /test.
+
+Autre chose, si je modifie le fichier index.html dans le conteneur et qu'après je le détruise, le contenu de ce fichier apparaîtra modifié dans ma machine locale.
+
+Le contrairement est également vrai ! Si je modifie ce fichier en local, il le sera également automatiquement dans le conteneur.
+
+## Manager un volume.
+
+Par contre, lorsque l'on crée un volume managé, c'est le dossier du conteneur qui prend le dessus.
+
+Cependant, la façon de faire dans ce genre de cas est différente par rapport aux volumes mappés.
+
+En effet, il faut obligatoirement créer un volume avec un nom (grâce à une commande Docker) pour ensuite le relier à un dossier du conteneur.
+
+![docker-manager-volume.png](./images/docker-manager-volume.png)
+
+Cela peut paraître compliqué, mais en pratiquant plus tard, les choses seront plus claires.
