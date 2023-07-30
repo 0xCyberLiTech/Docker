@@ -64,3 +64,13 @@ Bien entendu, si nous le désirons, nous pouvons changer l'emplacement et le nom
 
 Il faudra juste adapter notre docker-compose.yml.
 
+Avant de lancer notre docker-compose.yml, nous allons créer le dossier (data/scripts) et (data/log) dans notre machine locale. Il faudra les placer dans le même dossier ou adapté le chemin.
+```
+cd ~/Containers/exercice-docker-compose
+```
+```
+mkdir -p data/scripts
+mkdir -p data/log
+```
+![Docker Banner](./images/leçon_01_0E.png)
+
