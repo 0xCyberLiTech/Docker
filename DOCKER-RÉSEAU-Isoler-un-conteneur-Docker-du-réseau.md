@@ -35,12 +35,16 @@ docker exec -it (celtak_ubuntu_1) bash
 ```
 ping celtak_ubuntu_2
 ```
+![ping-01.png](./images/ping-01.png)
+
 ```
 docker exec -it (celtak_ubuntu_2) bash
 ```
 ```
 ping celtak_ubuntu_1
 ```
+![ping-01.png](./images/ping-01.png)
+
 Depuis le container celtak_ubuntu_1
 ```
 docker run --rm -it --network=none celtak/ubuntu-ping-ip
