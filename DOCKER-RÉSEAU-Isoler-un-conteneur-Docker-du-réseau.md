@@ -29,6 +29,7 @@ docker compose up -d
 ```
 docker ps
 ```
+Depuis le container celtak_ubuntu_1
 ```
 docker exec -it (celtak_ubuntu_1) bash
 ```
@@ -37,6 +38,7 @@ ping celtak_ubuntu_2
 ```
 ![ping-01.png](./images/ping-01.png)
 
+Depuis le container celtak_ubuntu_2
 ```
 docker exec -it (celtak_ubuntu_2) bash
 ```
