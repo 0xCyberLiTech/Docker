@@ -49,4 +49,6 @@ Lancez les services du fichier grâce à la commande ci-dessous.
 ```
 docker-compose up -d
 ```
+![leçon_01_0H.png](./images/leçon_01_0H.png)
+
 
