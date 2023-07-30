@@ -176,6 +176,86 @@ Pour tester, nous allons relancer notre conteneur.
 ```
 docker compose up -d
 ```
+![Docker Banner](./images/leçon_01_0G.png)
+
 Puis nous allons entrer dans le conteneur nouvellement créé, via docker exec -it <id du conteneur> bash.
 
+```
+docker exec -it b7da8cf14e49 bash
+```
+```
+root@b7da8cf14e49:/#
+```
+Pour y vérifier le contenu.
+```
+ls
+```
+```
+lrwxrwxrwx   1 root root    7 Jul 25 00:00 bin -> usr/bin
+drwxr-xr-x   2 root root 4096 Jul 14 16:00 boot
+drwxr-xr-x   5 root root  360 Jul 30 13:04 dev
+drwxr-xr-x   1 root root 4096 Jul 30 13:04 etc
+drwxr-xr-x   2 root root 4096 Jul 14 16:00 home
+lrwxrwxrwx   1 root root    7 Jul 25 00:00 lib -> usr/lib
+lrwxrwxrwx   1 root root    9 Jul 25 00:00 lib32 -> usr/lib32
+lrwxrwxrwx   1 root root    9 Jul 25 00:00 lib64 -> usr/lib64
+lrwxrwxrwx   1 root root   10 Jul 25 00:00 libx32 -> usr/libx32
+drwxr-xr-x   2 root root 4096 Jul 25 00:00 media
+drwxr-xr-x   2 root root 4096 Jul 25 00:00 mnt
+drwxr-xr-x   2 root root 4096 Jul 25 00:00 opt
+dr-xr-xr-x 487 root root    0 Jul 30 13:04 proc
+drwx------   2 root root 4096 Jul 25 00:00 root
+drwxr-xr-x   3 root root 4096 Jul 25 00:00 run
+lrwxrwxrwx   1 root root    8 Jul 25 00:00 sbin -> usr/sbin
+drwxr-xr-x   2 root root 4096 Jul 25 00:00 srv
+dr-xr-xr-x  13 root root    0 Jul 30 13:04 sys
+drwxr-xr-x   2 root root 4096 Jul 30 13:04 test-volume-dans-le-conteneur
+drwxrwxrwt   2 root root 4096 Jul 25 00:00 tmp
+drwxr-xr-x  14 root root 4096 Jul 25 00:00 usr
+drwxr-xr-x  11 root root 4096 Jul 25 00:00 var
+```
+```
+drwxr-xr-x   2 root root 4096 Jul 30 13:04 test-volume-dans-le-conteneur
+```
+Nous voyons bien le dossier test-volume-dans-le-conteneur
 
+Sortons du conteneur avec la commande exit.
+
+Puisque c'est un volume managé, normalement celui-ci devrait apparaître ci nous tapons la commande qui suit.
+```
+docker volume ls
+```
+```
+DRIVER    VOLUME NAME
+local     exercice-docker-compose_test_volume
+local     greenbone-community-edition_cert_data_vol
+local     greenbone-community-edition_data_objects_vol
+local     greenbone-community-edition_gpg_data_vol
+local     greenbone-community-edition_gvmd_data_vol
+local     greenbone-community-edition_gvmd_socket_vol
+local     greenbone-community-edition_notus_data_vol
+local     greenbone-community-edition_ospd_openvas_socket_vol
+local     greenbone-community-edition_psql_data_vol
+local     greenbone-community-edition_psql_socket_vol
+local     greenbone-community-edition_redis_socket_vol
+local     greenbone-community-edition_scap_data_vol
+local     greenbone-community-edition_vt_data_vol
+local     portainer_data
+```
+```
+DRIVER    VOLUME NAME
+local     exercice-docker-compose_test_volume
+```
+Et c'est effectivement vrai.
+
+Mais peut-être que vous vous demandez d'où sort ce nom à rallonge : exercice-docker-compose_test_volume.
+
+Pourquoi un nom à rallonge ?
+
+C'est très simple à comprendre. 
+
+Il faut diviser le nom en deux parties :
+
+- 1) La première partie correspond au nom du dossier qui contient le docker-compose.yml (exercice-docker-compose). 
+
+- 2) Et la deuxième partie au nom du volume choisi (test_volume).
