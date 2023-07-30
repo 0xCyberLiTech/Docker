@@ -2,10 +2,10 @@
 
 ## DOCKER leçon 03 - Réseau.
 
-[- 1) Conteneurs connectés automatiquement](#balise-01)
-- B) Créer un réseau
-- C) Connecter des conteneurs via des réseaux personnalisés
-- D) Tester les réseaux
+[Conteneurs connectés automatiquement.](#balise-01)
+[Créer un réseau.](#balise-02)
+[Connecter des conteneurs via des réseaux personnalisés.](#balise-03)
+[Tester les réseaux.](#balise-04)
  
 Les réseaux dans docker-compose.yml
 
