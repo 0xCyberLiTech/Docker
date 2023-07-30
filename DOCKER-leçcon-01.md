@@ -1,4 +1,8 @@
-## Créer un fichier docker-compose.yml
+![Docker Banner](https://thingsolver.com/wp-content/uploads/docker-cover.png)
+
+## DOCKER leçon 01 - Débuter avec Docker.
+
+Créer un fichier docker-compose.yml
 
 Pour bien débuter, je vous propose de créer un nouveau dossier quelque-part sur votre ordinateur. Et dans celui-ci, nous mettrons le fichier docker-compose.yml.
 
