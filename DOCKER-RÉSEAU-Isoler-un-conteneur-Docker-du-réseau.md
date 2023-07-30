@@ -34,6 +34,10 @@ Depuis le container celtak_ubuntu_1
 docker exec -it (celtak_ubuntu_1) bash
 ```
 ```
+ip -c addr
+```
+![ip-01.png](./images/ip-01.png)
+```
 ping celtak_ubuntu_2
 ```
 ![ping-01.png](./images/ping-01.png)
@@ -42,6 +46,10 @@ Depuis le container celtak_ubuntu_2
 ```
 docker exec -it (celtak_ubuntu_2) bash
 ```
+```
+ip -c addr
+```
+![ip-02.png](./images/ip-02.png)
 ```
 ping celtak_ubuntu_1
 ```
