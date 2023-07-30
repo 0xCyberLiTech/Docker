@@ -2,13 +2,13 @@
 
 ## DOCKER VOLUME - Deux types de volumes.
 
-Nous aborderons deux façons d'utiliser les volumes. Et pour bien comprendre ce que nous faisons nous utiliserons deux expressions.
+Nous aborderons deux façons d'utiliser les volumes.
+
+Et pour bien comprendre ce que nous faisons nous utiliserons deux expressions.
 
 Dans ce cadre, nous allons mapper des volumes (première expression) ou manager des volumes (deuxième expression).
 
 Pour ces deux types, nous expliquerons les différences et les avantages.
-
-Ensuite dans d'autres leçons, vous aurez la possibilité de pratiquer ce que vous aurez appris pour bien comprendre le fonctionnement de ces deux types de volumes.
 
 ## Mapper un volume.
 
@@ -18,7 +18,7 @@ Par exemple, si nous avons un dossier dans notre machine qui s'appelle /test ave
 
 ![docker-mapper-volume.png](./images/docker-mapper-volume.png)
 
-Et s'il y avait eu des autres fichiers dans le dossier /home, ils disparaîtront, car ils n'existeraient pas dans le dossier /test.
+Et s'il y avait eu d'autres fichiers dans le dossier /home, ils disparaîtront, car ils n'existeraient pas dans le dossier /test.
 
 Autre chose, si je modifie le fichier index.html dans le conteneur et qu'après je le détruise, le contenu de ce fichier apparaîtra modifié dans ma machine locale.
 
