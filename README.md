@@ -12,7 +12,7 @@
 - 06 - [PORTAINER mise à jour automatisée.](PORTAINER-Mise-à-jour-automatisée.md)
 - 07 - [DOCKER COMPOSE exemple mise en service d'un serveur LAMP.](DOCKER-COMPOSE-exemple-server-LAMP.md)
 
-👋 Apprendre à maitriser Docker :
+👋 Apprentissage Docker :
 
 - 01 - [DOCKER VOLUME - Comprende les volumes.](DOCKER-VOLUME-Comprende-les-volumes.md)
 - 02 - [DOCKER VOLUME - Deux types de volumes.](DOCKER-VOLUME-Deux-types-de-volumes.md)
