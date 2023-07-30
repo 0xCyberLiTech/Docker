@@ -74,3 +74,15 @@ mkdir -p data/log
 ```
 ![Docker Banner](./images/leçon_01_0E.png)
 
+Nous allons ensuite exécuter le docker-compose.yml.
+```
+docker compose up -d
+```
+![Docker Banner](./images/leçon_01_0F.png)
+
+Pour entrer dans le conteneur créé grâce à la commande docker exec -it <id du conteneur> bash.
+
+Vous pouvez trouver cet id grâce au docker ps.
+
+Maintenant que nous sommes dans notre conteneur, nous allons vérifier le conteneur de celui-ci.
+
