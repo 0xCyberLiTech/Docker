@@ -1,6 +1,6 @@
 ![Docker Banner](https://thingsolver.com/wp-content/uploads/docker-cover.png)
 
-## DOCKER COMPOSE mise en service d'un serveur LAMP par l'exemple :
+## DOCKER COMPOSE mise en service d'un container LAMP par l'exemple :
 
 Exemple :
 
