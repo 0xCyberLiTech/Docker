@@ -1,16 +1,22 @@
 ![Docker Banner](https://thingsolver.com/wp-content/uploads/docker-cover.png)
 ## DOCKER RÉSEAU - Isoler un conteneur Docker du réseau
 Pour atteindre cet objectif, nous allons recourir à none.
-
+```
 docker run --rm -it --network=none celtak/ubuntu-ping-ip
+```
 Faisons un test et tapons cette commande dans deux terminaux différents pour avoir deux conteneurs.
 
 Maintenant, nous allons vérifier si les conteneurs sont bien isolés, l'un de l'autre (plus de connexion réseau). C'est normalement le cas puisque le pilote none a été utilisé.
 
 Pour ce faire nous allons utiliser une commande que nous connaissons désormais très bien. Il faut la taper sur les deux terminaux.
+```
+ip -c addr
+```
+Si vous avez utilisé le conteneur celtak/ubuntu-ping-ip, normalement ip devrait être disponible. 
 
-ip -c a
-Si vous avez utilisé le conteneur celtak/ubuntu-ping-ip, normalement ip devrait être disponible. Sinon il faudra l'installer aux deux conteneurs pour pouvoir s'en servir.
+Sinon il faudra l'installer aux deux conteneurs pour pouvoir s'en servir.
+
+- [DOCKER RÉSEAU Installer les commandes ping et ip](DOCKER-RÉSEAU-Installer-les-commandes-ping-et-ip.md)
 
 Que voyons-nous 🧐?
 
