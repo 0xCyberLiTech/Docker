@@ -2,7 +2,7 @@
 
 ## DOCKER leçon 01 - Débuter avec Docker.
 
-Créer un fichier docker-compose.yml
+Créer un fichier docker-compose.yml.
 
 Pour bien débuter, je vous propose de créer un nouveau dossier quelque-part sur votre ordinateur. Et dans celui-ci, nous mettrons le fichier docker-compose.yml.
 
@@ -61,18 +61,10 @@ Pour exécuter notre docker-compose.yml, il faut se trouver dans le répertoire 
 
 Et on tape la commande qui suit.
 ```
-docker-compose up
+docker compose up
 ```
-```
-[+] Running 2/2
- ✔ my_debian 1 layers [⣿]      0B/0B      Pulled                                                                                                                                2.3s
-   ✔ 785ef8b9b236 Already exists                                                                                                                                                0.0s
-[+] Running 2/1
- ✔ Network exercice-docker-compose_default  Created                                                                                                                             0.1s
- ✔ Container OS-Debian                      Created                                                                                                                             0.1s
-Attaching to OS-Debian
-OS-Debian exited with code 0
-```
+![Docker Banner](./images/leçon_01_01.png)
+
 L'image va être téléchargée (si celle-ci n'est déjà pas présente dans notre machine). 
 
 Le conteneur va être créé et ensuite automatiquement arrêté.
@@ -80,6 +72,9 @@ Le conteneur va être créé et ensuite automatiquement arrêté.
 Mais il sera bien présent (mais pas démarré).
 ```
 docker ps -a
+```
+```
+
 ```
 Mais voilà, le conteneur s'est arrêté et nous n'avons pas pu interagir avec lui.
 
