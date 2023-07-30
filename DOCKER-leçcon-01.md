@@ -91,18 +91,10 @@ services:
 ```
 Sauvegardez le fichier et tapez de nouveau la commande qui suit.
 ```
-docker-compose up
+docker compose up
 ```
-```
-[+] Running 2/2
- ✔ my_debian 1 layers [⣿]      0B/0B      Pulled                                                                                                                                2.4s
-   ✔ 785ef8b9b236 Already exists                                                                                                                                                0.0s
-[+] Running 2/2
- ✔ Network exercice-docker-compose_default  Created                                                                                                                             0.1s
- ✔ Container OS-Debian                      Created                                                                                                                             0.1s
-Attaching to OS-Debian
-OS-Debian  | root@23a278e4bf2b:/#
-```
+![Docker Banner](./images/leçon_01_03.png)
+
 Le conteneur est lancé. Maintenant ouvrez un autre terminal et tapez la commande suivante.
 ```
 docker ps
