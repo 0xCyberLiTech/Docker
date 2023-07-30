@@ -58,8 +58,24 @@ Pour atteindre ce but, il faut taper la commande suivante.
 ```
 docker run --rm -p 9001:80 nginx
 ```
-Accéder à présent au serveur NGINX via votre navigateur/
+Contrairement aux autres fois, nous n'utilisons pas l'option -it, car nous n'avons pas besoin d'interagir avec le conteneur.
+
+Maintenant ouvrez un navigateur et tapez l'adresse localhost:9001.
+
+Nous accédons à la page web générée par Nginx :
 
 http://192.168.50.250:9001
 
 ![nginx.png](./images/nginx.png)
+
+Explication de "-p 9001:80"
+
+L'option -p permet de mapper des ports.
+
+-p comme port.
+
+Ensuite 9001 est le port de la machine locale.
+
+Les : séparent les ports.
+
+Et 80 est le port du conteneur.
