@@ -2,7 +2,7 @@
 
 ## DOCKER leçon 03 - Réseau.
 
-- A) Conteneurs connectés automatiquement
+[- 1) Conteneurs connectés automatiquement](#balise-01)
 - B) Créer un réseau
 - C) Connecter des conteneurs via des réseaux personnalisés
 - D) Tester les réseaux
