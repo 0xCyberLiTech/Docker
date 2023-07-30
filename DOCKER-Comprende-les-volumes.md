@@ -18,5 +18,7 @@ Grâce aux volumes.
 
 Ils vous permettront de garder en mémoire des dossiers de votre choix de votre conteneur. Grâce à cette technique, vous pouvez garder des informations de manière permanente.
 
+![volume-docker.png](./images/volume-docker.png)
+
 
 
