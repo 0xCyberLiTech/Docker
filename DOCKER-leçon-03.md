@@ -51,7 +51,7 @@ Lancez les services du fichier grâce à la commande ci-dessous.
 ```
 docker compose up -d
 ```
-![leçon_01_0H.png](./images/leçon_03_0A.png)
+![leçon_03_0A.png](./images/leçon_03_0A.png)
 
 Maintenant ouvrez deux fenêtres du terminal et connectez-vous aux deux conteneurs (une connexion par fenêtre).
 
@@ -69,5 +69,5 @@ Dans le conteneur (celtak_ubuntu_1) tapez la commande ci-dessous.
 ```
 ping celtak_ubuntu_2
 ```
-![leçon_03_0A.png](./images/leçon_03_0A.png)
+![leçon_03_0B.png](./images/leçon_03_0B.png.png)
 
