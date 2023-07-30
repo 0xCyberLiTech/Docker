@@ -20,5 +20,19 @@ Ils vous permettront de garder en mémoire des dossiers de votre choix de votre 
 
 ![volume-docker.png](./images/volume-docker.png)
 
+Pourquoi utiliser les volumes ?
 
+Le volume est une fonctionnalité très intéressante dans Docker.
+
+Elle rend l'utilisation des conteneurs encore plus attrayants.
+
+En effet, sans celle-ci, dès lors que nous supprimons un conteneur, toutes les données sont supprimées.
+
+Avec des volumes bien configurés, il est possible de réutiliser certaines données dans un autre conteneur, de les exporter ailleurs ou de les importer.
+
+C'est particulièrement profitable pour les conteneurs de bases de données.
+
+Mais pas seulement.
+
+Pour les fichiers de configurations aussi (Nginx pour ne parler que de lui, mais c'est le cas pour n'importe quel autre serveur web ou programme qui nécessite des fichiers de configuration).
 
