@@ -84,5 +84,64 @@ Pour entrer dans le conteneur créé grâce à la commande docker exec -it <id d
 
 Vous pouvez trouver cet id grâce au docker ps.
 
-Maintenant que nous sommes dans notre conteneur, nous allons vérifier le conteneur de celui-ci.
+Maintenant que nous sommes dans notre conteneur, nous allons créer un fichier nommé test.sh dans /usr/local/bin.
+```
+root@9f75a4bd896f:/# cd /usr/local/bin/
+root@9f75a4bd896f:/usr/local/bin# touch test.sh
+root@9f75a4bd896f:/usr/local/bin# ls -l
+total 0
+-rw-r--r-- 1 root root 0 Jul 30 12:40 test.sh
+root@9f75a4bd896f:/usr/local/bin#
+```
+Pour resortir du container exécuter la command exit.
 
+À présent, ouvrons une autre fenêtre de notre terminal.
+
+Cette fois-ci nous n'entrerons pas dans le conteneur, mais nous resterons dans notre machine locale. 
+Via la commande cd, allons dans le dossier contenant notre dossier data/scripts et data/log.
+```
+cd ~/Containers/exercice-docker-compose
+```
+Avec la commande ls, vérifions le contenu de (data/scripts).
+
+Nous avions créer un fichier sur le container vers /usr/local/bin nommé test.sh.
+```
+ls -l data/scripts/*
+```
+```
+-rw-r--r-- 1 root root 0 30 juil. 14:40 data/scripts/test.sh
+```
+Le fichier créé dans notre conteneur apparaît bien.
+
+C'est le cas parce que nous avons configuré notre docker-compose.yml de telle sorte que le dossier data.scripts en local soit lié avec le dossier /usr/local/bin de notre conteneur.
+
+💡 D'ailleurs l'inverse est également vrai.
+
+Si je crée un fichier dans data/scripts, il sera automatiquement /usr/local/bin.
+
+## Volume managé.
+
+Pour partir de zéro, nous allons supprimer le conteneur précédemment créé.
+
+Mettons-nous dans le dossier qui contient notre docker-compose.yml et tapons la commande suivante.
+```
+truncate -s 0 docker-compose.yml
+```
+Ensuite nous allons nous occuper du docker-compose.yml et supprimer le volume créé précédemment.
+```
+sudo rm -rf data
+```
+Après, nous allons ajouter le volume managé. ℹ️ Les choses se feront un peu différemment.
+```
+version: '3'
+
+services:
+  my_ubuntu:
+    image: celtak/ubuntu-ping-ip
+    container_name: celtak_ubuntu
+    stdin_open: true
+    tty: true
+
+volumes:
+  test_volume:
+```
