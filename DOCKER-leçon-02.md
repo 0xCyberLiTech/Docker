@@ -133,15 +133,49 @@ sudo rm -rf data
 ```
 Après, nous allons ajouter le volume managé. ℹ️ Les choses se feront un peu différemment.
 ```
-version: '3'
+version: '3.8'
 
 services:
-  my_ubuntu:
-    image: celtak/ubuntu-ping-ip
-    container_name: celtak_ubuntu
+  my_debian:
+    image: debian:latest
+    container_name: OS-Debian
     stdin_open: true
     tty: true
 
 volumes:
   test_volume:
 ```
+Cette fois-ci il faut utiliser le mot clé (volumes:) et ensuite créer un volume. 
+
+Par exemple test_volume: comme indiqué ci-dessus. Mais vous pouvez choisir un autre nom.
+
+Quoi faire ensuite ?
+
+Eh bien, tout simplement, la procédure qui suit est la même que pour les volumes mappés.
+
+Nous allons juste changer le nom du dossier dans le conteneur.
+
+```
+version: '3.8'
+
+services:
+  my_debian:
+    image: debian:latest
+    container_name: OS-Debian
+    stdin_open: true
+    tty: true
+    volumes:
+      - test_volume:/test-volume-dans-le-conteneur
+
+volumes:
+  test_volume:
+```
+Tester le fonctionnement.
+
+Pour tester, nous allons relancer notre conteneur.
+```
+docker compose up -d
+```
+Puis nous allons entrer dans le conteneur nouvellement créé, via docker exec -it <id du conteneur> bash.
+
+
