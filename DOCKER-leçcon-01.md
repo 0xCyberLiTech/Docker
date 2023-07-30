@@ -63,7 +63,7 @@ Et on tape la commande qui suit.
 ```
 docker compose up
 ```
-![Docker Banner](./images/leçon_01_01.png)
+![Docker Banner](./images/leçon_01_00.png)
 
 L'image va être téléchargée (si celle-ci n'est déjà pas présente dans notre machine). 
 
