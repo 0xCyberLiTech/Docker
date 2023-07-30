@@ -55,15 +55,17 @@ ping celtak_ubuntu_1
 ```
 ![ping-02.png](./images/ping-02.png)
 
-Nous pouvons contater que ces deux container celtak_ubuntu_ et celtak_ubuntu_2 discutent entre eux.
+Nous pouvons constater que ces deux containers (celtak_ubuntu_1) et (celtak_ubuntu_2) discutent entre eux.
 
-Arreter et supprimer ces deux containers
+Arrêter et supprimer ces deux containers
 
-A présent repartons de zéro :
+À présent repartons de zéro :
 
-Faisons un test et tapons cette commande dans deux terminaux différents pour avoir deux conteneurs.
+Faisons un test et tapons cette commande dans deux terminaux différents pour avoir deux containers.
 
-Maintenant, nous allons vérifier si les conteneurs sont bien isolés, l'un de l'autre (plus de connexion réseau). C'est normalement le cas puisque le pilote none a été utilisé.
+Maintenant, nous allons vérifier si les conteneurs sont bien isolés, l'un de l'autre (plus de connexion réseau).
+
+C'est normalement le cas puisque le pilote none a été utilisé.
 
 Pour ce faire nous allons utiliser une commande que nous connaissons désormais très bien.
 
