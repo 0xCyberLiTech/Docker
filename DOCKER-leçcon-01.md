@@ -63,7 +63,7 @@ Et on tape la commande qui suit.
 ```
 docker compose up
 ```
-![Docker Banner](./images/leçon_01_05.png)
+![Docker Banner](./images/leçon_01_0A.png)
 
 L'image va être téléchargée (si celle-ci n'est déjà pas présente dans notre machine). 
 
@@ -73,7 +73,7 @@ Mais il sera bien présent (mais pas démarré).
 ```
 docker ps -a
 ```
-![Docker Banner](./images/leçon_01_02.png)
+![Docker Banner](./images/leçon_01_0B.png)
 
 Mais voilà, le conteneur s'est arrêté et nous n'avons pas pu interagir avec lui.
 
@@ -93,13 +93,13 @@ Sauvegardez le fichier et tapez de nouveau la commande qui suit.
 ```
 docker compose up
 ```
-![Docker Banner](./images/leçon_01_03.png)
+![Docker Banner](./images/leçon_01_0C.png)
 
 Le conteneur est lancé. Maintenant ouvrez un autre terminal et tapez la commande suivante.
 ```
 docker ps
 ```
-![Docker Banner](./images/leçon_01_04.png)
+![Docker Banner](./images/leçon_01_0D.png)
 
 Nous voyons bien notre conteneur qui a été lancé et ne s'est pas arrêté
 
@@ -118,12 +118,14 @@ Tapez exit pour sortir et cliquez sur la combinaison ctrl + C sur l'autre termin
 ## Détacher le conteneur du terminal.
 
 Il est possible de faire la même chose, mais en détachant le conteneur du terminal. Celui-ci tournera alors en arrière-plan. Il suffit pour cela d'ajouter l'option -d.
-
+```
 docker-compose up -d
+```
 En affichant la liste des conteneurs en cours, vous constaterez que celui-ci décrit dans le docker-compose.yml existe.
 ```
 docker ps
 ```
+![Docker Banner](./images/leçon_01_0E.png)
 ## Arrêter.
 
 Pour arrêter le conteneur, on peut utiliser la méthode que l'on connaît déjà.
