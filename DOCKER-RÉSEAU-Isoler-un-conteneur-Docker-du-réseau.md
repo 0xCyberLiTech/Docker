@@ -85,7 +85,6 @@ ip -c a
 ```
 ![ip-c-1.png](./images/ip-c-1.png)
 
-
 Depuis le terminal 02 :
 ```
 docker run --rm -it --network=none celtak/ubuntu-ping-ip
@@ -96,20 +95,7 @@ root@6ef97c0be0cd:/#
 ```
 ip -c a
 ```
-
-Maintenant, nous allons vérifier si les conteneurs sont bien isolés, l'un de l'autre (plus de connexion réseau). 
-
-C'est normalement le cas puisque le pilote none a été utilisé.
-
-Pour ce faire nous allons utiliser une commande que nous connaissons désormais très bien. Il faut la taper sur les deux terminaux.
-```
-ip -c addr
-```
-Si vous avez utilisé le conteneur celtak/ubuntu-ping-ip, normalement ip devrait être disponible. 
-
-Sinon il faudra l'installer aux deux conteneurs pour pouvoir s'en servir.
-
-- [DOCKER RÉSEAU Installer les commandes ping et ip](DOCKER-RÉSEAU-Installer-les-commandes-ping-et-ip.md)
+![ip-c-2.png](./images/ip-c-2.png)
 
 Que voyons-nous 🧐?
 
@@ -127,4 +113,6 @@ Par conséquent, Docker va attribuer un réseau automatiquement à notre contene
 ```
 docker run --rm -it celtak/ubuntu-ping-ip
 ```
+![ip-c-3.png](./images/ip-c-3.png)
+
 
