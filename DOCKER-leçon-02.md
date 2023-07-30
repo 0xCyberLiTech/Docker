@@ -15,3 +15,13 @@ Il est possible d'utiliser des volumes mappés et/ou managés.
 
 Partons de notre docker-compose.yml initial.
 
+```
+version: '3.8'
+
+services:
+  my_debian:
+    image: debian:latest
+    container_name: OS-Debian
+    stdin_open: true
+    tty: true
+```
