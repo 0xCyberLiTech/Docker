@@ -16,7 +16,8 @@
 
 - 01 - [DOCKER VOLUME - Comprende les volumes.](DOCKER-Comprende-les-volumes.md)
 - 02 - [DOCKER VOLUME - Deux types de volumes.](DOCKER-Deux-types-de-volumes.md)
-- 03 - [DOCKER RÉSEAU - Mapper des ports.](DOCKER-Réseau-Mapper-des-ports.md)
-- 03 - [DOCKER leçon 01 - Débuter avec Docker.](DOCKER-leçon-01.md)
-- 04 - [DOCKER leçon 02 - Volume mappé et managé.](DOCKER-leçon-02.md)
-- 05 - [DOCKER leçon 03 - Les réseaux.](DOCKER-leçon-03.md)
+- 03 - [DOCKER RÉSEAU - Installer les commandes ping et ip.](DOCKER-Réseau-Installer-les-commandes-ping-et-ip.md)
+- 04 - [DOCKER RÉSEAU - Mapper des ports.](DOCKER-Réseau-Mapper-des-ports.md)
+- 05 - [DOCKER leçon 01 - Débuter avec Docker.](DOCKER-leçon-01.md)
+- 06 - [DOCKER leçon 02 - Volume mappé et managé.](DOCKER-leçon-02.md)
+- 07 - [DOCKER leçon 03 - Les réseaux.](DOCKER-leçon-03.md)
