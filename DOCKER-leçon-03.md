@@ -73,7 +73,6 @@ ping celtak_ubuntu_2
 
 Deuxième fenêtre :
 
-```
 Dans le conteneur (celtak_ubuntu_2) tapez la commande ci-dessous.
 ```
 ping celtak_ubuntu_1
