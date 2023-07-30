@@ -151,3 +151,73 @@ Pour bien comprendre le fonctionnement, nous allons utiliser cinq conteneurs.
 Nous allons utiliser un schéma pour entrevoir ce que nous souhaitons.
 
 ![leçon_03_0D.png](./images/leçon_03_0D.png)
+
+Désormais nous allons traduire le schéma dans le docker-compose.yml.
+
+```
+version: '3'
+
+services:
+  my_ubuntu_1:
+    image: celtak/ubuntu-ping-ip
+    container_name: celtak_ubuntu_1
+    stdin_open: true
+    tty: true
+    networks:
+      - bridge_networks_1 
+
+  my_ubuntu_2:
+    image: celtak/ubuntu-ping-ip
+    container_name: celtak_ubuntu_2
+    stdin_open: true
+    tty: true
+    networks:
+      - bridge_networks_1 
+
+  my_ubuntu_3:
+    image: celtak/ubuntu-ping-ip
+    container_name: celtak_ubuntu_3
+    stdin_open: true
+    tty: true
+    networks:
+      - bridge_networks_2 
+
+  my_ubuntu_4:
+    image: celtak/ubuntu-ping-ip
+    container_name: celtak_ubuntu_4
+    stdin_open: true
+    tty: true
+    networks:
+      - bridge_networks_2 
+
+  my_ubuntu_5:
+    image: celtak/ubuntu-ping-ip
+    container_name: celtak_ubuntu_5
+    stdin_open: true
+    tty: true
+    networks:
+      - bridge_networks_3
+
+networks:
+  bridge_networks_1:
+    driver: bridge
+  bridge_networks_2:
+    driver: bridge
+  bridge_networks_3:
+    driver: bridge
+```
+Analysons le contenu du fichier.
+
+Comme indiqué en haut, nous avons créé trois réseaux bridge.
+
+Nous avons par la suite, rattaché les cinq conteneurs aux réseaux selon les détails du schéma. Pour les relier à des réseaux, nous avons utilisé le mot-clé networks: suivi du nom du réseau. Par exemple - bridge_networks_1.
+
+Testons les choses afin de vérifier le système.
+
+Commençons par lancer le docker-compose.yml.
+```
+docker-compose up -d
+```
+![leçon_03_0E.png](./images/leçon_03_0E.png)
+
+
