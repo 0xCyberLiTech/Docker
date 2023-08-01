@@ -124,3 +124,4 @@ Votre serveur Zabbix doit être ajouté à Grafana en tant que source de donnée
 
 ![grapfana-13.png](./images/grafana-13.png)
 
+Prochaine étape, surveillance de Zabbix avec Grafana.
