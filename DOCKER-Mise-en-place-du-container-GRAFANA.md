@@ -119,3 +119,8 @@ Faites défiler un peu vers le bas et tapez le nom d’utilisateur de connexion 
 Une fois que vous avez terminé, cliquez sur Enregistrer et tester comme indiqué dans la capture d’écran ci-dessous.
 
 ![grapfana-12.png](./images/grafana-12.png)
+
+Votre serveur Zabbix doit être ajouté à Grafana en tant que source de données.
+
+![grapfana-13.png](./images/grafana-13.png)
+
