@@ -88,3 +88,7 @@ Pour ajouter votre serveur Zabbix en tant que source de données sur Grafana, cl
 
 ![grapfana-06.png](./images/grafana-06.png)
 
+Cliquez sur Ajouter une source de données.
+
+![grapfana-07.png](./images/grafana-07.png)
+
