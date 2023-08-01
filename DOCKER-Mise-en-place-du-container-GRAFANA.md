@@ -95,3 +95,8 @@ Cliquez sur Ajouter une source de données.
 Recherchez la source de données Zabbix et cliquez dessus comme indiqué dans la capture d’écran ci-dessous.
 
 ![grapfana-08.png](./images/grafana-08.png)
+
+Vous devriez voir la page suivante. Vous devez ajouter les informations de votre serveur Zabbix ici.
+
+![grapfana-09.png](./images/grafana-09.png)
+
