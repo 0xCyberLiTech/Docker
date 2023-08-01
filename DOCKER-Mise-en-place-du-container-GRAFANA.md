@@ -17,13 +17,12 @@ Alors, commençons.
 Notre serveur Grafana est issu d'un container en production depuis Docker.
 
 Je joins donc le fichier docker-compose.yml.
-
 ```
 version: '3.8'
 services:
   grafana:
-    image: grafana/grafana-enterprise
-    container_name: grafana:latest
+    image: grafana/grafana-enterprise:latest
+    container_name: grafana
     restart: unless-stopped
     environment:
       # increases the log level from info to debug
@@ -125,3 +124,5 @@ Votre serveur Zabbix doit être ajouté à Grafana en tant que source de donnée
 ![grapfana-13.png](./images/grafana-13.png)
 
 Prochaine étape, surveillance de Zabbix avec Grafana.
+
+Il faut se rendre vers : 
