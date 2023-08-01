@@ -112,3 +112,6 @@ Une fois que vous connaissez l’adresse IP de votre serveur Zabbix, tapez l’U
 
 ![grapfana-10.png](./images/grafana-10.png)
 
+Faites défiler un peu vers le bas et tapez le nom d’utilisateur de connexion et le mot de passe de votre serveur Zabbix dans la section Nom d’utilisateur et Mot de passe respectivement.
+
+![grapfana-11.png](./images/grafana-11.png)
