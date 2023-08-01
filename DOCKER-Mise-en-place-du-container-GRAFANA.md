@@ -68,3 +68,8 @@ Depuis l’interface Web de Grafana, cliquez sur Paramètres > Plugins comme ind
 
 ![grapfana-02.png](./images/grafana-02.png)
 
+Recherchez le plugin Zabbix et cliquez sur le plugin Zabbix à partir du résultat de la recherche comme indiqué dans la capture d’écran ci-dessous.
+
+![grapfana-03.png](./images/grafana-03.png)
+
+Cliquez sur Activer.
