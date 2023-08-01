@@ -100,3 +100,15 @@ Vous devriez voir la page suivante. Vous devez ajouter les informations de votre
 
 ![grapfana-09.png](./images/grafana-09.png)
 
+Pour ajouter votre serveur Zabbix en tant que source de données sur Grafana, vous devez connaître l’adresse IP de votre serveur Zabbix. Dans mon cas, l’adresse IP de mon serveur Zabbix est 192.168.50.250. 
+
+Ce sera différent pour vous.
+
+Alors, assurez-vous de le remplacer par le vôtre à partir de maintenant.
+```
+hostanme -I
+```
+Une fois que vous connaissez l’adresse IP de votre serveur Zabbix, tapez l’URL suivante dans la section URL de l’assistant de source de données Grafana Zabbix.
+
+![grapfana-10.png](./images/grafana-10.png)
+
