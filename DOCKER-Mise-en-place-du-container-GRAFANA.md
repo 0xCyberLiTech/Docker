@@ -14,9 +14,9 @@ Je vais également vous montrer comment démarrer avec la visualisation de donn�
 
 Alors, commençons.
 
-Je suis partis depuis une installation de Grafana sur Docker.
+Notre serveur Grafana est issu d'un container en production depuis Docker.
 
-Je joins donc le fichier docker-compose.
+Je joins donc le fichier docker-compose.yml.
 
 ```
 version: '3.8'
@@ -44,7 +44,7 @@ Pour ajouter Zabbix en tant que source de données Grafana, vous devez avoir le 
 Pour installer le plugin Grafana-Zabbix sur l’ordinateur sur lequel Grafana est installé, exécutez la commande suivante :
 
 ```
-sudo grafana-cli plugins installer alexanderzobnin-zabbix-app
+sudo grafana-cli plugins install alexanderzobnin-zabbix-app     
 ```
 Le plugin Grafana-Zabbix doit être installé.
 
@@ -65,4 +65,6 @@ hosname -I
 Pour accéder à l’interface Web de Grafana, visitez http://192.168.50.250:3000 depuis votre navigateur Web préféré.
 
 Depuis l’interface Web de Grafana, cliquez sur Paramètres > Plugins comme indiqué dans la capture d’écran ci-dessous.
+
+![grapfana-02.png](./images/grafana-02.png)
 
