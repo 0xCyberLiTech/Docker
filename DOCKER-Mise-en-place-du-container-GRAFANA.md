@@ -92,3 +92,6 @@ Cliquez sur Ajouter une source de données.
 
 ![grapfana-07.png](./images/grafana-07.png)
 
+Recherchez la source de données Zabbix et cliquez dessus comme indiqué dans la capture d’écran ci-dessous.
+
+![grapfana-08.png](./images/grafana-08.png)
