@@ -80,3 +80,11 @@ Le plugin Grafana Zabbix doit être activé.
 
 ![grapfana-05.png](./images/grafana-05.png)
 
+Ajout de la source de données Zabbix sur Grafana.
+
+Une fois le plugin Grafana Zabbix activé, vous pouvez ajouter votre serveur Zabbix en tant que source de données sur Grafana.
+
+Pour ajouter votre serveur Zabbix en tant que source de données sur Grafana, cliquez sur Configuration > Sources de données de l’interface Web de Grafana comme indiqué dans la capture d’écran ci-dessous.
+
+![grapfana-06.png](./images/grafana-06.png)
+
