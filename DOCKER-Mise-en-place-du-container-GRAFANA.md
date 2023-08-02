@@ -49,7 +49,7 @@ Le plugin Grafana-Zabbix doit être installé.
 
 Pour que les modifications prennent effet, redémarrez le service systemd grafana-server avec la commande suivante :
 ```
-sudo systemctl redémarrer grafana-server.service
+sudo systemctl restart grafana-server.service
 ```
 Activation du plugin Grafana-Zabbix.
 
