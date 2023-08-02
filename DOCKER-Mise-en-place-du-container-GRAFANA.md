@@ -1,4 +1,4 @@
-![grapfana-01.png](./images/grafana-01.png)
+![grafana-dashboard-1.png](./images/grafana-dashboard-1.png)
 
 ## DOCKER - Mise en place du container GRAFANA :
 
