@@ -34,6 +34,10 @@ services:
 volumes:
   grafana_storage: {}
 ```
+Exécuter la commande suivante :
+```
+docker compose up -d
+```
 L'accès l'interface de Grafana se fait depuis l'url http://192.168.50.250:3000/
 
 Passons à l'installation du plugin Grafana Zabbix.
