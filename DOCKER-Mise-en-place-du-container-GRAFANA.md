@@ -143,7 +143,7 @@ Noubliez pas de mettre en place vos règles de firewall ( UFW ).
 [11] 25/tcp                     ALLOW IN    192.168.50.0/24
 [12] Anywhere                   ALLOW IN    172.21.0.0/16
 [13] Anywhere                   ALLOW IN    172.22.0.0/16
-
+[14] 3000/tcp                   ALLOW IN    192.168.0.0/16
 ```
 Il faut ouvrir le port 3000 pourGrafana, mais cela ne suffit pas si Grafana est installé dans un container.
 ```
