@@ -1,4 +1,4 @@
-![]()
+![grafana-dashboard-1.png](grafana-dashboard-1.png)
 
 ## DOCKER - Mise en place du container GRAFANA :
 
