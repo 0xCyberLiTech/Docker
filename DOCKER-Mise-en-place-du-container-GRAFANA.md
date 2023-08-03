@@ -113,8 +113,13 @@ Vous devriez voir la page suivante.
 
 Vous devez ajouter les informations de votre serveur Zabbix ( Admin / zabbix), si vous n'avez pas changé le mot de passe par défaut.
 
-Concernant cette installation via ce container, saisir : http://192.168.50.250:8080/api_jsonrpc.php
-
+Concernant cette installation via ce container, saisir : 
+```
+http://192.168.50.250:8080/api_jsonrpc.php
+```
+```
+https://192.168.50.250/zabbix/api_jsonrpc.php
+```
 ![grapfana-2023.png](./images/grafana-2023.png)
 
 Faites défiler un peu vers le bas et tapez le nom d’utilisateur de connexion et le mot de passe de votre serveur Zabbix dans la section Nom d’utilisateur et Mot de passe respectivement.
