@@ -131,7 +131,10 @@ Votre serveur Zabbix doit être ajouté à Grafana en tant que source de donnée
 
 Prochaine étape, surveillance de Zabbix avec Grafana.
 
-Il faut se rendre vers : 
+Extrait du ripositorie ZABBIX
+
+- 07 - [ZABBIX - Surveillance avec Grafana.md](https://github.com/0xCyberLiTech/Zabbix/blob/main/ZABBIX-Surveillance-avec-Grafana.md)
+- 08 - [ZABBIX - Création de base d'un tableau de bord sur Grafana.](https://github.com/0xCyberLiTech/Zabbix/blob/main/ZABBIX-Cr%C3%A9ation-de-base-d-un-tableau-de-bord-Grafana.md)
 
 Noubliez pas de mettre en place vos règles de firewall ( UFW ).
 
