@@ -38,25 +38,33 @@ Exécuter la commande suivante :
 ```
 docker compose up -d
 ```
-L'accès l'interface de Grafana se fait depuis l'url http://192.168.50.250:3000/
+L'accès l'interface de Grafana se fait depuis l'url http://192.168.50.250:3000/, remplacer celle-ci par votre adresse ip.
 
 Passons à l'installation du plugin Grafana Zabbix.
 
-Pour ajouter Zabbix en tant que source de données Grafana, vous devez avoir le plugin Grafana-Zabbix installé sur l’ordinateur sur lequel Grafana est installé.
+Pour ajouter Zabbix en tant que source de données Grafana, vous devez avoir le plugin Grafana-Zabbix installé sur l’ordinateur sur lequel Grafana est installé, ici cela sera donc sur notre container Grafana.
 
-Pour installer le plugin Grafana-Zabbix sur l’ordinateur sur lequel Grafana est installé, exécutez la commande suivante :
+Pour installer le plugin Grafana-Zabbix sur le container sur lequel Grafana est installé, exécutez la commande suivante :
 
+Depuis l'hôte lancer la commande suivante :
 ```
-sudo grafana-cli plugins install alexanderzobnin-zabbix-app     
+docker exec -it grafana bash
+```
+```
+grafana-cli plugins install alexanderzobnin-zabbix-app     
 ```
 Le plugin Grafana-Zabbix doit être installé.
 
 Pour que les modifications prennent effet, redémarrez le service systemd grafana-server avec la commande suivante :
 ```
-sudo systemctl restart grafana-server.service
+systemctl restart grafana-server.service
 ```
 Activation du plugin Grafana-Zabbix.
 
+On sort du container Grafana. On se retrouvera sur l'hôte.
+```
+exit
+```
 Une fois le plugin Grafana Zabbix installé, vous devez l’activer à partir de l’interface Web du tableau de bord Grafana.
 
 Pour accéder à l’interface Web de Grafana, vous devez connaître l’adresse IP de l’ordinateur sur lequel Grafana est installé. Dans mon cas, l’adresse IP de l’ordinateur sur lequel j’ai installé Grafana est 192.168.50.250.
