@@ -1,4 +1,4 @@
-![grafana-dashboard-1.png](./images/grafana-dashboard-1.png)
+![image](https://github.com/0xCyberLiTech/Docker/assets/136077064/ceb902d3-477c-49f9-9967-52e141c22b6e)![grafana-dashboard-1.png](./images/grafana-dashboard-1.png)
 
 ## DOCKER - Mise en place du container GRAFANA :
 
@@ -103,7 +103,9 @@ Recherchez la source de données Zabbix et cliquez dessus comme indiqué dans la
 
 Vous devriez voir la page suivante. Vous devez ajouter les informations de votre serveur Zabbix ici.
 
-![grapfana-09.png](./images/grafana-09.png)
+Concernant cette installation via ce container, saisir : http://192.168.50.250:8080/api_jsonrpc.php
+
+![grapfana-2023.png](./images/grafana-2023.png)
 
 Pour ajouter votre serveur Zabbix en tant que source de données sur Grafana, vous devez connaître l’adresse IP de votre serveur Zabbix. Dans mon cas, l’adresse IP de mon serveur Zabbix est 192.168.50.250. 
 
