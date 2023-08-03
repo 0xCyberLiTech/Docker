@@ -1,4 +1,4 @@
-![image](https://github.com/0xCyberLiTech/Docker/assets/136077064/ceb902d3-477c-49f9-9967-52e141c22b6e)![grafana-dashboard-1.png](./images/grafana-dashboard-1.png)
+![]()
 
 ## DOCKER - Mise en place du container GRAFANA :
 
