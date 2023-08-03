@@ -109,20 +109,6 @@ Concernant cette installation via ce container, saisir : http://192.168.50.250:8
 
 ![grapfana-2023.png](./images/grafana-2023.png)
 
-Pour ajouter votre serveur Zabbix en tant que source de données sur Grafana, vous devez connaître l’adresse IP de votre serveur Zabbix.
-
-Dans mon cas, l’adresse IP de mon serveur Zabbix est 192.168.50.250. 
-
-Ce sera différent pour vous.
-
-Alors, assurez-vous de le remplacer par le vôtre à partir de maintenant.
-```
-hostanme -I
-```
-Une fois que vous connaissez l’adresse IP de votre serveur Zabbix, tapez l’URL suivante dans la section URL de l’assistant de source de données Grafana Zabbix.
-
-![grapfana-10.png](./images/grafana-10.png)
-
 Faites défiler un peu vers le bas et tapez le nom d’utilisateur de connexion et le mot de passe de votre serveur Zabbix dans la section Nom d’utilisateur et Mot de passe respectivement.
 
 ![grapfana-11.png](./images/grafana-11.png)
