@@ -9,7 +9,7 @@
 - 03 - [PORTAINER - Mise à jour manuelle.](PORTAINER-Mise-à-jour-manuelle.md)
 - 04 - [PORTAINER - Installation automatisée.](PORTAINER-Installation-automatisée.md)
 - 05 - [PORTAINER - Mise à jour automatisée.](PORTAINER-Mise-à-jour-automatisée.md)
-- 06 - [DOCKER COMPOSE - Exemple mise en service d'un cpntainer LAMP.](DOCKER-COMPOSE-exemple-container-LAMP.md)
+- 06 - [DOCKER COMPOSE - Exemple mise en service d'un container LAMP.](DOCKER-COMPOSE-exemple-container-LAMP.md)
 - 07 - [DOCKER - Mise en place du container GRAFANA](DOCKER-Mise-en-place-du-container-GRAFANA.md)
 
 👋 Apprentissage Docker : 
