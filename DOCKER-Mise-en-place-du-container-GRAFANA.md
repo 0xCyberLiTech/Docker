@@ -145,21 +145,21 @@ N'oubliez pas de mettre en place vos règles de firewall ( UFW ).
 
 ```
 ufw limit in on enp86s0 from 192.168.50.118 to 192.168.50.250 port 2277 proto tcp
-ufw limit in on enp86s0 from 192.168.50.118 to 192.168.50.250 port 80 proto tcp
-ufw limit in on enp86s0 from 192.168.50.118 to 192.168.50.250 port 443 proto tcp
-ufw limit in on enp86s0 from 192.168.0.0/16 to 192.168.50.250 port 10050 proto tcp
-ufw limit in on enp86s0 from 192.168.50.118 to 192.168.50.250 port 9443 proto tcp
+ufw allow in on enp86s0 from 192.168.50.118 to 192.168.50.250 port 80 proto tcp
+ufw allow in on enp86s0 from 192.168.50.118 to 192.168.50.250 port 443 proto tcp
+ufw allow in on enp86s0 from 192.168.0.0/16 to 192.168.50.250 port 10050 proto tcp
+ufw allow in on enp86s0 from 192.168.50.118 to 192.168.50.250 port 9443 proto tcp
 ufw allow from 172.17.0.0/16 to 192.168.50.0/24 proto tcp comment 'LANSUBNET 172.17.0.0 Docker'
 ufw allow from 172.18.0.0/16 to 192.168.50.0/24 proto tcp comment 'LANSUBNET 172.18.0.0 Docker'
 ```
 ```
      To                         Action      From
      --                         ------      ----
-[ 1] 192.168.50.250 2234/tcp on enp86s0 LIMIT IN    192.168.50.118
-[ 2] 192.168.50.250 80/tcp on enp86s0 LIMIT IN    192.168.50.118
-[ 3] 192.168.50.250 443/tcp on enp86s0 LIMIT IN    192.168.50.118
-[ 4] 192.168.50.250 10050/tcp on enp86s0 LIMIT IN    192.168.0.0/16
-[ 5] 192.168.50.250 9443/tcp on enp86s0 LIMIT IN    192.168.50.118
+[ 1] 192.168.50.250 2277/tcp on enp86s0 LIMIT IN    192.168.50.118
+[ 2] 192.168.50.250 80/tcp on enp86s0 ALLOW IN    192.168.50.118
+[ 3] 192.168.50.250 443/tcp on enp86s0 ALLOW IN    192.168.50.118
+[ 4] 192.168.50.250 10050/tcp on enp86s0 ALLOW IN    192.168.0.0/16
+[ 5] 192.168.50.250 9443/tcp on enp86s0 ALLOW IN    192.168.50.118
 [ 6] 192.168.50.0/24/tcp        ALLOW IN    172.17.0.0/16/tcp          # LANSUBNET 172.17.0.0 Docker
 [ 7] 192.168.50.0/24/tcp        ALLOW IN    172.18.0.0/16/tcp          # LANSUBNET 172.18.0.0 Docker
 ```
