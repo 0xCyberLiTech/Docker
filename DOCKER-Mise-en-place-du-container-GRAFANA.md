@@ -75,7 +75,7 @@ hosname -I
 ```
 Pour accéder à l’interface Web de Grafana, visitez http://192.168.50.250:3000 depuis votre navigateur Web préféré.
 
-Identifiants par défaut admin / admin.
+Identifiants par défaut admin/admin.
 
 Depuis l’interface Web de Grafana, cliquez sur Paramètres > Plugins comme indiqué dans la capture d’écran ci-dessous.
 
