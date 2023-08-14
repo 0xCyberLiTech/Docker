@@ -18,10 +18,12 @@ On est partie, on va commencer par configurer l’hôte dans Zabbix.
 
 Aller dans le menu de gauche sur (Collecte de données), puis cliquer sur hôtes.
 
-Cliquer en haut à droite (Créer un Hôte).
+Cliquer en haut à droite sur le bouton (Créer un Hôte).
 
 ![Docker-01.png](./images/Docker-01.png)
 
+![Docker-02.png](./images/Docker-02.png)
 
+![Docker-03.png](./images/Docker-03.png)
 
 
