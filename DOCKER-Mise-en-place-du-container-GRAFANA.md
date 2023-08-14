@@ -111,9 +111,9 @@ Recherchez la source de données Zabbix et cliquez dessus comme indiqué dans la
 
 Vous devriez voir la page suivante.
 
-Vous devez ajouter les informations de votre serveur Zabbix ( Admin / zabbix), si vous n'avez pas changé le mot de passe par défaut.
+Vous devez ajouter les informations de votre serveur Zabbix (Admin/zabbix), si vous n'avez pas changé le mot de passe par défaut.
 
-Concernant cette installation via ce container, saisir : 
+Concernant cette installation via ce container, saisir :
 ```
 http://192.168.50.250:8080/api_jsonrpc.php
 ```
@@ -126,7 +126,7 @@ Faites défiler un peu vers le bas et tapez le nom d’utilisateur de connexion 
 
 ![grapfana-11.png](./images/grafana-11.png)
 
-Une fois que vous avez terminé, cliquez sur Enregistrer et tester comme indiqué dans la capture d’écran ci-dessous.
+Une fois que vous avez terminé, cliquer sur Enregistrer et tester comme indiqué dans la capture d’écran ci-dessous.
 
 ![grapfana-12.png](./images/grafana-12.png)
 
