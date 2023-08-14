@@ -189,7 +189,7 @@ Autre exemple : d'autres règles de ce type peuvent également être mises en pl
 
 Dans cet exemple, nous avons installé Docker sur notre serveur Zabbix et également déployé Grafana sous la forme d'un container.
 
-De nouvelles règles seront mises en service afin d'assurer la communication entre docker et votre réseau local.
+De nouvelles règles seront mises en service afin d'assurer la communication entre docker, Grafana et votre réseau local.
 ```
 ufw allow from 172.17.0.0/16 to 192.168.50.0/24 proto tcp comment 'LANSUBNET 172.17.0.0 Docker'
 ```
