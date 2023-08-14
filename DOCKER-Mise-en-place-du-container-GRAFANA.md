@@ -165,6 +165,10 @@ ufw allow from 172.17.0.0/16 to 192.168.50.0/24 proto tcp comment 'LANSUBNET 172
 ```
 ufw allow from 172.18.0.0/16 to 192.168.50.0/24 proto tcp comment 'LANSUBNET 172.18.0.0 Docker'
 ```
+Liste des règles en service :
+```
+ufw status numbered
+```
 ```
      To                         Action      From
      --                         ------      ----
