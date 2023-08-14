@@ -142,6 +142,8 @@ Extrait du ripositorie ZABBIX
 - 08 - [ZABBIX - Création de base d'un tableau de bord sur Grafana.](https://github.com/0xCyberLiTech/Zabbix/blob/main/ZABBIX-Cr%C3%A9ation-de-base-d-un-tableau-de-bord-Grafana.md)
 
 N'oubliez pas de mettre en place vos règles de firewall ( UFW ).
+
+Exemples de règles :
 ```
 ufw limit in on enp86s0 from 192.168.50.118 to 192.168.50.250 port 2277 proto tcp
 ```
