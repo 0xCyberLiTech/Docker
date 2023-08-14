@@ -22,8 +22,23 @@ Cliquer en haut à droite sur le bouton (Créer un Hôte).
 
 ![Docker-01.png](./images/Docker-01.png)
 
+Dans la liste des templates, rechercher Docker 1 et sélectionner Docker by Zabbix agent 2
+
 ![Docker-02.png](./images/Docker-02.png)
 
 ![Docker-03.png](./images/Docker-03.png)
 
+Il faut intervenir sur le serveur Docker :
 
+Une petite manipulation est à faire pour que l’agent Zabbix puisse collecter les données au niveau du service Docker.
+
+Il faut ajouter l’utilisateur Zabbix qui est utilisé par l’agent, dans le groupe Docker du serveur.
+
+Pour cela entrer la commande suivante :
+```
+sudo usermod -aG docker zabbix
+```
+Redémarrer ensuite le service de l’agent Zabbix pour la prise en compte :
+```
+sudo systemctl  restart zabbix-agent2
+```
