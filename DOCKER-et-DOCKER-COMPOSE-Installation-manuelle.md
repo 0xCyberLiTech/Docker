@@ -68,7 +68,11 @@ Ensuite, actualisez la liste des packages.
 ```
 sudo apt update
 ```
-Notre nouveau référentiel Docker est maintenant disponible et prêt à être utilisé.
+```
+Réception de :2 https://download.docker.com/linux/debian bookworm InRelease [43,3 kB]
+Réception de :5 https://download.docker.com/linux/debian bookworm/stable amd64 Packages [11,9 kB]
+```
+Nous pouvons voir que notre nouveau référentiel Docker est maintenant disponible et prêt à être utilisé.
 
 ## Étape 4 : Installer Docker sur Debian 12 (Bookworm).
 
