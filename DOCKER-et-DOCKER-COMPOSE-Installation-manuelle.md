@@ -29,6 +29,15 @@ Pour cette raison, je vais vous montrer comment installer Docker sur Debian 12 �
 
 Cette approche garantit que vous obtenez toujours la dernière version à jour et que vous recevrez automatiquement toutes les futures mises à jour logicielles dès qu’elles seront disponibles.
 
+Rappel sur la commande sudo, si celle-ci n'est pas installée :
+
+```
+su - root
+apt install sudo
+usermod -aG sudo cyberlitech
+init 6
+```
+
 ## Étape 1 : Installer les composants requis.
 
 Tout d’abord, exécutez les deux commandes ci-dessous pour mettre à jour l’index du package et installer les composants requis nécessaires pour ajouter et utiliser un nouveau référentiel HTTPS.
