@@ -12,125 +12,101 @@ Docker compose V2 est inclus dans toutes les versions actuellement prises en cha
 
 ## Installation de Docker Engine & Docker-compose-plugin v2.
 
-Pour commencer à utiliser Docker Engine & Docker-compose-plugin v2 sur Debian, assurez-vous de remplir les conditions préalables, puis suivez les étapes d’installation.
+Installation de Docker sur Debian 12.
 
-Si l'installation de DEBIAN 12 à été effectuée de manière minimale, il faudra installer le paquet 'sudo'.
-```
-# su - root
-# apt install sudo
-# usermod -aG sudo cyberlitech
-# init 6
-```
-Configuration et installation des dépôts 'APT'.
+Il existe plusieurs façons d’installer Docker sur votre système Debian 12.
 
-Avant d’installer Docker Engine & Docker-compose-plugin v2 pour la première fois sur une nouvelle machine hôte, vous devez configurer les dépôts de Docker.
+Il est disponible dans les dépôts officiels de Debian, où il peut être facilement installé avec une seule commande APT.
 
-Ensuite, vous pouvez installer et mettre à jour Docker à partir de ceux-ci.
+Cependant, un inconvénient de cette approche est que la version disponible n’est pas toujours la plus récente.
 
-## Installation des dépendances de Docker Engine.
+Pour cette raison, je vais vous montrer comment installer Docker sur Debian 12 à partir du dépôt officiel de Docker.
 
-Mettre à jour votre système :
+Cette approche garantit que vous obtenez toujours la dernière version à jour et que vous recevrez automatiquement toutes les futures mises à jour logicielles dès qu’elles seront disponibles.
 
-Pour ce faire, exécutez la commande ci-dessous sur votre shell :
-```
-sudo apt-get update && sudo apt upgrade -y
-```
-Pour pouvoir installer Docker, Docker-compose-plugin v2 et tous les paquets requis, nous devons ajouter les dépôts officiel de docker.
+## Étape 1 : Installer les composants requis.
 
-Nous allons commencer par installer les paquets requis :
-```
-sudo apt-get install ca-certificates \
-             curl \
-             gnupg -y
-```
-Une fois, cette étape effectuée, poursuivre l'installation.
+Tout d’abord, exécutez les deux commandes ci-dessous pour mettre à jour l’index du package et installer les composants requis nécessaires pour ajouter et utiliser un nouveau référentiel HTTPS.
 
-## Ajouter la clé GPG officielle de Docker Engine:.
+```
+sudo apt update
+sudo apt install apt-transport-https ca-certificates curl gnupg
+```
+## Étape 2: Ajouter la clé GPG Repo de Docker.
+Ensuite, importez la clé du dépôt Docker GPG dans votre système Debian.
 
-Commençons par récupérer la clé GPG qui nous permettra de valider l'installation des paquets.
-```
-sudo install -m 0755 -d /etc/apt/keyrings
-```
-```
-curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-```
-```
-sudo chmod a+r /etc/apt/keyrings/docker.gpg
-```
-Utilisez la commande suivante pour configurer les nouveaux dépôts vers /etc/apt/sources.list.d/docker.list
-```
-echo \
-  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
-  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-```
-Poursuivre l'installation de docker.
+Cette fonction de sécurité garantit l’authenticité du logiciel que vous installez.
 
-Mettez à jour l’index de la liste des dépôts 'apt'.
 ```
-sudo apt-get update
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker.gpg
 ```
-## Installez Docker Engine, containerd, et Docker Compose (docker-compose-plugin v2).
+## Étape 3 : Ajouter le dépôt Docker à Debian 12.
 
-Pour installer la dernière version, exécutez :
-```
-sudo apt-get install docker-ce \
-             docker-ce-cli \
-             containerd.io \
-             docker-buildx-plugin \
-             docker-compose-plugin -y
-```
-Une fois l’installation terminée, vous devez ajouter votre utilisateur au groupe Docker pour pouvoir exécuter des commandes Docker sans utiliser sudo.
-```
-sudo usermod -aG docker cyberlitech
-```
-```
-newgrp docker
-```
-Assurez-vous également que le service Docker Engine est démarré et activé :
+Après avoir importé les clés GPG, nous ajouterons le dépôt officiel Docker à notre système Debian 12.
 
-Si vous souhaitez que Docker Engine démarre automatiquement avec votre machine Debian, la commande suivante doit être exécutée :
+Cela implique que le package de mise à jour sera disponible avec le reste des mises à jour régulières de votre système si une nouvelle version est publiée.
 ```
-sudo systemctl start docker && sudo systemctl enable docker
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker.gpg] https://download.docker.com/linux/debian bookworm stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
-## Docker Engine est-il bien installé ?
+Comme pour la commande précédente, son exécution ne produit aucune sortie.
 
-Vérifiez si le service est en cours d’exécution :
-
-L'installation des paquets est terminée, mais Docker Engine est-il correctement installé ?
-Pour répondre à cette question, vous pouvez regarder le statut de Docker Engine, ce qui sera une première indication si le service est identifié sur la machine.
+Ensuite, actualisez la liste des packages.
 ```
-systemctl is-enabled docker
+sudo apt update
 ```
+Notre nouveau référentiel Docker est maintenant disponible et prêt à être utilisé.
+
+## Étape 4 : Installer Docker sur Debian 12 (Bookworm).
+
+Pour installer la dernière version de Docker sur Debian, exécutez la commande ci-dessous.
 ```
-systemctl is-enabled containerd
+sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin
 ```
+Cela installe les composants Docker suivants :
+
+- docker-ce : Le moteur Docker lui-même.
+- docker-ce-cli : Un outil de ligne de commande qui vous permet de parler au démon Docker.
+- containerd.io : runtime de conteneur qui gère le cycle de vie du conteneur.
+- docker-buildx-plugin : Un plugin CLI qui étend la version Docker avec de nombreuses nouvelles fonctionnalités.
+
+C’est tout! Docker devrait maintenant être installé; Le service a démarré et activé pour démarrer automatiquement au démarrage.
+
+En outre, vous pouvez vérifier l’état du service Docker à l’aide des éléments suivants :
 ```
-systemctl status docker containerd
+sudo systemctl is-active docker
 ```
-Docker & Docker compose v2 est à présent installé et opérationnel.
+## Étape 5 : Vérifier l’installation de Docker.
 
-## Test Docker Engine.
-
-Après avoir installé Docker Engine, vous pouvez l’utiliser pour gérer les conteneurs comme vous le souhaitez.
-
-Voici quelques-unes des opérations de base de Docker Engine.
-
-Meilleur moyen de vérifier si Docker Engine est installé, c'est d'exécuter le container nommé "hello-world".
-La commande ci-dessous permettra de télécharger l'image de ce container et de l'exécuter.
-```
-sudo docker run hello-world
-```
-Lorsque ce container sera exécuté, le message "Hello from Docker!" Sera retourné dans la console.
-
-C'est le signe que les différents composants sont opérationnels et que Docker Engine a pu générer et exécuter le container.
-
-- Quelle est la version de Docker Engine installée ?
-
-Pour finir avec la phase d'installation, sachez qu'à tout moment vous pouvez voir quelle est la version de Docker Engine que vous utilisez grâce à la commande suivante :
+Vérifions maintenant si tout fonctionne correctement avec notre nouvelle installation Docker.
 ```
 sudo docker version
 ```
 ```
 sudo docker compose version
 ```
+Nous allons exécuter une application simple appelée « hello-world ».
+```
+sudo docker run hello-world
+```
+Activation des utilisateurs non root pour exécuter des commandes Docker.
+
+Jusqu’à présent, nous avons installé avec succès Docker sur votre système Debian 12.
+
+Toutefois, seuls les utilisateurs root et sudo disposant de privilèges sudo qui peuvent exécuter des commandes Docker par défaut.
+
+Ainsi, pour exécuter des commandes Docker en tant qu’utilisateur non root, vous devez ajouter votre utilisateur au groupe « docker ».
+
+Pour ce faire, tapez ce qui suit :
+
+```
+sudo usermod -aG docker ${USER}
+```
+Dans la commande ci-dessus, ${USER} est une variable d’environnement qui contient votre nom d’utilisateur.
+
+Pour demander la nouvelle adhésion au groupe, redémarrez votre système Debian.
+
+Vous pouvez ensuite exécuter des commandes Docker sans les préfixer avec 'sudo'.
+
+## Conclusion :
+
+Nous avons exploré le processus étape par étape d’installation de Docker sur Debian 12 (Bookworm).
