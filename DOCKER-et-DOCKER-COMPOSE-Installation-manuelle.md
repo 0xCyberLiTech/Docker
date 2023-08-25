@@ -2,13 +2,18 @@
 
 ## Installation manuelle de Docker Engine & Docker compose (docker-compose-plugin v2).
 
-Important.
+## Important.
 
 À partir de juillet 2023, Docker-compose V1 a cessé de recevoir des mises à jour.
 
 Il n’est également plus disponible dans les nouvelles versions de Docker Desktop.
 
 Docker compose V2 est inclus dans toutes les versions actuellement prises en charge de Docker Desktop.
+
+Nouvelle syntaxe concerant Docker compose :
+
+- Avant - docker-compose
+- Après - docker compose
 
 ## Installation de Docker Engine & Docker-compose-plugin v2.
 
