@@ -25,3 +25,14 @@
 - 08 - [DOCKER leçon 01 - Débuter avec Docker.](DOCKER-leçon-01.md)
 - 09 - [DOCKER leçon 02 - Volume mappé et managé.](DOCKER-leçon-02.md)
 - 10 - [DOCKER leçon 03 - Les réseaux.](DOCKER-leçon-03.md)
+
+---
+
+Merci pour ta visite — et bon déploiement Debian ! 💻🚀
+
+---
+
+<p align="center">
+  🔒 Un guide proposé par <a href="https://github.com/0xCyberLiTech">0xCyberLiTech</a> • Pour des tutoriels accessible à tous.
+</p>
+
