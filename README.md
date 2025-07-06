@@ -29,6 +29,13 @@
 
 ---
 
+### 🎯 **Objectif de ce dépôt.**
+
+> Ce dépôt a pour vocation de centraliser un ensemble de notions clés autour de Docker. Il s’adresse aux passionnés, étudiants et professionnels souhaitant mieux comprendre les principes de la conteneurisation,
+> apprendre à construire, déployer et gérer des applications avec Docker, et se familiariser avec les concepts et outils essentiels pour optimiser leurs flux de développement et leurs infrastructures.
+
+---
+
 ### 🧭 **Sommaire :**
 
 <div align="center">
