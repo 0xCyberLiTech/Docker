@@ -35,14 +35,14 @@
 
 | Catégorie | Sujet | Accès Rapide |
 |:---:|:---|:---:|
-| **Tutoriels & Outils** | Installation manuelle de Docker & Docker Compose | [<img src="https://img.shields.io/badge/EXPLORER-brightgreen?style=for-the-badge&logo=github&logoColor=white">](DOCKER-et-DOCKER-COMPOSE-Installation-manuelle.md) |
-| **Tutoriels & Outils** | Installation manuelle de Portainer | [<img src="https://img.shields.io/badge/EXPLORER-brightgreen?style=for-the-badge&logo=github&logoColor=white">](PORTAINER-Installation-manuelle.md) |
-| **Tutoriels & Outils** | Mise à jour manuelle de Portainer | [<img src="https://img.shields.io/badge/EXPLORER-brightgreen?style=for-the-badge&logo=github&logoColor=white">](PORTAINER-Mise-à-jour-manuelle.md) |
-| **Tutoriels & Outils** | Installation automatisée de Portainer | [<img src="https://img.shields.io/badge/EXPLORER-brightgreen?style=for-the-badge&logo=github&logoColor=white">](PORTAINER-Installation-automatisée.md) |
-| **Tutoriels & Outils** | Mise à jour automatisée de Portainer | [<img src="https://img.shields.io/badge/EXPLORER-brightgreen?style=for-the-badge&logo=github&logoColor=white">](PORTAINER-Mise-à-jour-automatisée.md) |
-| **Tutoriels & Outils** | Exemple Docker Compose : conteneur LAMP | [<img src="https://img.shields.io/badge/EXPLORER-brightgreen?style=for-the-badge&logo=github&logoColor=white">](DOCKER-COMPOSE-exemple-container-LAMP.md) |
-| **Tutoriels & Outils** | Mise en place d'un conteneur Grafana | [<img src="https://img.shields.io/badge/EXPLORER-brightgreen?style=for-the-badge&logo=github&logoColor=white">](DOCKER-Mise-en-place-du-container-GRAFANA.md) |
-| **Tutoriels & Outils** | Superviser Docker avec Zabbix | [<img src="https://img.shields.io/badge/EXPLORER-brightgreen?style=for-the-badge&logo=github&logoColor=white">](DOCKER-Superviser-à-l-aide-de-Zabbix.md) |
+| **Tutos & Outils** | Installation manuelle de Docker & Docker Compose | [<img src="https://img.shields.io/badge/EXPLORER-brightgreen?style=for-the-badge&logo=github&logoColor=white">](DOCKER-et-DOCKER-COMPOSE-Installation-manuelle.md) |
+| **Tutos & Outils** | Installation manuelle de Portainer | [<img src="https://img.shields.io/badge/EXPLORER-brightgreen?style=for-the-badge&logo=github&logoColor=white">](PORTAINER-Installation-manuelle.md) |
+| **Tutos & Outils** | Mise à jour manuelle de Portainer | [<img src="https://img.shields.io/badge/EXPLORER-brightgreen?style=for-the-badge&logo=github&logoColor=white">](PORTAINER-Mise-à-jour-manuelle.md) |
+| **Tutos & Outils** | Installation automatisée de Portainer | [<img src="https://img.shields.io/badge/EXPLORER-brightgreen?style=for-the-badge&logo=github&logoColor=white">](PORTAINER-Installation-automatisée.md) |
+| **Tutos & Outils** | Mise à jour automatisée de Portainer | [<img src="https://img.shields.io/badge/EXPLORER-brightgreen?style=for-the-badge&logo=github&logoColor=white">](PORTAINER-Mise-à-jour-automatisée.md) |
+| **Tutos & Outils** | Exemple Docker Compose : conteneur LAMP | [<img src="https://img.shields.io/badge/EXPLORER-brightgreen?style=for-the-badge&logo=github&logoColor=white">](DOCKER-COMPOSE-exemple-container-LAMP.md) |
+| **Tutos & Outils** | Mise en place d'un conteneur Grafana | [<img src="https://img.shields.io/badge/EXPLORER-brightgreen?style=for-the-badge&logo=github&logoColor=white">](DOCKER-Mise-en-place-du-container-GRAFANA.md) |
+| **Tutos & Outils** | Superviser Docker avec Zabbix | [<img src="https://img.shields.io/badge/EXPLORER-brightgreen?style=for-the-badge&logo=github&logoColor=white">](DOCKER-Superviser-à-l-aide-de-Zabbix.md) |
 | **Apprentissage** | Présentation générale de Docker | [<img src="https://img.shields.io/badge/EXPLORER-brightgreen?style=for-the-badge&logo=github&logoColor=white">](DOCKER-Présentation.md) |
 | **Apprentissage** | Commandes Docker utiles | [<img src="https://img.shields.io/badge/EXPLORER-brightgreen?style=for-the-badge&logo=github&logoColor=white">](DOCKER-Quelques-commandes-utiles.md) |
 | **Apprentissage** | Comprendre les volumes Docker | [<img src="https://img.shields.io/badge/EXPLORER-brightgreen?style=for-the-badge&logo=github&logoColor=white">](DOCKER-VOLUME-Comprende-les-volumes.md) |
