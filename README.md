@@ -10,6 +10,7 @@
 </p>
 
 [![Dernière version](https://img.shields.io/github/v/release/0xCyberLiTech/Docker?style=flat-square&color=blue)](https://github.com/0xCyberLiTech/Docker/releases/latest)
+[![Changelog](https://img.shields.io/badge/📄%20CHANGELOG-Docker-blue)](https://github.com/0xCyberLiTech/Docker/blob/main/CHANGELOG.md)
 
 </div>
 
