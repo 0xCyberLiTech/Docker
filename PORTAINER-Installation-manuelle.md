@@ -29,5 +29,5 @@ sudo docker run -d -p 9443:9443 --name portainer \
    portainer/portainer-ce:latest \
    --http-disabled
 ```
-Une fois le conteneur lancé, il suffit de se rendre sur http://@IPduserveur:9000 pour accéder à Portainer. 
+Une fois le conteneur lancé, il suffit de se rendre sur http://@IPduserveur:9000 ou https://@IPduserveur:9443 pour accéder à Portainer. 
 Les étapes de configuration sont ensuite limpides et vous devriez vous en sortir.
