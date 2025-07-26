@@ -79,10 +79,23 @@ Une petite manipulation est à faire pour que l’agent Zabbix puisse collecter 
 Il faut ajouter l’utilisateur Zabbix qui est utilisé par l’agent, dans le groupe Docker du serveur.
 
 Pour cela entrer la commande suivante :
+
 ```
 sudo usermod -aG docker zabbix
 ```
+
 Redémarrer ensuite le service de l’agent Zabbix pour la prise en compte :
+
 ```
 sudo systemctl  restart zabbix-agent2
 ```
+
+---
+
+**Mise à jour :** Juillet 2025
+
+---
+
+<p align="center">
+  <b>🔒 Un guide proposé par <a href="https://github.com/0xCyberLiTech">0xCyberLiTech</a> • Pour des tutoriels accessibles à tous. 🔒</b>
+</p>
