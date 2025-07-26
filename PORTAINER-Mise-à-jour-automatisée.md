@@ -48,12 +48,26 @@
 
 Accès au script,
 [cliquer ici](mise-à-jour-automatisée-de-portainer.md)
+
 ```
 touch mise-à-jour-automatisée-de-portainer.sh
 ```
+
 ```
 chmod +x mise-à-jour-automatisée-de-portainer.sh
 ```
+
 ```
 sudo ./mise-à-jour-automatisée-de-portainer.sh
 ```
+
+---
+
+**Mise à jour :** Juillet 2025
+
+---
+
+<p align="center">
+  <b>🔒 Un guide proposé par <a href="https://github.com/0xCyberLiTech">0xCyberLiTech</a> • Pour des tutoriels accessibles à tous. 🔒</b>
+</p>
+
