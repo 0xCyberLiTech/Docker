@@ -85,3 +85,14 @@ sudo docker run -d -p 9443:9443 --name portainer \
    --http-disabled
 ```
 Portainer est maintenant à jour et tous ses réglages ont été conservés.
+
+---
+
+**Mise à jour :** Juillet 2025
+
+---
+
+<p align="center">
+  <b>🔒 Un guide proposé par <a href="https://github.com/0xCyberLiTech">0xCyberLiTech</a> • Pour des tutoriels accessibles à tous. 🔒</b>
+</p>
+
