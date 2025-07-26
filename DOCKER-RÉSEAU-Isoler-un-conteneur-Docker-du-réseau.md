@@ -49,6 +49,7 @@
 Pour atteindre cet objectif, nous allons recourir à none.
 
 Rappel communication entre deux containers :
+
 ```
 version: '3.8'
 
@@ -65,36 +66,49 @@ services:
     stdin_open: true
     tty: true
 ```
+
 ```
 docker compose up -d
 ```
+
 ```
 docker ps
 ```
+
 Depuis le container celtak_ubuntu_1
+
 ```
 docker exec -it (celtak_ubuntu_1) bash
 ```
+
 ```
 ip -c addr
 ```
+
 ![ip-1.png](./images/ip-1.png)
+
 ```
 ping celtak_ubuntu_2
 ```
+
 ![ping-01.png](./images/ping-01.png)
 
 Depuis le container celtak_ubuntu_2
+
 ```
 docker exec -it (celtak_ubuntu_2) bash
 ```
+
 ```
 ip -c addr
 ```
+
 ![ip-2.png](./images/ip-2.png)
+
 ```
 ping celtak_ubuntu_1
 ```
+
 ![ping-02.png](./images/ping-02.png)
 
 Nous pouvons constater que ces deux containers (celtak_ubuntu_1) et (celtak_ubuntu_2) discutent entre eux.
@@ -112,31 +126,41 @@ C'est normalement le cas puisque le pilote none a été utilisé.
 Pour ce faire nous allons utiliser une commande que nous connaissons désormais très bien.
 
 Il faut la taper sur les deux terminaux.
+
 ```
 ip -c a
 ```
+
 Depuis le terminal 01 :
+
 ```
 docker run --rm -it --network=none celtak/ubuntu-ping-ip
 ```
+
 ```
 root@5863762b3801:/#
 ```
+
 ```
 ip -c a
 ```
+
 ![ip-c-1.png](./images/ip-c-1.png)
 
 Depuis le terminal 02 :
+
 ```
 docker run --rm -it --network=none celtak/ubuntu-ping-ip
 ```
+
 ```
 root@6ef97c0be0cd:/#
 ```
+
 ```
 ip -c a
 ```
+
 ![ip-c-2.png](./images/ip-c-2.png)
 
 Que voyons-nous 🧐?
@@ -152,7 +176,20 @@ Un troisième conteneur va etre mis en service.
 Ensuite nous allons taper la même commande que précédemment, mais en omettant le paramètre --network=none.
 
 Par conséquent, Docker va attribuer un réseau automatiquement à notre conteneur.
+
 ```
 docker run --rm -it celtak/ubuntu-ping-ip
 ```
+
 ![ip-c-3.png](./images/ip-c-3.png)
+
+---
+
+**Mise à jour :** Juillet 2025
+
+---
+
+<p align="center">
+  <b>🔒 Un guide proposé par <a href="https://github.com/0xCyberLiTech">0xCyberLiTech</a> • Pour des tutoriels accessibles à tous. 🔒</b>
+</p>
+
