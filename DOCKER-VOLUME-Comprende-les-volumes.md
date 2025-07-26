@@ -1,6 +1,6 @@
-![Docker Banner](https://thingsolver.com/wp-content/uploads/docker-cover.png)
-
 <div align="center">
+
+  ![Docker Banner](https://thingsolver.com/wp-content/uploads/docker-cover.png)
 
   <a href="https://github.com/0xCyberLiTech">
     <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&pause=1000&color=D14A4A&center=true&vCenter=true&width=700&lines=CONTENEURISATION+AVEC+DOCKER;Docker+•+Docker+Compose+•+Portainer;Tutoriels+et+Guides+Pratiques" alt="Typing SVG" />
@@ -85,10 +85,6 @@ C'est particulièrement profitable pour les conteneurs de bases de données.
 Mais pas seulement.
 
 Pour les fichiers de configurations aussi (Nginx pour ne parler que de lui, mais c'est le cas pour n'importe quel autre serveur web ou programme qui nécessite des fichiers de configuration).
-
----
-
-**Mise à jour :** Juillet 2025
 
 ---
 
