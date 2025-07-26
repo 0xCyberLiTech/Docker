@@ -1,6 +1,6 @@
-![Docker Banner](https://thingsolver.com/wp-content/uploads/docker-cover.png)
-
 <div align="center">
+
+  ![Docker Banner](https://thingsolver.com/wp-content/uploads/docker-cover.png)
 
   <a href="https://github.com/0xCyberLiTech">
     <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&pause=1000&color=D14A4A&center=true&vCenter=true&width=700&lines=CONTENEURISATION+AVEC+DOCKER;Docker+•+Docker+Compose+•+Portainer;Tutoriels+et+Guides+Pratiques" alt="Typing SVG" />
@@ -341,10 +341,6 @@ Il faut diviser le nom en deux parties :
 - 1) La première partie correspond au nom du dossier qui contient le docker-compose.yml (exercice-docker-compose). 
 
 - 2) Et la deuxième partie au nom du volume choisi (test_volume).
-
----
-
-**Mise à jour :** Juillet 2025
 
 ---
 
