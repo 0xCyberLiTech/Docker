@@ -79,3 +79,13 @@ En effet, il faut obligatoirement créer un volume avec un nom (grâce à une co
 ![docker-manager-volume.png](./images/docker-manager-volume.png)
 
 Cela peut paraître compliqué, mais en pratiquant plus tard, les choses seront plus claires.
+
+---
+
+**Mise à jour :** Juillet 2025
+
+---
+
+<p align="center">
+  <b>🔒 Un guide proposé par <a href="https://github.com/0xCyberLiTech">0xCyberLiTech</a> • Pour des tutoriels accessibles à tous. 🔒</b>
+</p>
