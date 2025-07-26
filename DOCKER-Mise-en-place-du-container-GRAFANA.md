@@ -1,5 +1,3 @@
-![grafana-dashboard-1.png](./images/Grafana-console_01.png)
-
 ![Docker Banner](https://thingsolver.com/wp-content/uploads/docker-cover.png)
 
 <div align="center">
@@ -262,3 +260,5 @@ ufw status numbered
 [ 7] 192.168.50.0/24/tcp        ALLOW IN    172.18.0.0/16/tcp          # LANSUBNET 172.18.0.0 Docker
 [ 8] 192.168.50.250 10051/tcp on enp86s0 ALLOW IN    192.168.0.0/16             # 1051 agent Zabbix - For Active checks
 ```
+
+![grafana-dashboard-1.png](./images/Grafana-console_01.png)
