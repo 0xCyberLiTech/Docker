@@ -66,9 +66,11 @@ Cependant, un conteneur est indépendant et nous ne pouvons pas l'atteindre via 
 En l'état, il n'est donc possible d'y accéder.
 
 Pour vérifier ce que nous avons dit, tapez la commande suivante (les options -it sont inutiles, car nous ne cherchons pas à interagir avec le conteneur, mais juste à la lancer).
+
 ```
 docker run --rm nginx
 ```
+
 Puis ouvrez votre navigateur préféré (par exemple Chrome ou Opéra) et tapez dans la barre d'adresse localhost:80 (ou localhost qui revient au même, car dans ce cas le port 80 est utilisé implicitement).
 
 Nous tombons sur une page qui nous indique que le "site est inaccessible".
@@ -98,9 +100,11 @@ Par contre, on peut le relier à n'importe quel autre port libre de la machine l
 Nous avons décidé d'utiliser le port 9001, mais il est possible de faire un autre choix.
 
 Pour atteindre ce but, il faut taper la commande suivante.
+
 ```
 docker run --rm -p 9001:80 nginx
 ```
+
 Contrairement aux autres fois, nous n'utilisons pas l'option -it, car nous n'avons pas besoin d'interagir avec le conteneur.
 
 Maintenant ouvrez un navigateur et tapez l'adresse localhost:9001.
@@ -122,3 +126,14 @@ Ensuite 9001 est le port de la machine locale.
 Les : séparent les ports.
 
 Et 80 est le port du conteneur.
+
+---
+
+**Mise à jour :** Juillet 2025
+
+---
+
+<p align="center">
+  <b>🔒 Un guide proposé par <a href="https://github.com/0xCyberLiTech">0xCyberLiTech</a> • Pour des tutoriels accessibles à tous. 🔒</b>
+</p>
+
