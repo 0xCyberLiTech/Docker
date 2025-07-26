@@ -64,3 +64,14 @@ Pour fonctionner, Docker Engine s'appuie sur différents composants qu'il est im
 
 La documentation de Docker Engine est disponible à cette adresse : docs.docker.com
 [ La documentation de Docker Engine est disponible ici.](https://docs.docker.com/)
+
+---
+
+**Mise à jour :** Juillet 2025
+
+---
+
+<p align="center">
+  <b>🔒 Un guide proposé par <a href="https://github.com/0xCyberLiTech">0xCyberLiTech</a> • Pour des tutoriels accessibles à tous. 🔒</b>
+</p>
+
