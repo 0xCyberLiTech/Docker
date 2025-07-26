@@ -92,10 +92,13 @@ services:
     stdin_open: true
     tty: true
 ```
+
 Lancez les services du fichier grâce à la commande ci-dessous.
+
 ```
 docker compose up -d
 ```
+
 ![leçon_03_0A.png](./images/leçon_03_0A.png)
 
 Maintenant ouvrez deux fenêtres du terminal et connectez-vous aux deux conteneurs (une connexion par fenêtre).
@@ -103,25 +106,33 @@ Maintenant ouvrez deux fenêtres du terminal et connectez-vous aux deux conteneu
 - Première fenêtre :
 
 (Container - celtak_ubuntu_1)
+
 ```
 docker exec -it e8bf1b5ec5bd bash
 ```
+
 (Container - celtak_ubuntu_2)
+
 ```
 docker exec -it 1d47b93872f3 bash
 ```
+
 Dans le conteneur (celtak_ubuntu_1) tapez la commande ci-dessous.
+
 ```
 ping celtak_ubuntu_2
 ```
+
 ![leçon_03_0B.png](./images/leçon_03_0B.png)
 
 - Deuxième fenêtre :
 
 Dans le conteneur (celtak_ubuntu_2) tapez la commande ci-dessous.
+
 ```
 ping celtak_ubuntu_1
 ```
+
 ![leçon_03_0C.png](./images/leçon_03_0C.png)
 
 Ils réussissent à communiquer ce qui affirme ce que nous avons dit juste avant.
@@ -138,6 +149,7 @@ La première étape pour utiliser des réseaux personnalisés, consiste à les c
 Pour cela, il faut utiliser le mot-clé networks:. Ensuite, après tabulation, on pourra insérer le nom du réseau.
 
 Pratiquons ce que nous venons de dire.
+
 ```
 version: '3'
 
@@ -157,6 +169,7 @@ services:
 networks:
   test_networks:
 ```
+
 Dans notre exemple, nous avons déterminé un réseau personnalisé qui porte le nom test_networks:. 
 
 Mais les deux conteneurs ne sont toujours pas connectés via ce réseau (mais par contre comme nous l'avons vu précédemment, ils le sont automatiquement via le réseau par défaut).
@@ -164,6 +177,7 @@ Mais les deux conteneurs ne sont toujours pas connectés via ce réseau (mais pa
 Il est possible de spécifier le type (ou pilotes) du réseau.
 
 Pour l'exemple, nous allons spécifier le réseau bridge.
+
 ```
 version: '3'
 
@@ -184,6 +198,7 @@ networks:
   test_networks:
     driver: bridge
 ```
+
 Maintenant nous allons connecter les conteneurs entre eux.
 
 <a name="balise-03"></a>
@@ -253,6 +268,7 @@ networks:
   bridge_networks_3:
     driver: bridge
 ```
+
 Analysons le contenu du fichier.
 
 Comme indiqué en haut, nous avons créé trois réseaux bridge.
@@ -262,9 +278,11 @@ Nous avons par la suite, rattaché les cinq conteneurs aux réseaux selon les d�
 Testons les choses afin de vérifier le système.
 
 Commençons par lancer le docker-compose.yml.
+
 ```
 docker-compose up -d
 ```
+
 ![leçon_03_0E.png](./images/leçon_03_0E.png)
 
 <a name="balise-04"></a>
@@ -291,3 +309,13 @@ Avec my_ubuntu_5, sur quels conteneurs je peux communiquer ?
 Aucun d'entre eux, car my_ubuntu_5 est seul dans son réseau.
 
 Parfait 🙂 ! Vous savez à présent bien utiliser les réseaux via le docker-compose.yml.
+
+---
+
+**Mise à jour :** Juillet 2025
+
+---
+
+<p align="center">
+  <b>🔒 Un guide proposé par <a href="https://github.com/0xCyberLiTech">0xCyberLiTech</a> • Pour des tutoriels accessibles à tous. 🔒</b>
+</p>
