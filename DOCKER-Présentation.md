@@ -1,6 +1,6 @@
-![Docker Banner](https://thingsolver.com/wp-content/uploads/docker-cover.png)
-
 <div align="center">
+
+  ![Docker Banner](https://thingsolver.com/wp-content/uploads/docker-cover.png)
 
   <a href="https://github.com/0xCyberLiTech">
     <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&pause=1000&color=D14A4A&center=true&vCenter=true&width=700&lines=CONTENEURISATION+AVEC+DOCKER;Docker+•+Docker+Compose+•+Portainer;Tutoriels+et+Guides+Pratiques" alt="Typing SVG" />
@@ -67,11 +67,6 @@ La documentation de Docker Engine est disponible à cette adresse : docs.docker.
 
 ---
 
-**Mise à jour :** Juillet 2025
-
----
-
 <p align="center">
   <b>🔒 Un guide proposé par <a href="https://github.com/0xCyberLiTech">0xCyberLiTech</a> • Pour des tutoriels accessibles à tous. 🔒</b>
 </p>
-
