@@ -77,3 +77,14 @@ sudo docker run -d -p 9443:9443 --name portainer \
 ```
 Une fois le conteneur lancé, il suffit de se rendre sur http://@IPduserveur:9000 ou https://@IPduserveur:9443 pour accéder à Portainer. 
 Les étapes de configuration sont ensuite limpides et vous devriez vous en sortir.
+
+---
+
+**Mise à jour :** Juillet 2025
+
+---
+
+<p align="center">
+  <b>🔒 Un guide proposé par <a href="https://github.com/0xCyberLiTech">0xCyberLiTech</a> • Pour des tutoriels accessibles à tous. 🔒</b>
+</p>
+
