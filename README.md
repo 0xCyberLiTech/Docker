@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/0xCyberLiTech" target="_blank" rel="noopener">
-    <img src="./images/Docker-logo-01.png" alt="Logo Docker" width="360">
+    <img src="./images/Docker-logo-01.png" alt="Logo Docker" width="400">
   </a>
 </p>
 
