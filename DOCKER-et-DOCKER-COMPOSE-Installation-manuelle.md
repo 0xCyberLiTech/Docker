@@ -1,6 +1,10 @@
-<div align="center">
+<p align="center">
+  <a href="https://github.com/0xCyberLiTech" target="_blank" rel="noopener">
+    <img src="./images/Docker-logo-01.png" alt="Logo Docker" width="360">
+  </a>
+</p>
 
-  ![Docker Banner](https://thingsolver.com/wp-content/uploads/docker-cover.png)
+<div align="center">
 
   <a href="https://github.com/0xCyberLiTech">
     <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&pause=1000&color=D14A4A&center=true&vCenter=true&width=700&lines=CONTENEURISATION+AVEC+DOCKER;Docker+•+Docker+Compose+•+Portainer;Tutoriels+et+Guides+Pratiques" alt="Typing SVG" />
