@@ -45,13 +45,13 @@
 
 ---
 
-## PORTAINER, mise à jour automatisée.
+## Script de mise à jour de Portainer dans sa dernière version.
 
-```
+```bash
 nano update-portainer-latest.sh
 ```
 
-```
+```sh
 #!/bin/sh
 # --------------------------------------------------------
 # 0xCyberLiTech
@@ -114,11 +114,11 @@ echo "=== Mise à jour terminée ! ==="
 echo "Accédez à Portainer via : https://<IP_de_votre_serveur>:${HTTPS_PORT}"
 ```
 
-```
+```bash
 chmod +x update-portainer-latest.sh
 ```
 
-```
+```bash
 sudo ./update-portainer-latest.sh
 ```
 
