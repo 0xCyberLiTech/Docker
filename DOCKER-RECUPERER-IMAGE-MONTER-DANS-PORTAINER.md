@@ -89,3 +89,10 @@ Network ports configuration : mappe le port du conteneur vers ta machine
 Une fois lancé, tu peux tester dans ton navigateur :
 
 http://<IP_SERVEUR>:8080
+
+---
+
+<p align="center">
+  <b>🔒 Un guide proposé par <a href="https://github.com/0xCyberLiTech">0xCyberLiTech</a> • Pour des tutoriels accessibles à tous. 🔒</b>
+</p>
+
