@@ -45,7 +45,7 @@
 
 ---
 
-## Mise à jour de Portainer CE (Debian 12 & 13)
+## Mise à jour manuellr de Portainer CE (Debian 12 & 13)
 
 Prérequis avoir installé auparavant sudo si celui-ci n'est pas présent.
 
