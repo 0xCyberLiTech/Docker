@@ -54,6 +54,8 @@ sudo apt install apt-transport-https ca-certificates curl gnupg
 
 Cela te permet de télécharger des paquets via HTTPS et d’ajouter la clé GPG de Docker en toute confiance.
 
+---
+
 2. Ajoute la clé GPG officielle de Docker :
 
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker.gpg
@@ -66,6 +68,8 @@ sudo chmod a+r /etc/apt/keyrings/docker.asc
 
 Ces commandes importent et sécurisent la clé GPG pour vérifier les paquets APT
 
+---
+
 3. Ajoute le dépôt Docker pour Trixie :
 
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker.gpg] https://download.docker.com/linux/debian trixie stable" | \
@@ -74,11 +78,15 @@ sudo apt update
 
 Cela active le dépôt Docker stable pour Debian 13 Trixie.
 
+---
+
 4. Installe Docker Engine et les composants essentiels :
 
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 Cela installe Docker, le CLI, containerd, le plugin buildx et le plugin Docker Compose (version 2+ intégrée à Docker).
+
+---
 
 5. Vérifie que Docker fonctionne correctement :
 
@@ -87,6 +95,8 @@ sudo docker run hello-world
 
 Ça teste si le service tourne et si un conteneur simple fonctionne.
 
+---
+
 6. Exécuter Docker sans sudo :
 
 Pour une utilisation simplifiée :
@@ -94,7 +104,9 @@ Pour une utilisation simplifiée :
 sudo groupadd docker      # si le groupe n’existe pas encore
 sudo usermod -aG docker $USER
 
-Ensuite, déconnecte-toi/reconnecte-toi ou exécute newgrp docker
+Ensuite, déconnecte-toi/reconnecte-toi ou exécute newgrp docker.
+
+---
 
 7. Utiliser Docker Compose
 
@@ -181,16 +193,25 @@ echo "Déconnecte-toi / reconnecte-toi pour utiliser Docker sans sudo."
 echo "Test : docker run hello-world"
 echo "============================================================"
 
+---
+
 1 - Utilisation
 
 Crée le fichier du script :
 
 nano install-docker-trixie.sh
 
+---
+
 2 - Colle le contenu ci-dessus, enregistre (CTRL+O, CTRL+X).
+
+---
+
 3 - Rends le script exécutable :
 
 chmod +x install-docker-trixie.sh
+
+---
 
 4 - Lance-le (en root ou via sudo) :
 
@@ -202,3 +223,9 @@ sudo ./install-docker-trixie.sh
 - Service docker actif au démarrage.
 - Ton utilisateur ajouté au groupe docker.
 - Vérification de version effectuée automatiquement.
+
+---
+
+<p align="center">
+  <b>🔒 Un guide proposé par <a href="https://github.com/0xCyberLiTech">0xCyberLiTech</a> • Pour des tutoriels accessibles à tous. 🔒</b>
+</p>
