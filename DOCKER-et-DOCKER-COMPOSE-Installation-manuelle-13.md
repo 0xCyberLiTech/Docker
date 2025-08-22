@@ -49,8 +49,13 @@
 
 1. Prépare ton système :
 
+```bash
 sudo apt update
+```
+
+```bash
 sudo apt install apt-transport-https ca-certificates curl gnupg
+```
 
 Cela te permet de télécharger des paquets via HTTPS et d’ajouter la clé GPG de Docker en toute confiance.
 
@@ -58,13 +63,23 @@ Cela te permet de télécharger des paquets via HTTPS et d’ajouter la clé GPG
 
 2. Ajoute la clé GPG officielle de Docker :
 
+```bash
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker.gpg
+```
 
 Ou selon la doc Docker
 
+```bash
 sudo install -m 0755 -d /etc/apt/keyrings
+```
+
+```bash
 sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
+```
+
+```bash
 sudo chmod a+r /etc/apt/keyrings/docker.asc
+```
 
 Ces commandes importent et sécurisent la clé GPG pour vérifier les paquets APT
 
@@ -72,9 +87,11 @@ Ces commandes importent et sécurisent la clé GPG pour vérifier les paquets AP
 
 3. Ajoute le dépôt Docker pour Trixie :
 
+```bash
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker.gpg] https://download.docker.com/linux/debian trixie stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt update
+```
 
 Cela active le dépôt Docker stable pour Debian 13 Trixie.
 
@@ -82,7 +99,9 @@ Cela active le dépôt Docker stable pour Debian 13 Trixie.
 
 4. Installe Docker Engine et les composants essentiels :
 
+```bash
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```
 
 Cela installe Docker, le CLI, containerd, le plugin buildx et le plugin Docker Compose (version 2+ intégrée à Docker).
 
@@ -90,8 +109,13 @@ Cela installe Docker, le CLI, containerd, le plugin buildx et le plugin Docker C
 
 5. Vérifie que Docker fonctionne correctement :
 
+```bash
 sudo systemctl is-active docker
+```
+
+```bash
 sudo docker run hello-world
+```
 
 Ça teste si le service tourne et si un conteneur simple fonctionne.
 
@@ -101,8 +125,13 @@ sudo docker run hello-world
 
 Pour une utilisation simplifiée :
 
+```bash
 sudo groupadd docker      # si le groupe n’existe pas encore
+```
+
+```bash
 sudo usermod -aG docker $USER
+```
 
 Ensuite, déconnecte-toi/reconnecte-toi ou exécute newgrp docker.
 
@@ -112,10 +141,15 @@ Ensuite, déconnecte-toi/reconnecte-toi ou exécute newgrp docker.
 
 Avec Docker 2.x, le plugin s’utilise via :
 
+```bash
 docker compose version
-docker compose up -d
+```
 
-Le binaire docker-compose (1.x) est désormais obsolète 
+```bash
+docker compose up -d
+```
+
+Le binaire docker-compose (1.x) est désormais obsolète :
 - Reddit > https://www.reddit.com/r/debian/comments/1hwq1d7/dockercompose_on_trixie/?utm_source=chatgpt.com
 - Docker Documentation > https://docs.docker.com/compose/install/linux/?utm_source=chatgpt.com
 
@@ -123,6 +157,7 @@ Le binaire docker-compose (1.x) est désormais obsolète
 
 Récapitulatif des commandes :
 
+```bash
 sudo apt update
 sudo apt install apt-transport-https ca-certificates curl gnupg
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker.gpg
@@ -133,14 +168,15 @@ sudo systemctl is-active docker && echo "Docker est actif"
 sudo docker run hello-world
 sudo usermod -aG docker $USER
 docker compose version
+```
 
-A venir configurer un docker-compose.yaml, des alias pratiques
 Script d’installation automatique :
 
 Script d’installation automatique de Docker + Docker Compose (plugin officiel) pour Debian 13 (Trixie).
 
 📜 Script : install-docker-trixie.sh
 
+```bash
 #!/bin/bash
 # ============================================================
 # Script d'installation automatique de Docker & Docker Compose
@@ -192,6 +228,7 @@ echo "[SUCCESS] Docker & Docker Compose ont été installés avec succès !"
 echo "Déconnecte-toi / reconnecte-toi pour utiliser Docker sans sudo."
 echo "Test : docker run hello-world"
 echo "============================================================"
+```
 
 ---
 
@@ -199,7 +236,9 @@ echo "============================================================"
 
 Crée le fichier du script :
 
+```bash
 nano install-docker-trixie.sh
+```
 
 ---
 
@@ -209,13 +248,17 @@ nano install-docker-trixie.sh
 
 3 - Rends le script exécutable :
 
+```bash
 chmod +x install-docker-trixie.sh
+```
 
 ---
 
 4 - Lance-le (en root ou via sudo) :
 
+```bash
 sudo ./install-docker-trixie.sh
+```
 
 👉 Résultat :
 
