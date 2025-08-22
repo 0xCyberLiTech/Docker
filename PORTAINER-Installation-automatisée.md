@@ -47,11 +47,11 @@
 
 ## Script d'installation de Portainer dernière version.
 
-```
+```bash
 nano script-install-portainer-latest.sh
 ```
 
-```
+```bash
 #!/bin/sh
 # --------------------------------------------------------
 # 0xCyberLiTech
@@ -127,10 +127,10 @@ docker run -d \
 echo "Installation terminée !"
 echo "Accédez à Portainer via : https://<IP_de_votre_serveur>:${HTTPS_PORT}"
 ```
-```
+```bash
 chmod +x script-install-portainer-latest.sh
 ```
-```
+```bash
 sh ./script-install-portainer-latest.sh
 ```
 ---
