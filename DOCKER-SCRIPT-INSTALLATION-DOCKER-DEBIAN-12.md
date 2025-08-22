@@ -47,7 +47,7 @@
 
 ## Script d’installation automatique :
 
-Script Docker + Docker Compose (plugin officiel) pour Debian 12 (Bookworm).
+📜 Script Docker + Docker Compose (plugin officiel) pour Debian 12 (Bookworm).
 
 📜 Script : install-docker-bookworm-noninteractive.sh
 
