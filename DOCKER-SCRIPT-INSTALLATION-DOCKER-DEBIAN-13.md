@@ -47,62 +47,93 @@
 
 ## Script d’installation automatique :
 
-Script Docker + Docker Compose (plugin officiel) pour Debian 13 (Trixie).
+📜 Script Docker + Docker Compose (plugin officiel) pour Debian 13 (Trixie).
 
-📜 Script : install-docker-trixie.sh
+📜 Script : install-docker-trixie-noninteractive.sh
 
 ```bash
-#!/bin/bash
-# ============================================================
-# Script d'installation automatique de Docker & Docker Compose
-# pour Debian 13 (Trixie)
-# Auteur : 0xCyberLiTech
-# ============================================================
+#!/usr/bin/env bash
+# install-docker-trixie-noninteractive.sh
+# Installation non-interactive de Docker Engine + Compose (plugin officiel) sur Debian 13 (Trixie)
 
-set -e
+set -euo pipefail
 
-echo "[INFO] Mise à jour du système..."
-apt update -y && apt upgrade -y
+# ---------- Couleurs ----------
+BOLD="\e[1m"; GREEN="\e[32m"; RED="\e[31m"; YELLOW="\e[33m"; RESET="\e[0m"
+log(){ echo -e "${BOLD}👉 $*${RESET}"; }
+ok(){ echo -e "${GREEN}✔${RESET} $*"; }
+warn(){ echo -e "${YELLOW}⚠${RESET} $*"; }
+err(){ echo -e "${RED}✘${RESET} $*"; }
 
-echo "[INFO] Installation des dépendances..."
-apt install -y apt-transport-https ca-certificates curl gnupg lsb-release
-
-echo "[INFO] Ajout de la clé GPG Docker..."
-install -m 0755 -d /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-chmod a+r /etc/apt/keyrings/docker.gpg
-
-echo "[INFO] Ajout du dépôt Docker (Trixie)..."
-CODENAME=$(lsb_release -cs)  # doit renvoyer 'trixie'
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian $CODENAME stable" \
-    > /etc/apt/sources.list.d/docker.list
-
-echo "[INFO] Mise à jour des dépôts..."
-apt update -y
-
-echo "[INFO] Installation de Docker et Docker Compose (plugin)..."
-apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-
-echo "[INFO] Activation et démarrage de Docker..."
-systemctl enable docker
-systemctl start docker
-
-echo "[INFO] Ajout de l'utilisateur $SUDO_USER au groupe docker..."
-if [ -n "$SUDO_USER" ]; then
-    usermod -aG docker $SUDO_USER
-else
-    echo "[WARN] Script exécuté en root directement. Pense à ajouter ton utilisateur au groupe docker manuellement."
+# ---------- Vérif root ----------
+if [[ $EUID -ne 0 ]]; then
+  err "Ce script doit être exécuté en root (sudo)."
+  exit 1
 fi
 
-echo "[INFO] Vérification de l'installation..."
-docker --version
-docker compose version
+# ---------- OS ----------
+. /etc/os-release
+if [[ "${ID:-}" != "debian" || "${VERSION_CODENAME:-}" != "trixie" ]]; then
+  warn "OS détecté: ${PRETTY_NAME:-inconnu}. Ce script vise Debian 13 (Trixie)."
+fi
+ARCH="$(dpkg --print-architecture)"
+log "Arch: ${ARCH}, Distro: ${PRETTY_NAME}"
 
-echo "============================================================"
-echo "[SUCCESS] Docker & Docker Compose ont été installés avec succès !"
-echo "Déconnecte-toi / reconnecte-toi pour utiliser Docker sans sudo."
-echo "Test : docker run hello-world"
-echo "============================================================"
+# ---------- Dépendances ----------
+log "Installation dépendances..."
+apt-get update -y
+DEBIAN_FRONTEND=noninteractive apt-get install -y \
+  ca-certificates curl gnupg lsb-release apt-transport-https
+
+# ---------- GPG & dépôt ----------
+install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/debian/gpg \
+  | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+chmod a+r /etc/apt/keyrings/docker.gpg
+
+echo \
+"deb [arch=${ARCH} signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian trixie stable" \
+  > /etc/apt/sources.list.d/docker.list
+
+# ---------- Installation ----------
+log "Installation Docker Engine + CLI + plugins..."
+apt-get update -y
+DEBIAN_FRONTEND=noninteractive apt-get install -y \
+  docker-ce docker-ce-cli containerd.io \
+  docker-buildx-plugin docker-compose-plugin
+
+# ---------- Service ----------
+systemctl enable --now docker
+
+# ---------- Groupe docker ----------
+CURRENT_USER="${SUDO_USER:-$(logname 2>/dev/null || echo "")}"
+if [[ -n "$CURRENT_USER" ]]; then
+  if id -nG "$CURRENT_USER" | grep -qw docker; then
+    ok "Utilisateur ${CURRENT_USER} déjà dans le groupe docker."
+  else
+    usermod -aG docker "$CURRENT_USER"
+    warn "Ajout de ${CURRENT_USER} au groupe docker. Déconnectez-vous/reconnectez-vous pour activer."
+  fi
+fi
+
+# ---------- Vérifications ----------
+if docker --version >/dev/null 2>&1; then
+  ok "Docker CLI: $(docker --version)"
+else
+  err "Docker CLI non détecté"
+fi
+
+if docker compose version >/dev/null 2>&1; then
+  ok "Docker Compose plugin: $(docker compose version)"
+else
+  err "Compose plugin non détecté"
+fi
+
+# ---------- Test auto ----------
+log "Exécution test hello-world..."
+docker run --rm hello-world && ok "Test hello-world OK."
+
+ok "Installation Docker + Compose sur Debian Trixie terminée 🎉"
 ```
 
 ---
@@ -112,7 +143,7 @@ echo "============================================================"
 Crée le fichier du script :
 
 ```bash
-nano install-docker-trixie.sh
+nano install-docker-trixie-noninteractive.sh
 ```
 
 ---
@@ -124,7 +155,7 @@ nano install-docker-trixie.sh
 3 - Rends le script exécutable :
 
 ```bash
-chmod +x install-docker-trixie.sh
+chmod +x install-docker-trixie-noninteractive.sh
 ```
 
 ---
@@ -132,7 +163,7 @@ chmod +x install-docker-trixie.sh
 4 - Lance-le (en root ou via sudo) :
 
 ```bash
-sudo ./install-docker-trixie.sh
+sudo ./install-docker-trixie-noninteractive.sh
 ```
 
 ---
