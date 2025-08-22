@@ -168,6 +168,15 @@ sudo ./install-docker-trixie-noninteractive.sh
 
 ---
 
+Points clés :
+
+- Zéro interaction (même pour APT → DEBIAN_FRONTEND=noninteractive).
+- Ajoute automatiquement l’utilisateur courant au groupe docker si détecté.
+- Teste automatiquement docker run hello-world.
+- Tout logué en clair avec ✔ / ⚠ / ✘.
+
+---
+
 <p align="center">
   <b>🔒 Un guide proposé par <a href="https://github.com/0xCyberLiTech">0xCyberLiTech</a> • Pour des tutoriels accessibles à tous. 🔒</b>
 </p>
