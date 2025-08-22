@@ -45,7 +45,7 @@
 
 ---
 
-## Installation manuelle de Docker Engine & Docker compose (docker-compose-plugin v2) sur DEBIAN 13.
+## Installation manuelle de Docker Engine & Docker compose (docker-compose-plugin v2+) sur DEBIAN 13.
 
 1. Prépare système :
 
