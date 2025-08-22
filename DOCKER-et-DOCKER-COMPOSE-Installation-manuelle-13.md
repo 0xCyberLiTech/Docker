@@ -47,6 +47,15 @@
 
 ## Installation manuelle de Docker Engine & Docker compose (docker-compose-plugin v2+) sur DEBIAN 13.
 
+Rappel sur la commande sudo, si celle-ci n'est pas installée et configurée :
+
+```bash
+su - root
+apt install sudo
+usermod -aG sudo cyberlitech
+init 6
+```
+
 1. Prépare système :
 
 ```bash
