@@ -51,7 +51,7 @@
 nano script-install-portainer-latest.sh
 ```
 
-```bash
+```sh
 #!/bin/sh
 # --------------------------------------------------------
 # 0xCyberLiTech
