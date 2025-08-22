@@ -45,18 +45,93 @@
 
 ---
 
-## Installation automatisée de Portainer.
+## Script d'installation de Portainer dernière version.
 
-Accès au script,
-[cliquer ici](installation-automatisée-de-portainer.md)
 ```
-touch installation-automatisée-de-portainer.sh
+nano script-install-portainer-latest.sh
+```
+
+```
+#!/bin/sh
+# --------------------------------------------------------
+# 0xCyberLiTech
+# Créé  : 09-06-2023
+# Modif : 22-08-2025
+#
+# Usage :
+#   touch installation-automatisee-de-portainer.sh
+#   chmod +x installation-automatisee-de-portainer.sh
+#   sudo ./installation-automatisee-de-portainer.sh
+# --------------------------------------------------------
+
+set -eu
+
+echo "=== Installation automatisée de Portainer CE ==="
+
+# --- Variables (modifiables) ---
+IMAGE="portainer/portainer-ce:latest"
+CONTAINER="portainer"
+VOLUME="portainer_data"
+HTTPS_PORT="9443"
+
+# --- Vérifs de base ---
+# Le script est généralement lancé avec sudo, donc pas besoin de préfixer les commandes docker.
+if ! command -v docker >/dev/null 2>&1; then
+  echo "Erreur : Docker n'est pas installé. Installez Docker puis relancez."
+  exit 1
+fi
+
+# Alerte si le port est déjà occupé
+if command -v ss >/dev/null 2>&1 && ss -tulpen | grep -q ":${HTTPS_PORT} "; then
+  echo "Erreur : le port ${HTTPS_PORT} est déjà utilisé. Libérez-le ou changez HTTPS_PORT."
+  exit 1
+fi
+
+# --- Nettoyage éventuel d'une ancienne instance (nom exact) ---
+if [ -n "$(docker ps -a -q --filter "name=^/${CONTAINER}$")" ]; then
+  echo "Arrêt et suppression de l'ancien conteneur ${CONTAINER}..."
+  docker stop "${CONTAINER}" || true
+  docker rm   "${CONTAINER}" || true
+fi
+
+# --- Volume de données ---
+if ! docker volume inspect "${VOLUME}" >/dev/null 2>&1; then
+  echo "Création du volume Docker '${VOLUME}'..."
+  docker volume create --label app=portainer "${VOLUME}" >/dev/null
+fi
+
+# --- Image ---
+echo "Téléchargement/maj de l'image Portainer CE..."
+docker pull "${IMAGE}"
+
+# --- Lancement (HTTPS uniquement) ---
+echo "Lancement du conteneur Portainer (HTTPS sur le port ${HTTPS_PORT})..."
+docker run -d \
+  --name "${CONTAINER}" \
+  --restart=always \
+  -p "${HTTPS_PORT}:9443" \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v "${VOLUME}":/data \
+  --label app=portainer \
+  --security-opt no-new-privileges:true \
+  --log-opt max-size=10m --log-opt max-file=3 \
+  "${IMAGE}" \
+  --http-disabled
+
+# NOTE : pour préconfigurer le mot de passe admin (recommandé),
+# crée un hash bcrypt et utilise l’option ci-dessous :
+#   ... "${IMAGE}" --admin-password-file /data/admin_password
+# en plaçant le hash bcrypt dans /var/lib/docker/volumes/${VOLUME}/_data/admin_password
+# (à générer via 'mkpasswd -m bcrypt' ou 'htpasswd -bnBC 12 "" "TonMotDePasse" | tr -d :')
+
+echo "Installation terminée !"
+echo "Accédez à Portainer via : https://<IP_de_votre_serveur>:${HTTPS_PORT}"
 ```
 ```
-chmod +x installation-automatisée-de-portainer.sh
+chmod +x script-install-portainer-latest.sh
 ```
 ```
-sudo ./installation-automatisée-de-portainer.sh
+sh ./script-install-portainer-latest.sh
 ```
 ---
 
