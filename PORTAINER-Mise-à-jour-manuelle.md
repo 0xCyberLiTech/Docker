@@ -76,7 +76,7 @@ sudo docker rm portainer
 
 Quand une nouvelle version sort :
 
-lien pour voir la dernière mise à jour disponible CE latest de portainer :
+Lien pour voir la dernière mise à jour disponible CE latest de portainer :
 
 [![Voir la dernière version CE](https://img.shields.io/badge/PORTAINER-CE%20Latest-blue?style=for-the-badge&logo=docker)](https://github.com/portainer/portainer/releases)
 
