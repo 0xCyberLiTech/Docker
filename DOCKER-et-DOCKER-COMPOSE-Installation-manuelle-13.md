@@ -260,6 +260,8 @@ chmod +x install-docker-trixie.sh
 sudo ./install-docker-trixie.sh
 ```
 
+---
+
 👉 Résultat :
 
 - Docker CE + CLI + containerd + buildx + docker compose plugin installés.
