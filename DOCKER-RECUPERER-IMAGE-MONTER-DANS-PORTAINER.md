@@ -45,7 +45,7 @@
 
 ---
 
-## Récupérer une image Docker & Lancer un conteneur à partir de cette image dans Portainer
+## Portainer : Créer un conteneur depuis une image Docker
 
 ------------------------------------------------------------------------
 
