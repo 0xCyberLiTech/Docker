@@ -135,10 +135,6 @@ sudo docker run hello-world
 Pour une utilisation simplifiée :
 
 ```bash
-sudo groupadd docker      # si le groupe n’existe pas encore
-```
-
-```bash
 sudo usermod -aG docker $USER
 ```
 
