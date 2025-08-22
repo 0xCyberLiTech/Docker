@@ -45,47 +45,73 @@
 
 ---
 
-## Mise à jour manuelle de Portainer.
+## Mise à jour de Portainer CE (Debian 12 & 13)
 
 Prérequis avoir installé auparavant sudo si celui-ci n'est pas présent.
+
 ```
 # su - root
 # apt install sudo
 # usermod -aG sudo cyberlitech
 # init 6
 ```
+
 Portainer permettant de mettre à jour facilement nos conteneurs, il peut être tentant de l’utiliser également pour le mettre à jour lui-même. 
+
 Spoiler : c’est une mauvaise idée qui va tout simplement casser votre Portainer. 
 
 Nous allons tout d’abord arrêter le conteneur puis le supprimer. 
+
 Comme nous utilisons un volume, les données importantes du conteneur ne seront pas supprimées.
+
 On télécharge ensuite la dernière image de Portainer, puis nous relançons le conteneur avec les mêmes réglages qu’à l’origine.
-```
+
+```bash
 sudo docker stop portainer
 ```
-```
+
+```bash
 sudo docker rm portainer
 ```
-```
+
+Quand une nouvelle version sort :
+
+Télécharger la dernière image.
+
+```bash
 sudo docker pull portainer/portainer-ce:latest
 ```
+
+Stopper et supprimer l'ancien conteneur
+
+```bash
+sudo docker stop portainer
 ```
-sudo docker run -d -p 9000:9000 --name portainer \
-    --restart=always \
-    -v /var/run/docker.sock:/var/run/docker.sock \
-    -v portainer_data:/data \
-    portainer/portainer-ce:latest
+
+```bash
+sudo docker rm portainer
 ```
-Ou,
+
+Relancer avec la nouvelle image (volume conservé) :
+
+```bash
+sudo docker run -d \
+  -p 9443:9443 \
+  --name portainer \
+  --restart=always \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v portainer_data:/data \
+  portainer/portainer-ce:latest \
+  --http-disabled
 ```
-sudo docker run -d -p 9443:9443 --name portainer \
-   --restart=always \
-   -v /var/run/docker.sock:/var/run/docker.sock \
-   -v portainer_data:/data \
-   portainer/portainer-ce:latest \
-   --http-disabled
-```
-Portainer est maintenant à jour et tous ses réglages ont été conservés.
+
+Accéder à Portainer :
+
+Après le redémarrage, accéder à nouveau à.
+
+👉 https://<IP_de_votre_serveur>:9443
+
+Le volume portainer_data conserve toutes les configurations, utilisateurs et stacks existants.
 
 ---
 
