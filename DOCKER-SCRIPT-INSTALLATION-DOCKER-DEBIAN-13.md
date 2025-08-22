@@ -45,9 +45,9 @@
 
 ---
 
-Script d’installation automatique :
+## Script d’installation automatique :
 
-Script d’installation automatique de Docker + Docker Compose (plugin officiel) pour Debian 13 (Trixie).
+Script Docker + Docker Compose (plugin officiel) pour Debian 13 (Trixie).
 
 📜 Script : install-docker-trixie.sh
 
