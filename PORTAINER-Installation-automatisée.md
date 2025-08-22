@@ -45,7 +45,7 @@
 
 ---
 
-## Script d'installation de Portainer dernière version.
+## Script d'installation de Portainer dans sa dernière version.
 
 ```bash
 nano script-install-portainer-latest.sh
