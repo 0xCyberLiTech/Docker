@@ -47,19 +47,79 @@
 
 ## PORTAINER, mise à jour automatisée.
 
-Accès au script,
-[cliquer ici](mise-à-jour-automatisée-de-portainer.md)
-
 ```
-touch mise-à-jour-automatisée-de-portainer.sh
+nano update-portainer-latest.sh
 ```
 
 ```
-chmod +x mise-à-jour-automatisée-de-portainer.sh
+#!/bin/sh
+# --------------------------------------------------------
+# 0xCyberLiTech
+# Créé  : 22-08-2025
+# Objet : Mise à jour de Portainer CE vers la dernière image "latest"
+#
+# Usage :
+#   nano update-portainer-latest.sh
+#   chmod +x update-portainer-latest.sh
+#   sudo ./update-portainer-latest.sh
+# --------------------------------------------------------
+
+set -eu
+
+echo "=== Mise à jour automatisée de Portainer CE (latest) ==="
+
+# --- Variables ---
+IMAGE="portainer/portainer-ce:latest"
+CONTAINER="portainer"
+VOLUME="portainer_data"
+HTTPS_PORT="9443"
+
+# Vérif Docker
+if ! command -v docker >/dev/null 2>&1; then
+  echo "Erreur : Docker n'est pas installé."
+  exit 1
+fi
+
+# Vérif si conteneur existe
+if ! docker ps -a --format '{{.Names}}' | grep -q "^${CONTAINER}$"; then
+  echo "Erreur : aucun conteneur '${CONTAINER}' trouvé."
+  echo "Lance d'abord le script d'installation."
+  exit 1
+fi
+
+# Pull dernière image
+echo "Téléchargement de la nouvelle image Portainer CE (latest)..."
+docker pull "${IMAGE}"
+
+# Arrêt + suppression ancien conteneur
+echo "Arrêt et suppression de l'ancien conteneur ${CONTAINER}..."
+docker stop "${CONTAINER}" || true
+docker rm   "${CONTAINER}" || true
+
+# Relance avec la nouvelle image
+echo "Redémarrage de Portainer avec la nouvelle image..."
+docker run -d \
+  --name "${CONTAINER}" \
+  --restart=always \
+  -p "${HTTPS_PORT}:9443" \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v "${VOLUME}":/data \
+  --label app=portainer \
+  --security-opt no-new-privileges:true \
+  --log-opt max-size=10m --log-opt max-file=3 \
+  "${IMAGE}" \
+  --http-disabled
+
+echo "=== Mise à jour terminée ! ==="
+echo "Accédez à Portainer via : https://<IP_de_votre_serveur>:${HTTPS_PORT}"
 ```
 
 ```
-sudo ./mise-à-jour-automatisée-de-portainer.sh
+chmod +x update-portainer-latest.sh
+```
+
+```
+sudo ./update-portainer-latest.sh
 ```
 
 ---
