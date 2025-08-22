@@ -59,9 +59,9 @@ nano script-install-portainer-latest.sh
 # Modif : 22-08-2025
 #
 # Usage :
-#   touch installation-automatisee-de-portainer.sh
-#   chmod +x installation-automatisee-de-portainer.sh
-#   sudo ./installation-automatisee-de-portainer.sh
+#   touch script-install-portainer-latest.sh
+#   chmod +x script-install-portainer-latest.sh
+#   sudo ./script-install-portainer-latest.sh
 # --------------------------------------------------------
 
 set -eu
@@ -131,7 +131,7 @@ echo "Accédez à Portainer via : https://<IP_de_votre_serveur>:${HTTPS_PORT}"
 chmod +x script-install-portainer-latest.sh
 ```
 ```bash
-sh ./script-install-portainer-latest.sh
+sudo ./script-install-portainer-latest.sh
 ```
 ---
 
