@@ -45,7 +45,7 @@
 
 ---
 
-## Installation manuelle de Docker Engine & Docker compose (docker-compose-plugin v2).
+## Installation manuelle de Docker Engine & Docker compose (docker-compose-plugin v2) sur DEBIAN 12.
 
 ## Important.
 
