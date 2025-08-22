@@ -49,7 +49,7 @@
 
 Script Docker + Docker Compose (plugin officiel) pour Debian 12 (Bookworm).
 
-📜 Script : install-docker-Bookworm.sh
+📜 Script : install-docker-bookworm-noninteractive.sh
 
 ```bash
 #!/usr/bin/env bash
@@ -143,7 +143,7 @@ ok "Installation Docker + Compose terminée 🎉"
 Crée le fichier du script :
 
 ```bash
-nano install-docker-Bookworm.sh
+nano install-docker-bookworm-noninteractive.sh
 ```
 
 ---
@@ -155,7 +155,7 @@ nano install-docker-Bookworm.sh
 3 - Rends le script exécutable :
 
 ```bash
-chmod +x install-docker-Bookworm.sh
+chmod +x install-docker-bookworm-noninteractive.sh
 ```
 
 ---
@@ -163,8 +163,17 @@ chmod +x install-docker-Bookworm.sh
 4 - Lance-le (en root ou via sudo) :
 
 ```bash
-sudo ./install-docker-Bookworm.sh
+sudo ./install-docker-bookworm-noninteractive.sh
 ```
+
+---
+
+Points clés :
+
+- Zéro interaction (même pour APT → DEBIAN_FRONTEND=noninteractive).
+- Ajoute automatiquement l’utilisateur courant au groupe docker si détecté.
+- Teste automatiquement docker run hello-world.
+- Tout logué en clair avec ✔ / ⚠ / ✘.
 
 ---
 
