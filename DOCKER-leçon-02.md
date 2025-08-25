@@ -9,7 +9,7 @@
   <br></br>
 
   <p align="center">
-    <em>Guides et tutoriels sur la conteneurisation avec Docker.</em><br>
+    <em>Leçon 02 : Volumes mappés et managés.</em><br>
     <b>🐳 Conteneurs – 📦 Isolation – 🚀 Déploiement</b>
   </p>
 
