@@ -46,11 +46,27 @@
 
 ## Script d’installation automatique :
 
+### Rappel sur la commande sudo, si celle-ci n'est pas installée et configurée :
+
+```bash
+su - root
+apt install sudo
+usermod -aG sudo cyberlitech
+init 6
+```
+
 📜 Script Docker + Docker Compose (plugin officiel) pour Debian 13 (Trixie).
 
 📜 Script : install-docker-trixie-noninteractive.sh
 
 ```bash
+# --------------------------------------------------------------------------
+# 0xCyberLiTech
+# Date de création : le 25-08-2025
+# Date de modification : le 25-08-2025
+# install-docker-trixie-noninteractive.sh
+# --------------------------------------------------------------------------
+
 #!/usr/bin/env bash
 # install-docker-trixie-noninteractive.sh
 # Installation non-interactive de Docker Engine + Compose (plugin officiel) sur Debian 13 (Trixie)

@@ -51,17 +51,13 @@ nano script-install-portainer-latest.sh
 ```
 
 ```sh
-#!/bin/sh
-# --------------------------------------------------------
+# --------------------------------------------------------------------------
 # 0xCyberLiTech
-# Créé  : 09-06-2023
-# Modif : 22-08-2025
-#
-# Usage :
-#   touch script-install-portainer-latest.sh
-#   chmod +x script-install-portainer-latest.sh
-#   sudo ./script-install-portainer-latest.sh
-# --------------------------------------------------------
+# Date de création : le 25-08-2025
+# Date de modification : le 25-08-2025
+# script-install-portainer-latest.sh
+# --------------------------------------------------------------------------
+#!/bin/sh
 
 set -eu
 

@@ -51,17 +51,13 @@ nano update-portainer-latest.sh
 ```
 
 ```sh
-#!/bin/sh
-# --------------------------------------------------------
+# --------------------------------------------------------------------------
 # 0xCyberLiTech
-# Créé  : 22-08-2025
-# Objet : Mise à jour de Portainer CE vers la dernière image "latest"
-#
-# Usage :
-#   nano update-portainer-latest.sh
-#   chmod +x update-portainer-latest.sh
-#   sudo ./update-portainer-latest.sh
-# --------------------------------------------------------
+# Date de création : le 25-08-2025
+# Date de modification : le 25-08-2025
+# update-portainer-latest.sh
+# --------------------------------------------------------------------------
+#!/bin/sh
 
 set -eu
 
