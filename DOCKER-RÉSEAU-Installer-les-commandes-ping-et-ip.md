@@ -9,7 +9,7 @@
   <br></br>
 
   <p align="center">
-    <em>Guides et tutoriels sur la conteneurisation avec Docker.</em><br>
+    <em>Réseau : installer ping et ip dans un conteneur.</em><br>
     <b>🐳 Conteneurs – 📦 Isolation – 🚀 Déploiement</b>
   </p>
 
