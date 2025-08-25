@@ -9,7 +9,7 @@
   <br></br>
 
   <p align="center">
-    <em>Guides et tutoriels sur la conteneurisation avec Docker.</em><br>
+    <em>Mise en place d'un conteneur Grafana.</em><br>
     <b>🐳 Conteneurs – 📦 Isolation – 🚀 Déploiement</b>
   </p>
 
