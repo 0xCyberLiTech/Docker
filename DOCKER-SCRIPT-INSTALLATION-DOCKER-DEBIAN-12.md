@@ -60,6 +60,13 @@ init 6
 📜 Script : install-docker-bookworm-noninteractive.sh
 
 ```bash
+# --------------------------------------------------------------------------
+# 0xCyberLiTech
+# Date de création : le 25-08-2025
+# Date de modification : le 25-08-2025
+# install-docker-bookworm-noninteractive.sh
+# --------------------------------------------------------------------------
+
 #!/usr/bin/env bash
 # install-docker-bookworm-noninteractive.sh
 # Installation non-interactive de Docker Engine + Compose (plugin officiel) sur Debian 12
