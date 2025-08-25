@@ -46,6 +46,15 @@
 
 ## Script d’installation automatique :
 
+### Rappel sur la commande sudo, si celle-ci n'est pas installée et configurée :
+
+```bash
+su - root
+apt install sudo
+usermod -aG sudo cyberlitech
+init 6
+```
+
 📜 Script Docker + Docker Compose (plugin officiel) pour Debian 12 (Bookworm).
 
 📜 Script : install-docker-bookworm-noninteractive.sh
