@@ -150,12 +150,23 @@ docker run -d \
 echo "Installation terminée !"
 echo "Accédez à Portainer via : https://<IP_de_votre_serveur>:${HTTPS_PORT}"
 ```
+
+---
+
+3 - Rends le script exécutable :
+
 ```bash
 chmod +x script-install-portainer-latest.sh
 ```
+
+---
+
+4 - Lance-le (en root ou via sudo) :
+
 ```bash
 sudo ./script-install-portainer-latest.sh
 ```
+
 ---
 
 <p align="center">
