@@ -91,8 +91,6 @@ nano install-docker-trixie-noninteractive.sh
 
 2 - Colle le contenu ci-dessous, enregistre (CTRL+O, CTRL+X).
 
----
-
 ```bash
 # --------------------------------------------------------------------------
 # 0xCyberLiTech
