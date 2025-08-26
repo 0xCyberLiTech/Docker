@@ -64,9 +64,19 @@
 
 ## Script d'installation de Portainer dans sa dernière version.
 
+---
+
+1 - Utilisation
+
+Crée le fichier du script :
+
 ```bash
 nano script-install-portainer-latest.sh
 ```
+
+---
+
+2 - Colle le contenu ci-dessous, enregistre (CTRL+O, CTRL+X).
 
 ```sh
 # --------------------------------------------------------------------------
