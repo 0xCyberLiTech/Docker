@@ -64,6 +64,15 @@
 
 ## Script de mise à jour de Portainer dans sa dernière version.
 
+Rappel sur la commande sudo, si celle-ci n'est pas installée et configurée :
+
+```bash
+su - root
+apt install sudo
+usermod -aG sudo cyberlitech
+init 6
+```
+
 ```bash
 nano update-portainer-latest.sh
 ```
