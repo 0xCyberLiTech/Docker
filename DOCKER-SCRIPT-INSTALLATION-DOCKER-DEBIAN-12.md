@@ -183,6 +183,8 @@ docker run --rm hello-world && ok "Test hello-world OK."
 ok "Installation Docker + Compose terminée 🎉"
 ```
 
+---
+
 3 - Rends le script exécutable :
 
 ```bash
