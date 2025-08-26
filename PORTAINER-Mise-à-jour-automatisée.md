@@ -73,9 +73,19 @@ usermod -aG sudo cyberlitech
 init 6
 ```
 
+---
+
+1 - Utilisation
+
+Crée le fichier du script :
+
 ```bash
 nano update-portainer-latest.sh
 ```
+
+---
+
+2 - Colle le contenu ci-dessous, enregistre (CTRL+O, CTRL+X).
 
 ```sh
 # --------------------------------------------------------------------------
