@@ -77,6 +77,22 @@ init 6
 
 📜 Script : install-docker-trixie-noninteractive.sh
 
+---
+
+1 - Utilisation
+
+Crée le fichier du script :
+
+```bash
+nano install-docker-trixie-noninteractive.sh
+```
+
+---
+
+2 - Colle le contenu ci-dessous, enregistre (CTRL+O, CTRL+X).
+
+---
+
 ```bash
 # --------------------------------------------------------------------------
 # 0xCyberLiTech
@@ -168,22 +184,6 @@ docker run --rm hello-world && ok "Test hello-world OK."
 
 ok "Installation Docker + Compose sur Debian Trixie terminée 🎉"
 ```
-
----
-
-1 - Utilisation
-
-Crée le fichier du script :
-
-```bash
-nano install-docker-trixie-noninteractive.sh
-```
-
----
-
-2 - Colle le contenu ci-dessus, enregistre (CTRL+O, CTRL+X).
-
----
 
 3 - Rends le script exécutable :
 
