@@ -65,9 +65,6 @@ Le contenu est structuré, accessible et optimisé SEO pour répondre aux besoin
 ---
 
 ## Portainer : Créer un conteneur depuis une image Docker
-
-------------------------------------------------------------------------
-
 ### 🔹 1. Récupérer une image Docker
 
 Depuis ton terminal (ou via l'interface **Portainer → Images**), tu peux
