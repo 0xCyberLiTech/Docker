@@ -8,10 +8,7 @@
   
   <br></br>
 
-  <p align="center">
-    <em>Guides et tutoriels sur la conteneurisation avec Docker.</em><br>
-    <b>🐳 Conteneurs – 📦 Isolation – 🚀 Déploiement</b>
-  </p>
+  <h2>Laboratoire numérique pour la cybersécurité, Linux & IT</h2>
 
   <p align="center">
     <p align="center">
