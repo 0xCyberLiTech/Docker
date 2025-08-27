@@ -101,13 +101,3 @@ En effet, il faut obligatoirement créer un volume avec un nom (grâce à une co
 Cela peut paraître compliqué, mais en pratiquant plus tard, les choses seront plus claires.
 
 ---
-
-<p align="center">
-  <a href="https://github.com/0xCyberLiTech" target="_blank" rel="noopener">
-    <img src="https://skillicons.dev/icons?i=linux,debian,bash,docker,nginx,git,vim,python,markdown" alt="Skills" width="420">
-  </a>
-</p>
-
-<p align="center">
-  <b>🔒 Un guide proposé par <a href="https://github.com/0xCyberLiTech">0xCyberLiTech</a> • Pour des tutoriels accessibles à tous. 🔒</b>
-</p>
