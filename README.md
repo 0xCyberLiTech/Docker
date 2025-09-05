@@ -76,30 +76,30 @@ Le contenu est structuré, accessible et optimisé SEO pour répondre aux besoin
 
 **Catégories des projets :**
 
-| Catégorie | Sujet | Accès Rapide |
-|:---:|:---|:---:|
-| **Tutos & Outils** | Installation manuelle de Docker & Docker Compose DEBIAN-12 | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-et-DOCKER-COMPOSE-Installation-manuelle-12.md) |
-| **Tutos & Outils** | Installation manuelle de Docker & Docker Compose DEBIAN-13 | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-et-DOCKER-COMPOSE-Installation-manuelle-13.md) |
-| **Tutos & Outils** | Script installation docker DEBIAN-12 | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-SCRIPT-INSTALLATION-DOCKER-DEBIAN-12.md) |
-| **Tutos & Outils** | Script installation docker DEBIAN-13 | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-SCRIPT-INSTALLATION-DOCKER-DEBIAN-13.md) |
-| **Tutos & Outils** | Installation manuelle de Portainer | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](PORTAINER-Installation-manuelle.md) |
-| **Tutos & Outils** | Mise à jour manuelle de Portainer | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](PORTAINER-Mise-à-jour-manuelle.md) |
-| **Tutos & Outils** | Installation automatisée de Portainer | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](PORTAINER-Installation-automatisée.md) |
-| **Tutos & Outils** | Mise à jour automatisée de Portainer | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](PORTAINER-Mise-à-jour-automatisée.md) |
-| **Tutos & Outils** | Créer un conteneur depuis une image Docker avec Portainer | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-RECUPERER-IMAGE-MONTER-DANS-PORTAINER.md) |
-| **Tutos & Outils** | Exemple Docker Compose : conteneur LAMP | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-COMPOSE-exemple-container-LAMP.md) |
-| **Tutos & Outils** | Mise en place d'un conteneur Grafana | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-Mise-en-place-du-container-GRAFANA.md) |
-| **Tutos & Outils** | Superviser Docker avec Zabbix | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-Superviser-à-l-aide-de-Zabbix.md) |
-| **Apprentissage** | Présentation générale de Docker | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-Présentation.md) |
-| **Apprentissage** | Commandes Docker utiles | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-Quelques-commandes-utiles.md) |
-| **Apprentissage** | Comprendre les volumes Docker | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-VOLUME-Comprende-les-volumes.md) |
-| **Apprentissage** | Les deux types de volumes | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-VOLUME-Deux-types-de-volumes.md) |
-| **Apprentissage** | Réseau : installer `ping` et `ip` dans un conteneur | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-RÉSEAU-Installer-les-commandes-ping-et-ip.md) |
-| **Apprentissage** | Réseau : Mapper des ports | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-RÉSEAU-Mapper-des-ports.md) |
-| **Apprentissage** | Réseau : Isoler un conteneur | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-RÉSEAU-Isoler-un-conteneur-Docker-du-réseau.md) |
-| **Leçons** | Leçon 01 : Débuter avec Docker | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-leçon-01.md) |
-| **Leçons** | Leçon 02 : Volumes mappés et managés | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-leçon-02.md) |
-| **Leçons** | Leçon 03 : Les réseaux | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-leçon-03.md) |
+| Catégorie          | Sujet                                                      | Accès Rapide                                                                                                                                                      |
+|--------------------|------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Tutos & Outils** | Installation manuelle de Docker & Docker Compose DEBIAN-12 | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-et-DOCKER-COMPOSE-Installation-manuelle-12.md)  |
+| **Tutos & Outils** | Installation manuelle de Docker & Docker Compose DEBIAN-13 | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-et-DOCKER-COMPOSE-Installation-manuelle-13.md)  |
+| **Tutos & Outils** | Script installation docker DEBIAN-12                       | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-SCRIPT-INSTALLATION-DOCKER-DEBIAN-12.md)        |
+| **Tutos & Outils** | Script installation docker DEBIAN-13                       | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-SCRIPT-INSTALLATION-DOCKER-DEBIAN-13.md)        |
+| **Tutos & Outils** | Installation manuelle de Portainer                         | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](PORTAINER-Installation-manuelle.md)                    |
+| **Tutos & Outils** | Mise à jour manuelle de Portainer                          | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](PORTAINER-Mise-à-jour-manuelle.md)                     |
+| **Tutos & Outils** | Installation automatisée de Portainer                      | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](PORTAINER-Installation-automatisée.md)                 |
+| **Tutos & Outils** | Mise à jour automatisée de Portainer                       | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](PORTAINER-Mise-à-jour-automatisée.md)                  |
+| **Tutos & Outils** | Créer un conteneur depuis une image Docker avec Portainer  | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-RECUPERER-IMAGE-MONTER-DANS-PORTAINER.md)       |
+| **Tutos & Outils** | Exemple Docker Compose : conteneur LAMP                    | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-COMPOSE-exemple-container-LAMP.md)              |
+| **Tutos & Outils** | Mise en place d'un conteneur Grafana                       | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-Mise-en-place-du-container-GRAFANA.md)          |
+| **Tutos & Outils** | Superviser Docker avec Zabbix                              | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-Superviser-à-l-aide-de-Zabbix.md)               |
+| **Apprentissage**  | Présentation générale de Docker                            | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-Présentation.md)                                |
+| **Apprentissage**  | Commandes Docker utiles                                    | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-Quelques-commandes-utiles.md)                   |
+| **Apprentissage**  | Comprendre les volumes Docker                              | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-VOLUME-Comprende-les-volumes.md)                |
+| **Apprentissage**  | Les deux types de volumes                                  | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-VOLUME-Deux-types-de-volumes.md)                |
+| **Apprentissage**  | Réseau : installer `ping` et `ip` dans un conteneur        | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-RÉSEAU-Installer-les-commandes-ping-et-ip.md)   |
+| **Apprentissage**  | Réseau : Mapper des ports                                  | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-RÉSEAU-Mapper-des-ports.md)                     |
+| **Apprentissage**  | Réseau : Isoler un conteneur                               | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-RÉSEAU-Isoler-un-conteneur-Docker-du-réseau.md) |
+| **Leçons**         | Leçon 01 : Débuter avec Docker                             | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-leçon-01.md)                                    |
+| **Leçons**         | Leçon 02 : Volumes mappés et managés                       | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-leçon-02.md)                                    |
+| **Leçons**         | Leçon 03 : Les réseaux                                     | [<img src="https://img.shields.io/badge/EXPLORER-4CAF50?style=for-the-badge&logo=github&logoColor=white">](DOCKER-leçon-03.md)                                    |
 
 </div>
 
