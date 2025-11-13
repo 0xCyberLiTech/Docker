@@ -75,9 +75,7 @@ usermod -aG sudo cyberlitech
 init 6
 ```
 
-1. Prépare système :
-
-Mise à jour du cache des paquets
+1. Mise à jour du cache des paquets :
 
 ```bash
 sudo apt update
@@ -93,7 +91,7 @@ sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-pr
 sudo curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 ```
 
-3. Ajoute le dépôt Docker à la liste :
+3. Ajouter le dépôt Docker à la liste :
 
 ```bash
 sudo echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list
