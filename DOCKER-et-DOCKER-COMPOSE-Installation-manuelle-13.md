@@ -155,27 +155,6 @@ docker compose version
 docker compose up -d
 ```
 
-Le binaire docker-compose (1.x) est désormais obsolète :
-- Reddit > https://www.reddit.com/r/debian/comments/1hwq1d7/dockercompose_on_trixie/?utm_source=chatgpt.com
-- Docker Documentation > https://docs.docker.com/compose/install/linux/?utm_source=chatgpt.com
-
-. Bien que certains utilisateurs parlent de difficultés à trouver docker-compose dans les dépôts Trixie, l’approche recommandée est bien le plugin intégré
-
-Récapitulatif des commandes :
-
-```bash
-sudo apt update
-sudo apt install apt-transport-https ca-certificates curl gnupg
-curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker.gpg
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker.gpg] https://download.docker.com/linux/debian trixie stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-sudo apt update
-sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-sudo systemctl is-active docker && echo "Docker est actif"
-sudo docker run hello-world
-sudo usermod -aG docker $USER
-docker compose version
-```
-
 ---
 
 👉 Résultat :
