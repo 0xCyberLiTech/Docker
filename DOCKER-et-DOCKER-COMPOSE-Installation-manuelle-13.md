@@ -84,35 +84,38 @@ sudo apt update
 Téléchargement des paquets via HTTPS et ajouter la clé GPG officiel de Docker.
 
 ```bash
-sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
+sudo apt install apt-transport-https ca-certificates curl gpg
 ```
 
 ```bash
-sudo curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+sudo curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker.gpg
 ```
 
 3. Ajouter le dépôt Docker à la liste :
 
 ```bash
-sudo echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker.gpg] https://download.docker.com/linux/debian trixie stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 
 4. Mettre à jour le cache des paquets
 
 ```bash
-sudo apt-get update
+sudo apt update
+```
+```bash
+apt-cache policy
 ```
 
 5. Installe Docker Engine et les composants essentiels :
 
 ```bash
-sudo apt-get install docker-ce docker-ce-cli containerd.io
+sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 Trois paquets sont à installer sur notre machine. 
 Si vous souhaitez que Docker démarre automatiquement avec votre machine.
 
 ```bash
-sudo systemctl enable docker
+sudo systemctl is-active docker
 ```
 
 6. Vérifie que Docker fonctionne correctement :
