@@ -75,95 +75,106 @@ usermod -aG sudo cyberlitech
 init 6
 ```
 
-1. Mise à jour du cache des paquets :
+1. Mise à jour du système :
+
+```bash
+sudo apt update && sudo apt full-upgrade -y
+sudo apt install -y ca-certificates curl gnupg lsb-release
+```
+
+2. Ajout de la clé GPG Docker
+
+```bash
+sudo install -m 0755 -d /etc/apt/keyrings
+```
+
+Télécharger et enregistrer la clé GPG :
+
+```bash
+curl -fsSL https://download.docker.com/linux/debian/gpg \
+ | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+```
+
+Donner les bons droits :
+
+```bash
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+```
+
+3. Ajouter le dépôt officiel Docker
+
+```bash
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] \
+  https://download.docker.com/linux/debian \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" \
+  | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+```
+
+Pour Debian 13, $(. /etc/os-release && echo "$VERSION_CODENAME") renverra trixie.
+
+4. Mettre à jour les dépôts
 
 ```bash
 sudo apt update
 ```
-2. Installation des dépendances nécessaires au bon fonctionnement de Docker.
-Téléchargement des paquets via HTTPS et ajouter la clé GPG officiel de Docker.
+
+Vérifiez que le dépôt Docker est bien pris en compte :
 
 ```bash
-sudo apt install apt-transport-https ca-certificates curl gpg
+apt-cache policy docker-ce
 ```
+
+Vous devriez voir des entrées https://download.docker.com/linux/debian trixie/stable.
+
+5. Installer Docker Engine & Compose
 
 ```bash
-sudo curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker.gpg
+sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
-3. Ajouter le dépôt Docker à la liste :
+6. Vérifier le fonctionnement
 
 ```bash
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker.gpg] https://download.docker.com/linux/debian trixie stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+docker --version
+docker compose version
 ```
 
-4. Mettre à jour le cache des paquets
-
-```bash
-sudo apt update
-```
-```bash
-apt-cache policy
-```
-
-5. Installe Docker Engine et les composants essentiels :
-
-```bash
-sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-```
-Trois paquets sont à installer sur notre machine. 
-Si vous souhaitez que Docker démarre automatiquement avec votre machine.
-
-```bash
-sudo systemctl is-active docker
-```
-
-6. Vérifie que Docker fonctionne correctement :
-
-```bash
-sudo systemctl status docker
-```
+Tester avec un conteneur de démonstration :
 
 ```bash
 sudo docker run hello-world
 ```
 
-Ça teste si le service tourne et si un conteneur simple fonctionne.
+7. Exécuter Docker sans sudo (optionnel mais recommandé)
 
----
-
-7. Exécuter Docker sans sudo :
-
-Pour une utilisation simplifiée :
+Ajouter votre utilisateur au groupe docker :
 
 ```bash
 sudo usermod -aG docker $USER
 ```
 
-Ensuite, déconnecte-toi/reconnecte-toi ou exécute newgrp docker.
-
----
-
-8. Utiliser Docker Compose
-
-Avec Docker 2.x, le plugin s’utilise via :
+Déconnectez-vous / reconnectez-vous pour appliquer le changement.
 
 ```bash
-docker compose version
+docker ps
 ```
+
+8. (Optionnel) Activer Docker au démarrage
 
 ```bash
-docker compose up -d
+sudo systemctl enable docker
+sudo systemctl start docker
+sudo systemctl status docker
 ```
 
----
+9. Nettoyage et vérification finale
 
-👉 Résultat :
-
-- Docker CE + CLI + containerd + buildx + docker compose plugin installés.
-- Service docker actif au démarrage.
-- Ton utilisateur ajouté au groupe docker.
-- Vérification de version effectuée automatiquement.
+```bash
+sudo apt autoremove -y
+sudo apt clean
+docker info
+```
 
 ---
 
