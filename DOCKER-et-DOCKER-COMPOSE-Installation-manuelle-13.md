@@ -77,68 +77,50 @@ init 6
 
 1. Prépare système :
 
+Mise à jour du cache des paquets
+
 ```bash
 sudo apt update
 ```
+2. Installation des dépendances nécessaires au bon fonctionnement de Docker.
+Téléchargement des paquets via HTTPS et ajouter la clé GPG officiel de Docker.
 
 ```bash
-sudo apt install apt-transport-https ca-certificates curl gnupg
-```
-
-Cela te permet de télécharger des paquets via HTTPS et d’ajouter la clé GPG de Docker en toute confiance.
-
----
-
-2. Ajoute la clé GPG officielle de Docker :
-
-```bash
-curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker.gpg
-```
-
-Ou selon la doc Docker
-
-```bash
-sudo install -m 0755 -d /etc/apt/keyrings
+sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
 ```
 
 ```bash
-sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
+sudo curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 ```
 
+3. Ajoute le dépôt Docker à la liste :
+
 ```bash
-sudo chmod a+r /etc/apt/keyrings/docker.asc
+sudo echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list
 ```
 
-Ces commandes importent et sécurisent la clé GPG pour vérifier les paquets APT
-
----
-
-3. Ajoute le dépôt Docker pour Trixie :
+4. Mettre à jour le cache des paquets
 
 ```bash
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker.gpg] https://download.docker.com/linux/debian trixie stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-sudo apt update
+sudo apt-get update
 ```
 
-Cela active le dépôt Docker stable pour Debian 13 Trixie.
-
----
-
-4. Installe Docker Engine et les composants essentiels :
+5. Installe Docker Engine et les composants essentiels :
 
 ```bash
-sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+```
+Trois paquets sont à installer sur notre machine. 
+Si vous souhaitez que Docker démarre automatiquement avec votre machine.
+
+```bash
+sudo systemctl enable docker
 ```
 
-Cela installe Docker, le CLI, containerd, le plugin buildx et le plugin Docker Compose (version 2+ intégrée à Docker).
-
----
-
-5. Vérifie que Docker fonctionne correctement :
+6. Vérifie que Docker fonctionne correctement :
 
 ```bash
-sudo systemctl is-active docker
+sudo systemctl status docker
 ```
 
 ```bash
@@ -149,7 +131,7 @@ sudo docker run hello-world
 
 ---
 
-6. Exécuter Docker sans sudo :
+7. Exécuter Docker sans sudo :
 
 Pour une utilisation simplifiée :
 
@@ -161,7 +143,7 @@ Ensuite, déconnecte-toi/reconnecte-toi ou exécute newgrp docker.
 
 ---
 
-7. Utiliser Docker Compose
+8. Utiliser Docker Compose
 
 Avec Docker 2.x, le plugin s’utilise via :
 
