@@ -141,8 +141,38 @@ echo "[6/8] Mise à jour des dépôts"
 apt-get update -y
 
 echo "[7/8] Installation de Docker Engine + Compose (non-interactif)"
-apt-get $APT_OPTS install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compo_
+apt-get $APT_OPTS install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
+echo "[8/8] Vérifications automatiques"
+
+echo "[✓] Version Docker :"
+docker --version || echo "ERREUR: Docker non trouvé"
+
+echo "[✓] Version Docker Compose :"
+docker compose version || echo "ERREUR: Compose non trouvé"
+
+echo "[✓] Test : docker run hello-world"
+docker run --rm hello-world || echo "ERREUR: hello-world ne s'est pas exécuté"
+
+# Détermination automatique de l'utilisateur réel
+REAL_USER="${SUDO_USER:-${USER:-root}}"
+
+if id "$REAL_USER" >/dev/null 2>&1 && [ "$REAL_USER" != "root" ]; then
+    echo "[✓] Ajout de l'utilisateur $REAL_USER au groupe docker"
+    usermod -aG docker "$REAL_USER" || true
+else
+    echo "[i] Aucun utilisateur non-root détecté → pas d'ajout au groupe docker"
+fi
+
+echo "[✓] Activation du service Docker"
+systemctl enable docker
+systemctl start docker
+
+echo "[✓] Nettoyage"
+apt-get autoremove -y
+apt-get clean
+
+echo "=== Installation Docker (zéro interaction) terminée avec succès ==="
 
 ```
 
