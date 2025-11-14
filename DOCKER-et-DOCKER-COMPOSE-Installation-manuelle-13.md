@@ -156,10 +156,6 @@ sudo usermod -aG docker $USER
 
 Déconnectez-vous / reconnectez-vous pour appliquer le changement.
 
-```bash
-docker ps
-```
-
 8. (Optionnel) Activer Docker au démarrage
 
 ```bash
