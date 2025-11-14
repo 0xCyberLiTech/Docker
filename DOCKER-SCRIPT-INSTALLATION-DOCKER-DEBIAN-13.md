@@ -76,16 +76,21 @@ init 6
 
 📜 Script Docker + Docker Compose (plugin officiel) pour Debian 13 (Trixie).
 
-📜 Script : install-docker-trixie-noninteractive.sh
+📜 Script : install-docker-debian-13.sh
 
 ---
 
+Version totalement non-interactive, adaptée pour des automatisations (CI/CD, cloud-init, scripts distants, etc.).
+Elle n’utilise aucune interaction utilisateur et force les actions nécessaires.
+
 1 - Utilisation
+
+Script Docker Debian 13 — 100% non-interactif
 
 Crée le fichier du script :
 
 ```bash
-nano install-docker-trixie-noninteractive.sh
+nano install-docker-debian-13.sh
 ```
 
 ---
@@ -95,99 +100,71 @@ nano install-docker-trixie-noninteractive.sh
 ```bash
 # --------------------------------------------------------------------------
 # 0xCyberLiTech
-# Date de création : le 25-08-2025
-# Date de modification : le 25-08-2025
-# install-docker-trixie-noninteractive.sh
+# Date de création : le 14-11-2025
+# Date de modification : le 14-11-2025
+# install-docker-debian-13.sh
 # --------------------------------------------------------------------------
 
-#!/usr/bin/env bash
-# install-docker-trixie-noninteractive.sh
-# Installation non-interactive de Docker Engine + Compose (plugin officiel) sur Debian 13 (Trixie)
+#!/bin/bash
+# Installation non interactive de Docker sur Debian 13 (Trixie)
 
 set -euo pipefail
 
-# ---------- Couleurs ----------
-BOLD="\e[1m"; GREEN="\e[32m"; RED="\e[31m"; YELLOW="\e[33m"; RESET="\e[0m"
-log(){ echo -e "${BOLD}👉 $*${RESET}"; }
-ok(){ echo -e "${GREEN}✔${RESET} $*"; }
-warn(){ echo -e "${YELLOW}⚠${RESET} $*"; }
-err(){ echo -e "${RED}✘${RESET} $*"; }
+export DEBIAN_FRONTEND=noninteractive
 
-# ---------- Vérif root ----------
-if [[ $EUID -ne 0 ]]; then
-  err "Ce script doit être exécuté en root (sudo)."
-  exit 1
-fi
-
-# ---------- OS ----------
-. /etc/os-release
-if [[ "${ID:-}" != "debian" || "${VERSION_CODENAME:-}" != "trixie" ]]; then
-  warn "OS détecté: ${PRETTY_NAME:-inconnu}. Ce script vise Debian 13 (Trixie)."
-fi
-ARCH="$(dpkg --print-architecture)"
-log "Arch: ${ARCH}, Distro: ${PRETTY_NAME}"
-
-# ---------- Dépendances ----------
-log "Installation dépendances..."
+echo "=== Mise à jour du système ==="
 apt-get update -y
-DEBIAN_FRONTEND=noninteractive apt-get install -y \
-  ca-certificates curl gnupg lsb-release apt-transport-https
+apt-get full-upgrade -y
+apt-get install -y ca-certificates curl gnupg lsb-release
 
-# ---------- GPG & dépôt ----------
+echo "=== Création du dossier des clés GPG ==="
 install -m 0755 -d /etc/apt/keyrings
+
+echo "=== Téléchargement de la clé GPG Docker ==="
 curl -fsSL https://download.docker.com/linux/debian/gpg \
   | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+
 chmod a+r /etc/apt/keyrings/docker.gpg
 
-echo \
-"deb [arch=${ARCH} signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian trixie stable" \
+echo "=== Ajout du dépôt Docker ==="
+CODENAME=$( . /etc/os-release && echo "$VERSION_CODENAME" )
+
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] \
+https://download.docker.com/linux/debian $CODENAME stable" \
   > /etc/apt/sources.list.d/docker.list
 
-# ---------- Installation ----------
-log "Installation Docker Engine + CLI + plugins..."
+echo "=== Mise à jour des dépôts ==="
 apt-get update -y
-DEBIAN_FRONTEND=noninteractive apt-get install -y \
-  docker-ce docker-ce-cli containerd.io \
-  docker-buildx-plugin docker-compose-plugin
 
-# ---------- Service ----------
-systemctl enable --now docker
+echo "=== Installation de Docker Engine + Compose ==="
+apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
-# ---------- Groupe docker ----------
-CURRENT_USER="${SUDO_USER:-$(logname 2>/dev/null || echo "")}"
-if [[ -n "$CURRENT_USER" ]]; then
-  if id -nG "$CURRENT_USER" | grep -qw docker; then
-    ok "Utilisateur ${CURRENT_USER} déjà dans le groupe docker."
-  else
-    usermod -aG docker "$CURRENT_USER"
-    warn "Ajout de ${CURRENT_USER} au groupe docker. Déconnectez-vous/reconnectez-vous pour activer."
-  fi
-fi
+echo "=== Test des versions ==="
+docker --version || echo "Docker non trouvé"
+docker compose version || echo "Docker Compose non trouvé"
 
-# ---------- Vérifications ----------
-if docker --version >/dev/null 2>&1; then
-  ok "Docker CLI: $(docker --version)"
-else
-  err "Docker CLI non détecté"
-fi
+echo "=== Test du conteneur hello-world ==="
+docker run --rm hello-world || true
 
-if docker compose version >/dev/null 2>&1; then
-  ok "Docker Compose plugin: $(docker compose version)"
-else
-  err "Compose plugin non détecté"
-fi
+echo "=== Ajout de l’utilisateur au groupe docker ==="
+usermod -aG docker "$SUDO_USER" 2>/dev/null || usermod -aG docker "$USER" || true
 
-# ---------- Test auto ----------
-log "Exécution test hello-world..."
-docker run --rm hello-world && ok "Test hello-world OK."
+echo "=== Activation du service Docker ==="
+systemctl enable docker
+systemctl start docker
 
-ok "Installation Docker + Compose sur Debian Trixie terminée 🎉"
+echo "=== Nettoyage ==="
+apt-get autoremove -y
+apt-get clean
+
+echo "=== Installation terminée (mode non-interactif) ==="
+
 ```
 
 3 - Rends le script exécutable :
 
 ```bash
-chmod +x install-docker-trixie-noninteractive.sh
+chmod +x install-docker-debian-13.sh
 ```
 
 ---
@@ -195,7 +172,7 @@ chmod +x install-docker-trixie-noninteractive.sh
 4 - Lance-le (en root ou via sudo) :
 
 ```bash
-sudo ./install-docker-trixie-noninteractive.sh
+sudo ./install-docker-debian-13.sh
 ```
 
 ---
