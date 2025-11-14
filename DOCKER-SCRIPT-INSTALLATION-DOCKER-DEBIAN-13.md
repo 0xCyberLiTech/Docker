@@ -106,58 +106,43 @@ nano install-docker-debian-13.sh
 # --------------------------------------------------------------------------
 
 #!/bin/bash
-# Installation non interactive de Docker sur Debian 13 (Trixie)
+# Installation totalement non-interactive de Docker sur Debian 13 (Trixie)
 
 set -euo pipefail
 
+# Garantit zéro interaction APT
 export DEBIAN_FRONTEND=noninteractive
+APT_OPTS="-o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold"
 
-echo "=== Mise à jour du système ==="
+echo "[1/8] Mise à jour du système"
 apt-get update -y
-apt-get full-upgrade -y
+apt-get $APT_OPTS full-upgrade -y
+
+echo "[2/8] Installation des dépendances"
 apt-get install -y ca-certificates curl gnupg lsb-release
 
-echo "=== Création du dossier des clés GPG ==="
+echo "[3/8] Création du dossier des clés GPG"
 install -m 0755 -d /etc/apt/keyrings
 
-echo "=== Téléchargement de la clé GPG Docker ==="
+echo "[4/8] Téléchargement des clés Docker"
 curl -fsSL https://download.docker.com/linux/debian/gpg \
   | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-
 chmod a+r /etc/apt/keyrings/docker.gpg
 
-echo "=== Ajout du dépôt Docker ==="
+echo "[5/8] Ajout du dépôt Docker"
 CODENAME=$( . /etc/os-release && echo "$VERSION_CODENAME" )
 
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] \
-https://download.docker.com/linux/debian $CODENAME stable" \
-  > /etc/apt/sources.list.d/docker.list
+cat <<EOF > /etc/apt/sources.list.d/docker.list
+deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] \
+https://download.docker.com/linux/debian $CODENAME stable
+EOF
 
-echo "=== Mise à jour des dépôts ==="
+echo "[6/8] Mise à jour des dépôts"
 apt-get update -y
 
-echo "=== Installation de Docker Engine + Compose ==="
-apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+echo "[7/8] Installation de Docker Engine + Compose (non-interactif)"
+apt-get $APT_OPTS install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compo_
 
-echo "=== Test des versions ==="
-docker --version || echo "Docker non trouvé"
-docker compose version || echo "Docker Compose non trouvé"
-
-echo "=== Test du conteneur hello-world ==="
-docker run --rm hello-world || true
-
-echo "=== Ajout de l’utilisateur au groupe docker ==="
-usermod -aG docker "$SUDO_USER" 2>/dev/null || usermod -aG docker "$USER" || true
-
-echo "=== Activation du service Docker ==="
-systemctl enable docker
-systemctl start docker
-
-echo "=== Nettoyage ==="
-apt-get autoremove -y
-apt-get clean
-
-echo "=== Installation terminée (mode non-interactif) ==="
 
 ```
 
