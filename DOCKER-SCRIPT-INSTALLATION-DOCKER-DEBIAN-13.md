@@ -194,10 +194,27 @@ sudo ./install-docker-debian-13.sh
 
 Points clés :
 
-- Zéro interaction (même pour APT → DEBIAN_FRONTEND=noninteractive).
-- Ajoute automatiquement l’utilisateur courant au groupe docker si détecté.
-- Teste automatiquement docker run hello-world.
-- Tout logué en clair avec ✔ / ⚠ / ✘.
+✔ Zéro interaction obligatoire
+DEBIAN_FRONTEND=noninteractive
+Dpkg::Options::=--force-confdef & --force-confold
+Aucun sudo
+Aucun prompt APT, même en cas de modification de fichiers de configuration
+
+✔ Ajout automatique de l’utilisateur courant
+Détecte SUDO_USER (SSH, sudo)
+Sinon, utilise $USER
+Ignore si root
+
+✔ Tests automatisés
+Affiche les versions installées
+Lance docker run --rm hello-world sans bloquer le script en cas d’erreur
+
+✔ Prêt pour :
+cloud-init
+Packer
+Ansible (via shell module)
+Terraform provisioners
+Déploiement automatisé
 
 ---
 
