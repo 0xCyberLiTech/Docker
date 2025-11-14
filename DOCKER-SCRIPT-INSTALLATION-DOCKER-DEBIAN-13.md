@@ -173,15 +173,14 @@ apt-get autoremove -y
 apt-get clean
 
 echo "=== Installation Docker (zéro interaction) terminée avec succès ==="
-
 ```
+---
 
 3 - Rends le script exécutable :
 
 ```bash
 chmod +x install-docker-debian-13.sh
 ```
-
 ---
 
 4 - Lance-le (en root ou via sudo) :
@@ -189,7 +188,6 @@ chmod +x install-docker-debian-13.sh
 ```bash
 sudo ./install-docker-debian-13.sh
 ```
-
 ---
 
 Points clés :
