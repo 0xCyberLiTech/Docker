@@ -162,7 +162,11 @@ Déconnectez-vous / reconnectez-vous pour appliquer le changement.
 
 ```bash
 sudo systemctl enable docker
+```
+```bash
 sudo systemctl start docker
+```
+```bash
 sudo systemctl status docker
 ```
 
@@ -170,7 +174,11 @@ sudo systemctl status docker
 
 ```bash
 sudo apt autoremove -y
+```
+```bash
 sudo apt clean
+```
+```bash
 docker info
 ```
 
