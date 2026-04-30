@@ -8,7 +8,7 @@
   
   <br></br>
 
-  <h2>Laboratoire numérique pour la cybersécurité, Linux & IT.</h2>
+  <h2>Docker — conteneurs, images, compose, réseaux, volumes.</h2>
 
   <p align="center">
     <p align="center">
@@ -19,7 +19,7 @@
         <img src="https://img.shields.io/badge/Profil-GitHub-181717?logo=github&style=flat-square" alt="🔗 Profil GitHub" />
       </a>
       <a href="https://github.com/0xCyberLiTech/Docker/releases/latest">
-        <img src="https://img.shields.io/github/v/release/0xCyberLiTech/Docker?label=version&style=flat-square&color=blue" alt="📦 Dernière version" />
+        <img src="https://img.shields.io/badge/version-v1.0-blue?style=flat-square" alt="📦 Dernière version" />
       </a>
       <a href="https://github.com/0xCyberLiTech/Docker/blob/main/CHANGELOG.md">
         <img src="https://img.shields.io/badge/📄%20Changelog-Docker-blue?style=flat-square" alt="📄 CHANGELOG Docker" />
