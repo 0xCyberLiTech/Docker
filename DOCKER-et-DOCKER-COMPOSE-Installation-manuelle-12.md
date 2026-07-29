@@ -97,7 +97,7 @@ Rappel sur la commande sudo, si celle-ci n'est pas installée :
 ```
 su - root
 apt install sudo
-usermod -aG sudo cyberlitech
+usermod -aG sudo username
 init 6
 ```
 

@@ -71,7 +71,7 @@ Prérequis avoir installé auparavant sudo si celui-ci n'est pas présent.
 ```
 # su - root
 # apt install sudo
-# usermod -aG sudo cyberlitech
+# usermod -aG sudo username
 # init 6
 ```
 

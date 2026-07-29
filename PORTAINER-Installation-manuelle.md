@@ -70,7 +70,7 @@ Prérequis avoir installé auparavant 'sudo' si celui-ci n'est pas présent.
 ```
 # su - root
 # apt install sudo
-# usermod -aG sudo cyberlitech
+# usermod -aG sudo username
 # init 6
 ```
 Portainer est un conteneur Docker qui a pour but de faciliter l’installation et la gestion de vos autres conteneurs Docker. 

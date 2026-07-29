@@ -186,7 +186,7 @@ docker exec -it 23a278e4bf2b bash
 ```
 
 ```
-    @0xCLT:~/Containers/exercice-docker-compose$ docker exec -it 23a278e4bf2b bash
+    @srv-linux-01:~/Containers/exercice-docker-compose$ docker exec -it 23a278e4bf2b bash
 root@23a278e4bf2b:/#
 ```
 

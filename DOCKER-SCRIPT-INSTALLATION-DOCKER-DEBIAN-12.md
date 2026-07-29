@@ -70,7 +70,7 @@ Le contenu est structuré, accessible et optimisé SEO pour répondre aux besoin
 ```bash
 su - root
 apt install sudo
-usermod -aG sudo cyberlitech
+usermod -aG sudo username
 init 6
 ```
 
